@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сцена</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+/* Layout: большой экран слева, очередь и песни справа. На телефоне всё в одну колонку. */
+:root{
+  --ink:#120e1d;
+  --panel:#1b1630;
+  --panel-2:#251e3e;
+  --line:#392f5e;
+  --text:#f5f0ff;
+  --muted:#a9a1c6;
+  --pink:#ff4f8b;
+  --pink-ink:#2a0615;
+  --amber:#ffc24a;
+  --f-display:'Unbounded','Onest',system-ui,sans-serif;
+  --f-body:'Onest',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{
+  margin:0;
+  background-color:var(--ink);
+  background-image:radial-gradient(1100px 520px at 12% -12%,#2f1853 0%,transparent 62%),radial-gradient(800px 400px at 100% 110%,#3a1030 0%,transparent 60%);
+  color:var(--text);
+  font:400 17px/1.45 var(--f-body);
+  -webkit-font-smoothing:antialiased;
+}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+.app{display:flex;flex-direction:column;gap:16px;min-height:100dvh;padding:16px 24px 24px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font:700 26px/1 var(--f-display);letter-spacing:-.02em;display:flex;align-items:center;gap:10px;margin:0}
+.brand i{width:12px;height:12px;border-radius:50%;background:var(--pink);box-shadow:0 0 18px 3px #ff4f8b99}
+.top-actions{display:flex;gap:8px}
+
+.grid{display:grid;gap:20px;grid-template-columns:minmax(0,1.7fr) minmax(340px,1fr);flex:1;min-height:0}
+.stage-col{display:flex;flex-direction:column;gap:16px;min-width:0;min-height:0}
+
+.stage{position:relative;aspect-ratio:16/9;width:100%;background:#000;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px -24px #ff4f8b66}
+#player{position:absolute;inset:0;width:100%;height:100%;border:0}
+.idle{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:14px;text-align:center;padding:24px;
+  background:radial-gradient(circle at 50% 120%,#ff4f8b33 0,transparent 55%),repeating-radial-gradient(circle at 50% 120%,#ffffff0a 0 2px,transparent 2px 46px),#0d0916}
+.idle h2{font:700 clamp(24px,4.4vw,52px)/1.05 var(--f-display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.idle p{margin:0;color:var(--muted);max-width:34ch;text-wrap:balance}
+
+/* Заставка между песнями: видео в это время остановлено, поверх него ничего не играет. */
+.stage{container-type:inline-size}
+.inter{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:clamp(4px,1.4cqw,14px);text-align:center;padding:16px;
+  background:radial-gradient(circle at 50% 120%,#ff4f8b55 0,transparent 60%),repeating-radial-gradient(circle at 50% 120%,#ffffff0d 0 2px,transparent 2px 46px),#0d0916}
+.inter h2{font:700 clamp(20px,5.6cqw,72px)/1.05 var(--f-display);letter-spacing:-.02em;margin:0;text-wrap:balance;overflow-wrap:anywhere}
+.inter .song{margin:0;font:500 clamp(15px,3.2cqw,40px)/1.2 var(--f-display);text-wrap:balance;overflow-wrap:anywhere}
+.inter .art{margin:0;color:var(--muted);font-size:clamp(13px,2cqw,24px)}
+.inter .count{width:clamp(36px,7cqw,88px);height:clamp(36px,7cqw,88px);border-radius:50%;display:grid;place-items:center;border:3px solid var(--amber);color:var(--amber);font:700 clamp(16px,3.2cqw,38px) var(--f-display);font-variant-numeric:tabular-nums}
+
+.now{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:16px 20px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.now-meta{min-width:0;flex:1 1 260px}
+.eyebrow{margin:0;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.now h2{font:500 clamp(18px,2.2vw,24px)/1.2 var(--f-display);margin:6px 0 4px;text-wrap:balance;overflow-wrap:anywhere}
+.now .singer{margin:0;color:var(--text);font-weight:600}
+.now .next{margin:8px 0 0;color:var(--muted);font-size:15px;overflow-wrap:anywhere}
+.ctl{display:flex;gap:10px;align-items:center}
+
+.btn{min-height:44px;padding:0 18px;border-radius:12px;border:1px solid var(--line);background:var(--panel-2);font-weight:600;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
+.btn:hover{border-color:#6a5aa8}
+.btn.primary{background:var(--pink);border-color:var(--pink);color:var(--pink-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.small{min-height:36px;padding:0 12px;font-size:14px}
+.btn:disabled,.btn:disabled:hover{opacity:.45;cursor:not-allowed;filter:none;border-color:var(--line)}
+.ib{width:40px;height:40px;flex:none;border-radius:12px;border:1px solid var(--line);background:transparent;display:inline-grid;place-items:center;cursor:pointer;color:var(--muted)}
+.ib:hover{color:var(--text);border-color:#6a5aa8}
+.ib.big{width:56px;height:56px;border-radius:50%;color:var(--text);background:var(--panel-2)}
+.ib.big.primary{background:var(--pink);border-color:var(--pink);color:var(--pink-ink)}
+.ib[aria-pressed=true]{color:var(--pink-ink);background:var(--amber);border-color:var(--amber)}
+.ico{display:inline-grid;place-items:center;width:22px;height:22px}
+.ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ico svg .f{fill:currentColor;stroke:none}
+
+.side{display:flex;flex-direction:column;min-width:0;min-height:0;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding-block:16px}
+.who{padding:0 16px 12px}
+.who label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text);font-size:14px;cursor:pointer}
+.chip:hover{border-color:var(--pink)}
+.chip[aria-pressed=true]{background:var(--amber);border-color:var(--amber);color:var(--pink-ink);font-weight:600}
+.field{width:100%;min-height:46px;padding:0 14px;background:var(--ink);border:1px solid var(--line);border-radius:12px;color:var(--text)}
+.field::placeholder{color:#7d74a0}
+
+.tabs{display:flex;gap:6px;padding:6px;margin:0 16px;background:var(--ink);border-radius:14px}
+.tab{flex:1;min-height:44px;border:0;border-radius:10px;background:transparent;color:var(--muted);font-weight:600;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.tab[aria-selected=true]{background:var(--pink);color:var(--pink-ink)}
+.badge{min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:#ffffff1f;font-size:13px;display:inline-grid;place-items:center;font-variant-numeric:tabular-nums}
+.tab[aria-selected=true] .badge{background:#2a061526}
+@media (max-width:1199px){
+  .tabs{gap:3px;padding:4px}
+  .tab{font-size:13px;gap:4px;min-width:0}
+  .badge{min-width:20px;height:20px;padding:0 5px;font-size:12px}
+}
+
+.pane{flex:1;min-height:0;overflow:auto;padding:14px 16px 4px}
+.pane-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.hint{margin:0;color:var(--muted);font-size:14px}
+.hint.err{color:#ff9db8}
+.notice{margin:0 0 12px;padding:10px 12px;border-radius:12px;background:#ffc24a14;border:1px solid #ffc24a55;font-size:14px}
+.list{list-style:none;margin:0;padding:0}
+.row{display:flex;gap:12px;align-items:center;padding:10px;margin-bottom:8px;background:var(--panel-2);border-radius:14px}
+.idx{width:22px;text-align:center;color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums;flex:none}
+.thumb{width:88px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:#000;flex:none}
+.thumb.ph{display:grid;place-items:center;font:700 20px var(--f-display);color:#ffffffb3;background:linear-gradient(135deg,#3a1d63,#6e1b45)}
+.meta{flex:1;min-width:0}
+.meta .t{margin:0;font-weight:600;font-size:15px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.meta .s{margin:3px 0 0;color:var(--amber);font-size:14px;font-weight:500}
+.meta .tg{margin:3px 0 0;color:var(--muted);font-size:13px}
+.acts{display:flex;gap:6px;flex:none;align-items:center}
+.empty{padding:22px 8px;text-align:center;color:var(--muted)}
+.empty strong{display:block;color:var(--text);font:500 18px var(--f-display);margin-bottom:6px}
+.empty .btn{margin-top:14px}
+
+/* Комната: QR и код для входа с телефона. */
+.room{display:flex;gap:14px;align-items:center;margin:0 16px 14px;padding:12px;background:var(--panel-2);border-radius:16px}
+.qr{width:104px;height:104px;flex:none;border-radius:10px;background:#fff;padding:4px;cursor:zoom-in}
+.room .code{margin:2px 0;font:700 34px/1 var(--f-display);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.room .hint{overflow-wrap:anywhere}
+.room.off .code{color:var(--muted)}
+.join{display:flex;gap:14px;align-items:center;margin-top:8px;padding:10px 14px 10px 10px;border-radius:16px;background:#ffffff0d;text-align:left}
+.join .qr{width:clamp(72px,11cqw,140px);height:clamp(72px,11cqw,140px);cursor:default}
+.join p{margin:0;color:var(--muted);font-size:clamp(13px,1.6cqw,18px)}
+.join b{display:block;color:var(--text);font:700 clamp(22px,3.4cqw,40px)/1.1 var(--f-display);letter-spacing:.08em}
+.inter .join{margin-top:0}
+.inter .join .qr{width:clamp(48px,7cqw,96px);height:clamp(48px,7cqw,96px)}
+.qr-big{position:fixed;inset:0;z-index:60;display:grid;place-content:center;justify-items:center;gap:18px;background:#0d0916f2;text-align:center;padding:24px;cursor:zoom-out}
+.qr-big img{width:min(70vmin,560px);height:min(70vmin,560px);background:#fff;border-radius:20px;padding:12px}
+.qr-big b{font:700 clamp(32px,6vmin,64px)/1 var(--f-display);letter-spacing:.1em}
+.qr-big p{margin:0;color:var(--muted);font-size:clamp(16px,2.4vmin,24px)}
+.seg{display:inline-flex;gap:4px;padding:4px;background:var(--ink);border-radius:999px}
+.seg .chip{border:0;min-height:32px;padding:0 12px;white-space:nowrap}
+
+/* Реакции с телефонов взлетают внутри панели «Поёт сейчас», под видео, не перекрывая плеер. */
+.now{position:relative;overflow:hidden}
+.now>*{position:relative;z-index:1}
+.now .rx{position:absolute;inset:0;z-index:2;pointer-events:none}
+.rx span{position:absolute;bottom:-40px;font-size:34px;line-height:1;animation:rise 2.4s cubic-bezier(.2,.7,.3,1) forwards;filter:drop-shadow(0 4px 10px #0008)}
+.rx span small{display:block;margin-top:2px;font:600 11px var(--f-body);color:var(--text);text-align:center;white-space:nowrap}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:1}70%{opacity:1}100%{transform:translateY(-150px) scale(1.15) rotate(var(--r,0deg));opacity:0}}
+.rcount{margin:8px 0 0;color:var(--muted);font-size:15px;font-variant-numeric:tabular-nums;display:flex;gap:12px;flex-wrap:wrap}
+.tempo{display:flex;align-items:center;gap:8px;margin-top:10px;color:var(--muted);font-size:13px;font-weight:600}
+.tempo .seg .chip{min-height:30px;padding:0 10px;font-size:13px}
+@media (prefers-reduced-motion:reduce){.rx span{animation-duration:1.2s}}
+
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:14px}
+.stat{padding:10px 12px;background:var(--panel-2);border-radius:14px}
+.stat b{display:block;font:700 24px/1.1 var(--f-display);font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:13px}
+.award{display:flex;gap:12px;align-items:center;padding:10px 12px;margin-bottom:8px;background:var(--panel-2);border-radius:14px}
+.award i{font-style:normal;font-size:26px}
+.award p{margin:0;min-width:0}
+.award .k{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)}
+.award .v{font-weight:600;overflow-wrap:anywhere}
+.sum{position:fixed;inset:0;z-index:60;overflow:auto;background:#0d0916;padding:clamp(20px,5vh,56px) clamp(16px,6vw,80px)}
+.sum h2{font:700 clamp(28px,5vw,64px)/1.05 var(--f-display);margin:0 0 24px;letter-spacing:-.02em}
+.sum .stats{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.sum .stat b{font-size:clamp(28px,4vw,48px)}
+.sum .awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-bottom:22px}
+.sum .award{margin:0;padding:16px}
+.sum .award .v{font-size:clamp(16px,1.8vw,22px)}
+.sum .close{position:fixed;top:16px;right:16px}
+
+.filters{display:grid;gap:8px;margin-bottom:12px}
+.frow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.frow .lbl{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);min-width:64px}
+.frow .chip{min-height:34px;padding:0 12px}
+
+.block{margin-bottom:22px}
+.block h3{font:500 16px var(--f-display);margin:0 0 10px}
+.inline{display:flex;gap:8px;align-items:center}
+.inline .field{flex:1;min-width:0}
+details.block summary{cursor:pointer;font:500 16px var(--f-display);padding:4px 0}
+details.block[open] summary{margin-bottom:10px}
+.preview{display:grid;gap:10px;margin-top:12px;padding:12px;background:var(--panel-2);border-radius:14px}
+.preview img{width:100%;max-width:280px;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#000}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);max-width:min(92vw,520px);padding:12px 18px;border-radius:14px;background:var(--text);color:var(--ink);font-weight:500;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
+.toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast a{color:#a3124a;font-weight:600}
+
+@media (min-width:960px){
+  .app{height:100dvh;overflow:hidden}
+  .stage-col{overflow:auto}
+}
+@media (max-width:959px){
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .app{padding:14px max(16px,env(safe-area-inset-left,0px)) 24px max(16px,env(safe-area-inset-right,0px))}
+  .side{padding-bottom:12px}
+  .pane{overflow:visible}
+}
+@media (max-width:520px){
+  .row{flex-wrap:wrap}
+  .acts{width:100%;justify-content:flex-end}
+  .brand{font-size:22px}
+}
+body.focus .grid{grid-template-columns:minmax(0,1fr)}
+body.focus .side{display:none}
+@media (min-width:960px){
+  body.focus .stage{width:min(100%,calc((100dvh - 240px) * 16 / 9));margin-inline:auto}
+}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <h1 class="brand"><i aria-hidden="true"></i>Сцена</h1>
+    <div class="top-actions">
+      <button class="ib" id="btnFocus" type="button" aria-pressed="false" aria-label="Только видео (P)" title="Только видео (P)"></button>
+      <button class="ib" id="btnFull" type="button" aria-label="На весь экран (F)" title="На весь экран (F)"></button>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="stage-col" aria-label="Плеер">
+      <div class="stage">
+        <div id="player"></div>
+        <div class="idle" id="idle">
+          <h2>Сцена свободна</h2>
+          <p id="idleText">Выберите песню в каталоге, и она сразу зазвучит.</p>
+          <button class="btn primary" id="idleStart" type="button" hidden>Начать с первой песни</button>
+          <div class="join" data-join hidden><img class="qr" alt=""><div><p>Добавляйте песни с телефона</p><b data-code></b><p data-url></p></div></div>
+        </div>
+        <div class="inter" id="inter" role="status" hidden>
+          <h2 id="interHead"></h2>
+          <p class="song" id="interSong"></p>
+          <p class="art" id="interArt"></p>
+          <div class="count" id="interCount" aria-hidden="true"></div>
+          <button class="btn primary" id="interSkip" type="button">Пропустить</button>
+          <div class="join" data-join hidden><img class="qr" alt=""><div><p>Хотите спеть? Код комнаты</p><b data-code></b></div></div>
+        </div>
+      </div>
+      <div class="now">
+        <div class="now-meta">
+          <p class="eyebrow" id="nowLabel">На сцене</p>
+          <h2 id="nowTitle">Пока тихо</h2>
+          <p class="singer" id="nowSinger" hidden></p>
+          <p class="next" id="nowNext"></p>
+          <p class="rcount" id="nowReacts" hidden></p>
+          <div class="tempo" id="tempo" hidden>Темп
+            <div class="seg" role="group" aria-label="Темп">
+              <button class="chip" type="button" data-rate="0.75">0,75×</button>
+              <button class="chip" type="button" data-rate="1">1×</button>
+              <button class="chip" type="button" data-rate="1.25">1,25×</button>
+            </div>
+          </div>
+        </div>
+        <div class="rx" id="rx" aria-hidden="true"></div>
+        <div class="ctl">
+          <button class="ib big" id="btnRestart" type="button" aria-label="Сначала" title="Сначала"></button>
+          <button class="ib big primary" id="btnPlay" type="button" aria-label="Играть или пауза (пробел)" title="Играть или пауза (пробел)"></button>
+          <button class="ib big" id="btnNext" type="button" aria-label="Следующая песня (N)" title="Следующая песня (N)"></button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="side" aria-label="Песни">
+      <div class="room off" id="room">
+        <img class="qr" id="roomQr" alt="QR-код для входа с телефона" title="Показать крупно" hidden>
+        <div>
+          <p class="eyebrow">Пульт на телефоне</p>
+          <p class="code" id="roomCode">····</p>
+          <p class="hint" id="roomUrl">Подключаемся к серверу…</p>
+          <p class="hint" id="roomGuests"></p>
+        </div>
+      </div>
+      <div class="who">
+        <label for="singer">Кто поёт следующим</label>
+        <input class="field" id="singer" type="text" placeholder="Имя певца" autocomplete="off">
+        <div class="chips" id="singerChips"></div>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" id="tabQueue" aria-controls="paneQueue" aria-selected="true" type="button">Очередь <span class="badge" id="cntQueue">0</span></button>
+        <button class="tab" role="tab" id="tabCatalog" aria-controls="paneCatalog" aria-selected="false" type="button">Каталог</button>
+        <button class="tab" role="tab" id="tabSongs" aria-controls="paneSongs" aria-selected="false" type="button">Мои <span class="badge" id="cntSongs">0</span></button>
+        <button class="tab" role="tab" id="tabEvening" aria-controls="paneEvening" aria-selected="false" type="button">Вечер</button>
+      </div>
+
+      <div class="pane" id="paneQueue" role="tabpanel" aria-labelledby="tabQueue">
+        <div class="pane-head">
+          <div class="seg" role="group" aria-label="Порядок очереди">
+            <button class="chip" type="button" data-mode="order">По порядку</button>
+            <button class="chip" type="button" data-mode="round">По кругу</button>
+          </div>
+          <button class="btn small" id="clearQ" type="button">Очистить</button>
+        </div>
+        <p class="hint" id="modeHint" style="margin:-4px 0 12px"></p>
+        <ul class="list" id="queueList"></ul>
+      </div>
+
+      <div class="pane" id="paneCatalog" role="tabpanel" aria-labelledby="tabCatalog" hidden>
+        <p class="notice" id="catNotice" hidden></p>
+        <input class="field" id="catQ" type="search" placeholder="Название или исполнитель" autocomplete="off" style="margin-bottom:12px">
+        <div class="filters" id="catFilters"></div>
+        <div class="pane-head">
+          <p class="hint" id="catCount"></p>
+          <button class="btn small" id="btnRandom" type="button">Случайная песня</button>
+        </div>
+        <ul class="list" id="catList"></ul>
+      </div>
+
+      <div class="pane" id="paneSongs" role="tabpanel" aria-labelledby="tabSongs" hidden>
+        <div class="pane-head"><input class="field" id="filter" type="search" placeholder="Поиск по моим песням" autocomplete="off"></div>
+        <ul class="list" id="libList"></ul>
+
+        <details class="block" id="linkBox" style="margin-top:14px">
+          <summary>Добавить по ссылке YouTube</summary>
+          <input class="field" id="urlInput" type="text" inputmode="url" placeholder="Ссылка на видео YouTube" autocomplete="off">
+          <p class="hint" id="urlHint" style="margin-top:8px"></p>
+          <div class="preview" id="preview" hidden>
+            <img id="pvThumb" alt="">
+            <input class="field" id="pvTitle" type="text" placeholder="Название песни" autocomplete="off">
+            <div class="inline">
+              <button class="btn primary" id="addQueue" type="button">В очередь</button>
+              <button class="btn" id="addLib" type="button">Сохранить в мои</button>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="pane" id="paneEvening" role="tabpanel" aria-labelledby="tabEvening" hidden>
+        <div class="pane-head">
+          <button class="btn small primary" id="btnSummary" type="button">Итоги на экран</button>
+          <button class="btn small" id="btnNewEvening" type="button">Новый вечер</button>
+        </div>
+        <div id="evening"></div>
+      </div>
+    </aside>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+'use strict';
+
+var ICONS={
+  play:'<svg viewBox="0 0 24 24" aria-hidden="true"><path class="f" d="M8 5v14l11-7z"/></svg>',
+  pause:'<svg viewBox="0 0 24 24" aria-hidden="true"><path class="f" d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>',
+  next:'<svg viewBox="0 0 24 24" aria-hidden="true"><path class="f" d="M6 5l9 7-9 7z"/><path d="M18 5v14"/></svg>',
+  restart:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12a7 7 0 1 0 2.2-5.1"/><path d="M5 4v4h4"/></svg>',
+  up:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14l5-5 5 5"/></svg>',
+  down:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>',
+  close:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  full:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>',
+  focus:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M15 5v14"/></svg>'
+};
+
+function $(s,r){return (r||document).querySelector(s);}
+function h(tag,props){
+  var n=document.createElement(tag);
+  props=props||{};
+  Object.keys(props).forEach(function(k){
+    var v=props[k];
+    if(v===false||v==null)return;
+    if(k==='class')n.className=v;
+    else if(k==='text')n.textContent=v;
+    else if(k.indexOf('on')===0)n.addEventListener(k.slice(2),v);
+    else n.setAttribute(k,v===true?'':v);
+  });
+  for(var i=2;i<arguments.length;i++){
+    var kids=[].concat(arguments[i]);
+    for(var j=0;j<kids.length;j++){
+      var kid=kids[j];
+      if(kid==null||kid===false)continue;
+      n.append(kid.nodeType?kid:document.createTextNode(kid));
+    }
+  }
+  return n;
+}
+function ico(name){var s=document.createElement('span');s.className='ico';s.innerHTML=ICONS[name];return s;}
+function ib(name,label,onclick,cls){
+  return h('button',{class:'ib'+(cls?' '+cls:''),type:'button','aria-label':label,title:label,onclick:onclick},ico(name));
+}
+function btn(text,onclick,cls){return h('button',{class:'btn'+(cls?' '+cls:''),type:'button',onclick:onclick},text);}
+
+/* ---------- состояние ---------- */
+var KEY='scena.v1',BAD_KEY='scena.bad';
+// mode: order — по порядку добавления, round — по кругу (чередуем певцов); lastSang: певец -> когда пел
+// people: певец -> {name, favs:[id песен], history:[…]}; evening: журнал выступлений текущего вечера
+var S={library:[],queue:[],singers:[],singer:'',current:null,mode:'order',lastSang:{},people:{},evening:null};
+try{
+  var raw=JSON.parse(localStorage.getItem(KEY)||'null');
+  if(raw){
+    S.library=raw.library||[];S.singers=raw.singers||[];S.singer=raw.singer||'';
+    S.mode=raw.mode==='round'?'round':'order';S.lastSang=raw.lastSang||{};
+    S.people=raw.people||{};S.evening=raw.evening||null;
+    // старые элементы очереди хранили одно видео в vid
+    S.queue=(raw.queue||[]).map(function(it){
+      if(!it.vids)it.vids=it.vid?[it.vid]:[];
+      if(!it.vid)it.vid=it.vids[0];
+      delete it.tried;return it;
+    }).filter(function(it){return it.vid;});
+  }
+}catch(e){}
+function save(){
+  try{localStorage.setItem(KEY,JSON.stringify({library:S.library,queue:S.queue,singers:S.singers,singer:S.singer,mode:S.mode,lastSang:S.lastSang,people:S.people,evening:S.evening}));}catch(e){}
+}
+if(!S.evening||!S.evening.log)S.evening={started:Date.now(),log:[]};
+function person(name){
+  name=(name||'').trim();
+  if(!name)return null;
+  var k=norm(name);
+  if(!S.people[k])S.people[k]={name:name,favs:[],history:[]};
+  return S.people[k];
+}
+function logEntry(uid){return S.evening.log.find(function(e){return e.uid===uid;})||null;}
+// Очередь в порядке исполнения. По кругу: раунды по одной песне от каждого певца,
+// первыми идут те, кто давно не пел (или ещё не пел).
+function orderedQueue(){
+  if(S.mode!=='round')return S.queue.slice();
+  var groups={},order=[],out=[];
+  S.queue.forEach(function(it){
+    var k=norm((it.singer||'').trim());
+    if(!groups[k]){groups[k]=[];order.push(k);}
+    groups[k].push(it);
+  });
+  order.sort(function(a,b){return (S.lastSang[a]||0)-(S.lastSang[b]||0);});
+  for(var r=0,more=true;more;r++){
+    more=false;
+    order.forEach(function(k){if(groups[k][r]){out.push(groups[k][r]);more=true;}});
+  }
+  return out;
+}
+function takeFromQueue(uid){
+  var i=S.queue.findIndex(function(it){return it.uid===uid;});
+  return i<0?null:S.queue.splice(i,1)[0];
+}
+// видео, которые не захотели играть в этом браузере: id -> код ошибки
+var BAD={};
+try{BAD=JSON.parse(localStorage.getItem(BAD_KEY)||'{}')||{};}catch(e){}
+function okVids(list){return (list||[]).filter(function(v){return v&&!BAD[v];});}
+
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
+function thumb(vid){return 'https://i.ytimg.com/vi/'+vid+'/mqdefault.jpg';}
+function label(it){return it.artist?it.artist+' — '+it.title:it.title;}
+function norm(s){return (s||'').toLowerCase().replace(/ё/g,'е');}
+
+function parseVid(s){
+  s=(s||'').trim();
+  var m=s.match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/|\/live\/)([A-Za-z0-9_-]{11})/);
+  if(m)return m[1];
+  if(/^[A-Za-z0-9_-]{11}$/.test(s))return s;
+  return null;
+}
+
+/* ---------- уведомления ---------- */
+var toastTimer;
+function toast(msg,link){
+  var t=$('#toast');
+  t.replaceChildren(msg);
+  if(link)t.append(' ',h('a',{href:link.href,target:'_blank',rel:'noopener',text:link.text}));
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(function(){t.classList.remove('show');},4200);
+}
+
+/* ---------- плеер YouTube ---------- */
+var player=null,playerReady=false,pending=null,isPlaying=false;
+var INTRO_SEC=5,phase='idle',introTimer=null,introLeft=0; // phase: idle | intro | play
+var EMBED_ERR={100:1,101:1,150:1};
+var ERR_TEXT={2:'неверный адрес видео',5:'ошибка HTML5-плеера',100:'видео удалено или скрыто',101:'владелец запретил встраивание',150:'владелец запретил встраивание'};
+var FAILS=[];
+
+function makePlayer(){
+  var vars={rel:0,playsinline:1,modestbranding:1};
+  if(/^https?:$/.test(location.protocol))vars.origin=location.origin;
+  player=new YT.Player('player',{
+    width:'100%',height:'100%',
+    playerVars:vars,
+    events:{
+      onReady:function(){
+        playerReady=true;
+        if(pending&&phase==='play')player.loadVideoById(pending.vid);
+        pending=null;
+      },
+      onStateChange:function(e){
+        if(e.data===0&&phase==='play')playNext();
+        isPlaying=(e.data===1);
+        if(isPlaying&&S.current&&phase==='play'){
+          recordPerformance(S.current);
+          // YouTube сбрасывает темп при загрузке видео — возвращаем выбранный
+          var r=S.current.rate||1;
+          if(player.getPlaybackRate()!==r)player.setPlaybackRate(r);
+        }
+        renderControls();
+      },
+      onError:onPlayerError
+    }
+  });
+}
+function loadYT(){
+  if(window.YT&&window.YT.Player){makePlayer();return;}
+  window.onYouTubeIframeAPIReady=makePlayer;
+  var s=document.createElement('script');
+  s.src='https://www.youtube.com/iframe_api';
+  s.onerror=function(){toast('Не удалось загрузить плеер YouTube. Проверьте интернет.');};
+  document.head.append(s);
+}
+
+// 100/101/150: видео не встраивается — помечаем и пробуем следующего кандидата.
+function onPlayerError(e){
+  var it=S.current;
+  if(!it||phase!=='play')return;
+  var code=e.data,failed=it.vid;
+  if(EMBED_ERR[code])markBad(it,failed,code);
+  it.tried=(it.tried||[]).concat(failed);
+  var next=okVids(it.vids).filter(function(v){return it.tried.indexOf(v)<0;})[0]||null;
+  report(it,failed,code,next);
+  if(next){
+    it.vid=next;
+    toast('Это видео не открылось, включаем другую версию.');
+    loadCurrent();renderAll();
+  }else{
+    toast('Для «'+it.title+'» не нашлось рабочего видео, переходим к следующей песне.');
+    setTimeout(function(){if(S.current===it)playNext();},2800);
+  }
+}
+function markBad(it,vid,code){
+  BAD[vid]=code;
+  try{localStorage.setItem(BAD_KEY,JSON.stringify(BAD));}catch(e){}
+  fetch('/api/bad',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({vid:vid,code:code,song:it.songId||''})}).catch(function(){});
+  renderCatalog();
+}
+function report(it,vid,code,next){
+  FAILS.push({время:new Date().toLocaleTimeString('ru-RU'),песня:label(it),видео:vid,ошибка:code,причина:ERR_TEXT[code]||'неизвестно',дальше:next||'—'});
+  console.warn('[Сцена] «'+label(it)+'»: видео '+vid+' не играет, ошибка '+code+' ('+(ERR_TEXT[code]||'неизвестно')+'). '+(next?'Пробуем запасное: '+next:'Запасных видео больше нет.'));
+  console.table(FAILS);
+}
+window.scenaReport=function(){console.table(FAILS);return FAILS.length;};
+
+function loadCurrent(){
+  var it=S.current;
+  if(!it)return;
+  var v=okVids(it.vids).filter(function(x){return (it.tried||[]).indexOf(x)<0;})[0];
+  if(v)it.vid=v;
+  if(playerReady)player.loadVideoById(it.vid);
+  else pending=it;
+}
+// withIntro: перед песней показать заставку «Следующим поёт…»
+function startPlayback(item,withIntro){
+  clearInterval(introTimer);
+  closeSummary();
+  S.current=item;
+  S.lastSang[norm((item.singer||'').trim())]=Date.now();
+  save();
+  if(withIntro){
+    phase='intro';introLeft=INTRO_SEC;isPlaying=false;
+    if(playerReady){try{player.stopVideo();}catch(e){}}
+    introTimer=setInterval(function(){
+      introLeft--;
+      if(introLeft<=0)endIntro();else renderIntro();
+    },1000);
+  }else{
+    phase='play';loadCurrent();
+  }
+  renderAll();
+}
+function endIntro(){
+  if(phase!=='intro')return;
+  clearInterval(introTimer);
+  phase='play';loadCurrent();renderAll();
+}
+function playNext(){
+  var had=!!S.current;
+  var first=orderedQueue()[0];
+  var next=first?takeFromQueue(first.uid):null;
+  save();
+  if(next){startPlayback(next,had);}
+  else{
+    clearInterval(introTimer);
+    S.current=null;phase='idle';isPlaying=false;
+    if(playerReady){try{player.stopVideo();}catch(e){}}
+    renderAll();
+  }
+}
+function togglePlay(){
+  if(phase==='intro'){endIntro();return;}
+  if(!S.current){if(S.queue.length)playNext();return;}
+  if(!playerReady)return;
+  if(player.getPlayerState()===1)player.pauseVideo();else player.playVideo();
+}
+function restart(){if(playerReady&&S.current&&phase==='play'){player.seekTo(0,true);player.playVideo();}}
+function setRate(r){
+  var c=S.current;
+  if(!c)return;
+  c.rate=r;
+  if(playerReady&&phase==='play')player.setPlaybackRate(r);
+  renderNow();
+}
+
+/* ---------- вечер: журнал выступлений, избранное, история ---------- */
+// Выступление засчитывается, когда видео реально заиграло.
+function recordPerformance(it){
+  if(it.logged)return;
+  it.logged=true;
+  var at=Date.now();
+  S.evening.log.push({uid:it.uid,songId:it.songId,title:it.title,artist:it.artist,singer:it.singer,at:at,reactions:{},score:null});
+  if(S.evening.log.length>300)S.evening.log.shift();
+  var p=person(it.singer);
+  if(p){
+    p.history.unshift({songId:it.songId,title:it.title,artist:it.artist,at:at});
+    p.history=p.history.slice(0,30);
+  }
+  save();renderEvening();
+}
+var RX={clap:'👏',fire:'🔥',heart:'❤️',lol:'😂'};
+function remoteReact(m){
+  var c=S.current;
+  spawnReaction(RX[m.kind],m.singer);
+  var e=c&&phase==='play'?logEntry(c.uid):null;
+  if(e){e.reactions[m.kind]=(e.reactions[m.kind]||0)+1;saveSoon();renderReacts();}
+}
+var saveTimer;
+function saveSoon(){clearTimeout(saveTimer);saveTimer=setTimeout(function(){save();renderEvening();},1500);}
+function spawnReaction(emoji,who){
+  var box=$('#rx');
+  if(box.childElementCount>40)return;
+  var s=h('span',{style:'left:'+(4+Math.random()*88)+'%;--r:'+Math.round(Math.random()*40-20)+'deg'},emoji,who?h('small',{text:who}):null);
+  box.append(s);
+  setTimeout(function(){s.remove();},2500);
+}
+function remoteScore(m){
+  var e=logEntry(m.uid);
+  if(!e||norm(e.singer||'')!==norm(m.singer||''))return; // счёт принимаем только от самого певца
+  e.score=m.score;
+  save();renderEvening();
+  toast('🎤 '+e.singer+': '+m.score+' '+plural(m.score,'очко','очка','очков')+' за «'+e.title+'»');
+}
+function sendMe(gid,singer){
+  var p=person(singer)||{favs:[],history:[]};
+  wsSend({t:'to',gid:gid,m:{t:'me',favs:p.favs,history:p.history.slice(0,20)}});
+}
+function remoteFav(m){
+  var p=person(m.singer);
+  if(!p)return;
+  p.favs=p.favs.filter(function(id){return id!==m.songId;});
+  if(m.on)p.favs.unshift(m.songId);
+  p.favs=p.favs.slice(0,100);
+  save();sendMe(m.gid,m.singer);
+}
+function sumReacts(e){var n=0;for(var k in e.reactions)n+=e.reactions[k];return n;}
+function eveningStats(){
+  var log=S.evening.log,by={},total=0,hit=null,best=null;
+  log.forEach(function(e){
+    var k=norm(e.singer||'')||'—';
+    if(!by[k])by[k]={name:e.singer||'Без имени',songs:0,reacts:0,best:null};
+    var r=sumReacts(e);total+=r;
+    by[k].songs++;by[k].reacts+=r;
+    if(e.score!=null&&(by[k].best==null||e.score>by[k].best))by[k].best=e.score;
+    if(r&&(!hit||r>sumReacts(hit)))hit=e;
+    if(e.score!=null&&(!best||e.score>best.score))best=e;
+  });
+  var singers=Object.keys(by).map(function(k){return by[k];}).sort(function(a,b){return b.songs-a.songs||b.reacts-a.reacts;});
+  return {log:log,singers:singers,reacts:total,hit:hit,best:best,star:singers.find(function(s){return s.name!=='Без имени';})||null};
+}
+function fmtDur(ms){
+  var m=Math.max(0,Math.round(ms/60000)),hh=Math.floor(m/60);
+  return hh?hh+' ч '+(m%60)+' мин':m+' мин';
+}
+function reactLine(e){
+  return Object.keys(RX).filter(function(k){return e.reactions[k];}).map(function(k){return RX[k]+' '+e.reactions[k];}).join('  ');
+}
+function eveningView(big){
+  var st=eveningStats(),out=[];
+  if(!st.log.length)return [h('p',{class:'empty'},h('strong',{text:'Вечер только начинается'}),'Здесь появятся итоги: кто сколько спел, реакции зала и счёт.')];
+  out.push(h('div',{class:'stats'},
+    h('div',{class:'stat'},h('b',{text:String(st.log.length)}),h('span',{text:'песен спето'})),
+    h('div',{class:'stat'},h('b',{text:String(st.singers.length)}),h('span',{text:'певцов'})),
+    h('div',{class:'stat'},h('b',{text:String(st.reacts)}),h('span',{text:'реакций зала'})),
+    h('div',{class:'stat'},h('b',{text:fmtDur(Date.now()-S.evening.started)}),h('span',{text:'длится вечер'}))));
+  var aw=function(icon,k,v){return h('div',{class:'award'},h('i',{text:icon}),h('p',null,h('span',{class:'k',text:k}),h('span',{class:'v',style:'display:block',text:v})));};
+  out.push(h('div',{class:'awards'},
+    st.star?aw('⭐','Звезда вечера',st.star.name+' — '+st.star.songs+' '+plural(st.star.songs,'песня','песни','песен')):null,
+    st.hit?aw('🔥','Хит вечера',label(st.hit)+(st.hit.singer?' ('+st.hit.singer+')':'')+' · '+reactLine(st.hit)):null,
+    st.best?aw('🎤','Лучший счёт',st.best.singer+' — '+st.best.score+' за «'+st.best.title+'»'):null));
+  out.push(h('h3',{style:'font:500 16px var(--f-display);margin:8px 0 10px',text:'Певцы'}));
+  out.push(h('ul',{class:'list'},st.singers.map(function(s){
+    return h('li',{class:'row'},h('div',{class:'meta'},
+      h('p',{class:'t',text:s.name}),
+      h('p',{class:'tg',text:s.songs+' '+plural(s.songs,'песня','песни','песен')+(s.reacts?' · реакций: '+s.reacts:'')+(s.best!=null?' · лучший счёт: '+s.best:'')})));
+  })));
+  out.push(h('h3',{style:'font:500 16px var(--f-display);margin:16px 0 10px',text:'Все выступления'}));
+  out.push(h('ul',{class:'list'},st.log.slice().reverse().slice(0,big?100:30).map(function(e){
+    var extra=[reactLine(e),e.score!=null?'🎤 '+e.score:''].filter(Boolean).join(' · ');
+    return h('li',{class:'row'},
+      h('span',{class:'idx',style:'width:auto',text:new Date(e.at).toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'})}),
+      h('div',{class:'meta'},h('p',{class:'t',text:label(e)}),e.singer?h('p',{class:'s',text:e.singer}):null,extra?h('p',{class:'tg',text:extra}):null));
+  })));
+  return out;
+}
+function plural(n,one,few,many){
+  var a=n%10,b=n%100;
+  return a===1&&b!==11?one:(a>=2&&a<=4&&(b<12||b>14)?few:many);
+}
+function renderEvening(){
+  var box=$('#evening');
+  if(box)box.replaceChildren.apply(box,eveningView(false));
+  var sum=$('.sum');
+  if(sum)sum.querySelector('[data-body]').replaceChildren.apply(sum.querySelector('[data-body]'),eveningView(true));
+}
+// Итоги на весь экран — только когда ничего не играет: плеер YouTube перекрывать нельзя.
+function showSummary(){
+  if(phase!=='idle'){toast('Итоги можно показать на экране, когда песня закончится.');return;}
+  var box=h('div',{class:'sum',role:'dialog','aria-label':'Итоги вечера'},
+    btn('Закрыть',function(){box.remove();},'close'),
+    h('h2',{text:'Итоги вечера'}),
+    h('div',{'data-body':''},eveningView(true)));
+  document.body.append(box);
+}
+function closeSummary(){var s=$('.sum');if(s)s.remove();}
+
+/* ---------- очередь и мои песни ---------- */
+function rememberSinger(name){
+  name=(name||'').trim();
+  if(!name)return;
+  S.singers=[name].concat(S.singers.filter(function(n){return n!==name;})).slice(0,8);
+}
+function saveToLibrary(song){
+  if(S.library.some(function(s){return s.vid===song.vid;}))return false;
+  S.library.unshift({vid:song.vid,title:song.title});
+  save();renderLibrary();renderCounts();
+  return true;
+}
+// song: {title, artist?, id?, vids:[…]} из каталога или {vid, title} по ссылке
+// o.singer — имя с телефона (иначе берём поле «Кто поёт следующим»), o.quiet — без уведомления
+function enqueue(song,o){
+  o=o||{};
+  var vids=okVids(song.vids||[song.vid]);
+  if(!vids.length){if(!o.quiet)toast('Для этой песни нет рабочего видео.');return null;}
+  var singer=o.singer!=null?o.singer:(S.singer||'').trim();
+  if(o.singer==null)rememberSinger(singer);
+  var item={uid:uid(),songId:song.id||null,vids:vids,vid:vids[0],title:song.title,artist:song.artist||'',singer:singer};
+  var idle=!S.current;
+  S.queue.push(item);
+  save();
+  if(idle){playNext();}
+  else{renderAll();if(!o.quiet)toast('В очереди: '+label(item));}
+  return item;
+}
+function moveQueue(uid,d){
+  var i=S.queue.findIndex(function(it){return it.uid===uid;}),j=i+d;
+  if(i<0||j<0||j>=S.queue.length)return;
+  var t=S.queue[i];S.queue[i]=S.queue[j];S.queue[j]=t;
+  save();renderAll();
+}
+function removeQueue(uid){takeFromQueue(uid);save();renderAll();}
+function playNow(uid){var it=takeFromQueue(uid);save();if(it)startPlayback(it,false);}
+function setMode(m){S.mode=m;save();renderAll();}
+
+/* ---------- каталог ---------- */
+var CAT={songs:[],ready:false,error:''};
+var F={q:'',lang:'',decade:'',genre:''};
+var LANGS=[['','Все'],['ru','Русские'],['kk','Қазақша'],['en','Зарубежные']];
+function dkey(d){return d==null?'classic':String(d);}
+function decadeLabel(d){return d==null?'Классика':(d>=2000?d+'-е':String(d).slice(2)+'-е');}
+
+function loadCatalog(){
+  if(location.protocol==='file:'){
+    CAT.error='Каталог работает только через сервер: запустите npm start и откройте http://localhost:3030';
+    renderCatalog();return;
+  }
+  fetch('/api/catalog').then(function(r){
+    if(!r.ok)throw new Error('код '+r.status);
+    return r.json();
+  }).then(function(j){
+    CAT.songs=j.songs||[];CAT.ready=true;
+    renderFilters();renderCatalog();
+  }).catch(function(err){
+    CAT.error='Не удалось загрузить каталог ('+err.message+'). Проверьте, что сервер запущен.';
+    renderCatalog();
+  });
+}
+function catFiltered(){
+  var q=norm(F.q.trim());
+  return CAT.songs.filter(function(s){
+    return (!F.lang||s.language===F.lang)&&(!F.decade||dkey(s.decade)===F.decade)&&(!F.genre||s.genre===F.genre)
+      &&(!q||norm(s.title+' '+s.artist).indexOf(q)!==-1);
+  });
+}
+function chipRow(title,opts,key){
+  return h('div',{class:'frow',role:'group','aria-label':title},
+    h('span',{class:'lbl',text:title}),
+    opts.map(function(o){
+      return h('button',{class:'chip',type:'button','aria-pressed':F[key]===o[0]?'true':'false',text:o[1],onclick:function(){
+        F[key]=(F[key]===o[0])?'':o[0];
+        renderFilters();renderCatalog();
+      }});
+    }));
+}
+function renderFilters(){
+  var dec={},gen={};
+  CAT.songs.forEach(function(s){dec[dkey(s.decade)]=s.decade;gen[s.genre]=(gen[s.genre]||0)+1;});
+  var decs=Object.keys(dec).sort(function(a,b){return a==='classic'?-1:b==='classic'?1:a-b;});
+  var gens=Object.keys(gen).sort(function(a,b){return gen[b]-gen[a];});
+  $('#catFilters').replaceChildren(
+    chipRow('Язык',LANGS,'lang'),
+    chipRow('Годы',[['','Все']].concat(decs.map(function(k){return [k,decadeLabel(dec[k])];})),'decade'),
+    chipRow('Жанр',[['','Все']].concat(gens.map(function(g){return [g,g];})),'genre'));
+}
+function catSong(s){return {id:s.id,title:s.title,artist:s.artist,vids:s.videos};}
+function renderCatalog(){
+  var ul=$('#catList'),note=$('#catNotice');
+  ul.replaceChildren();
+  if(CAT.error){note.hidden=false;note.textContent=CAT.error;$('#catCount').textContent='';return;}
+  if(!CAT.ready){ul.append(h('li',{class:'hint',text:'Загружаем каталог…'}));return;}
+  var withV=CAT.songs.filter(function(s){return okVids(s.videos).length;}).length;
+  note.hidden=(withV===CAT.songs.length);
+  note.textContent=withV
+    ?'Видео есть у '+withV+' из '+CAT.songs.length+' песен. Остальные появятся после запуска npm run resolve.'
+    :'Видео для каталога ещё не найдены. Запустите на компьютере npm run resolve (нужен ключ YouTube API, см. README).';
+  var list=catFiltered();
+  $('#catCount').textContent=(list.length===CAT.songs.length?'Всего песен: ':'Найдено: ')+list.length;
+  if(!list.length){ul.append(emptyBox('Ничего не нашли','Попробуйте другое слово или снимите фильтры.'));return;}
+  list.forEach(function(s){
+    var vids=okVids(s.videos);
+    ul.append(row(s,{
+      vid:vids[0]||null,
+      sub:s.artist,
+      tg:[decadeLabel(s.decade),s.genre].concat(s.tags||[]).join(' · '),
+      actions:[vids.length
+        ?btn('В очередь',function(){enqueue(catSong(s));},'primary small')
+        :h('button',{class:'btn small',type:'button',disabled:true,title:'Видео для этой песни ещё не найдено',text:'Нет видео'})]
+    }));
+  });
+}
+function randomSong(){
+  var pool=catFiltered().filter(function(s){return okVids(s.videos).length;});
+  if(!pool.length){toast(CAT.ready?'Под эти фильтры нет песен с видео.':'Каталог ещё не загрузился.');return;}
+  var s=pool[Math.floor(Math.random()*pool.length)];
+  var it=enqueue(catSong(s),{quiet:true});
+  if(it)toast('Случайная песня: '+label(it));
+}
+
+/* ---------- отрисовка ---------- */
+function thumbEl(vid,name){
+  return vid
+    ?h('img',{class:'thumb',src:thumb(vid),alt:'',loading:'lazy'})
+    :h('div',{class:'thumb ph','aria-hidden':'true',text:(name||'?').trim().charAt(0).toUpperCase()});
+}
+function row(song,o){
+  return h('li',{class:'row'},
+    o.index!=null?h('span',{class:'idx',text:String(o.index)}):null,
+    thumbEl(o.vid!==undefined?o.vid:song.vid,song.artist||song.title),
+    h('div',{class:'meta'},
+      h('p',{class:'t',text:o.title||song.title}),
+      o.sub?h('p',{class:'s',text:o.sub}):null,
+      o.tg?h('p',{class:'tg',text:o.tg}):null),
+    h('div',{class:'acts'},o.actions||[]));
+}
+function emptyBox(title,text,action){
+  return h('li',{class:'empty'},h('strong',{text:title}),text,action||null);
+}
+
+function renderControls(){
+  $('#btnPlay').replaceChildren(ico(isPlaying?'pause':'play'));
+}
+function renderIntro(){
+  var c=S.current,on=!!(c&&phase==='intro');
+  $('#inter').hidden=!on;
+  if(!on)return;
+  $('#interHead').textContent=c.singer?'Следующим поёт '+c.singer:'Следующая песня';
+  $('#interSong').textContent=c.title;
+  $('#interArt').textContent=c.artist||'';
+  $('#interArt').hidden=!c.artist;
+  $('#interCount').textContent=String(introLeft);
+}
+function renderNow(){
+  var c=S.current,n=orderedQueue()[0];
+  $('#idle').hidden=!!c;
+  $('#idleStart').hidden=!(!c&&S.queue.length);
+  $('#idleText').textContent=S.queue.length?'В очереди уже есть песни. Нажмите, чтобы начать.':'Выберите песню в каталоге, и она сразу зазвучит.';
+  $('#nowLabel').textContent=c?(phase==='intro'?'Готовимся':'Поёт сейчас'):'На сцене';
+  $('#nowTitle').textContent=c?label(c):'Пока тихо';
+  var sg=$('#nowSinger');
+  sg.hidden=!(c&&c.singer);
+  sg.textContent=c&&c.singer?c.singer:'';
+  $('#nowNext').textContent=n?('Следом: '+(n.singer?n.singer+' — ':'')+label(n)):(c?'Дальше очередь пуста':'');
+  $('#tempo').hidden=!(c&&phase==='play');
+  document.querySelectorAll('[data-rate]').forEach(function(b){b.setAttribute('aria-pressed',c&&+b.dataset.rate===(c.rate||1)?'true':'false');});
+  renderReacts();
+  renderIntro();
+  renderControls();
+}
+function renderReacts(){
+  var c=S.current,e=c&&phase==='play'?logEntry(c.uid):null,line=e?reactLine(e):'';
+  $('#nowReacts').hidden=!line;
+  $('#nowReacts').textContent=line;
+}
+function renderQueue(){
+  var ul=$('#queueList'),round=S.mode==='round';
+  document.querySelectorAll('[data-mode]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.mode===S.mode?'true':'false');});
+  $('#modeHint').textContent=round
+    ?'Певцы чередуются: каждый поёт по одной песне за круг.'
+    :'Песни идут в порядке добавления. Между ними заставка на 5 секунд.';
+  ul.replaceChildren();
+  if(!S.queue.length){
+    ul.append(emptyBox('Очередь пуста','Выберите песню в каталоге или добавьте с телефона.',
+      btn('Открыть каталог',function(){setTab('catalog');},'primary')));
+    return;
+  }
+  orderedQueue().forEach(function(it,i){
+    ul.append(row(it,{
+      index:i+1,
+      title:label(it),
+      sub:it.singer||null,
+      actions:[
+        ib('play','Играть сейчас',function(){playNow(it.uid);}),
+        round?null:ib('up','Выше',function(){moveQueue(it.uid,-1);}),
+        round?null:ib('down','Ниже',function(){moveQueue(it.uid,1);}),
+        ib('close','Убрать из очереди',function(){removeQueue(it.uid);})
+      ]
+    }));
+  });
+}
+function renderLibrary(){
+  var ul=$('#libList');
+  var f=norm(($('#filter').value||'').trim());
+  ul.replaceChildren();
+  var list=S.library.filter(function(s){return !f||norm(s.title).indexOf(f)!==-1;});
+  if(!list.length){
+    ul.append(S.library.length
+      ?emptyBox('Ничего не нашли','Попробуйте другое слово.')
+      :emptyBox('Здесь будут ваши песни','Нет нужной песни в каталоге? Добавьте видео по ссылке ниже.'));
+    return;
+  }
+  list.forEach(function(s){
+    ul.append(row(s,{actions:[
+      btn('В очередь',function(){enqueue(s);},'primary small'),
+      ib('close','Удалить из моих',function(){
+        S.library=S.library.filter(function(x){return x.vid!==s.vid;});
+        save();renderLibrary();renderCounts();
+      })
+    ]}));
+  });
+}
+function renderCounts(){
+  $('#cntQueue').textContent=S.queue.length;
+  $('#cntSongs').textContent=S.library.length;
+}
+function renderSingers(){
+  var box=$('#singerChips');
+  box.replaceChildren();
+  S.singers.forEach(function(n){
+    box.append(h('button',{class:'chip',type:'button',text:n,onclick:function(){
+      S.singer=n;$('#singer').value=n;save();
+    }}));
+  });
+}
+function renderAll(){renderNow();renderQueue();renderLibrary();renderCounts();renderSingers();publish();}
+
+/* ---------- комната: телефоны как пульт ---------- */
+// Очередью владеет экран. Сервер пересылает сюда песни с телефонов, а гостям — снимок очереди.
+var RT={ws:null,room:null,retry:0,guests:0,stop:false,pubTimer:null};
+var ROOM_KEY='scena.room';
+function wsSend(m){if(RT.ws&&RT.ws.readyState===1)RT.ws.send(JSON.stringify(m));}
+function publish(){
+  clearTimeout(RT.pubTimer);
+  RT.pubTimer=setTimeout(function(){
+    var c=S.current;
+    wsSend({t:'state',state:{
+      mode:S.mode,
+      now:c?{uid:c.uid,title:c.title,artist:c.artist,singer:c.singer,phase:phase}:null,
+      queue:orderedQueue().slice(0,50).map(function(it){return {uid:it.uid,title:it.title,artist:it.artist,singer:it.singer};})
+    }});
+  },80);
+}
+function connectRoom(){
+  if(!/^https?:$/.test(location.protocol)){renderRoom();return;}
+  var saved=null;
+  try{saved=JSON.parse(localStorage.getItem(ROOM_KEY)||'null');}catch(e){}
+  var ws=new WebSocket((location.protocol==='https:'?'wss://':'ws://')+location.host+'/ws');
+  RT.ws=ws;
+  ws.onopen=function(){
+    RT.retry=0;
+    ws.send(JSON.stringify({t:'host',code:saved&&saved.code,token:saved&&saved.token}));
+  };
+  ws.onmessage=function(e){
+    var m;try{m=JSON.parse(e.data);}catch(x){return;}
+    if(m.t==='room'){
+      RT.room=m;
+      try{localStorage.setItem(ROOM_KEY,JSON.stringify({code:m.code,token:m.token}));}catch(x){}
+      renderRoom();publish();
+    }
+    else if(m.t==='guests'){RT.guests=m.count;renderRoom();}
+    else if(m.t==='add'){remoteAdd(m);}
+    else if(m.t==='react'){remoteReact(m);}
+    else if(m.t==='fav'){remoteFav(m);}
+    else if(m.t==='me'){sendMe(m.gid,m.singer);}
+    else if(m.t==='score'){remoteScore(m);}
+    else if(m.t==='replaced'){RT.stop=true;toast('Эта комната открыта на другом экране.');}
+  };
+  ws.onclose=function(){
+    if(RT.ws===ws)RT.ws=null;
+    renderRoom();
+    if(!RT.stop)setTimeout(connectRoom,Math.min(10000,1000*Math.pow(2,RT.retry++)));
+  };
+}
+function remoteAdd(m){
+  var ack=function(ok,text){wsSend({t:'ack',gid:m.gid,rid:m.rid,ok:ok,text:text});};
+  var s=CAT.songs.find(function(x){return x.id===m.songId;});
+  if(!s)return ack(false,CAT.ready?'Такой песни нет в каталоге.':'Экран ещё загружается, попробуйте через пару секунд.');
+  var it=enqueue(catSong(s),{singer:m.singer||'',quiet:true});
+  if(!it)return ack(false,'Для этой песни пока нет рабочего видео.');
+  toast((m.singer||'Гость')+' добавляет: '+label(it));
+  if(S.current===it)return ack(true,'«'+it.title+'» уже играет. Ваш выход!');
+  var pos=orderedQueue().indexOf(it)+1;
+  ack(true,'«'+it.title+'» в очереди, '+(pos===1?'следующая.':'место '+pos+'.'));
+}
+function renderRoom(){
+  var r=RT.room,online=!!(RT.ws&&RT.ws.readyState===1&&r);
+  $('#room').classList.toggle('off',!online);
+  var qr=$('#roomQr');
+  if(r&&qr.dataset.code!==r.code){
+    qr.dataset.code=r.code;qr.src='/api/qr?code='+r.code;
+    document.querySelectorAll('[data-join] img').forEach(function(img){img.src=qr.src;});
+  }
+  qr.hidden=!r;
+  $('#roomCode').textContent=r?r.code:'····';
+  $('#roomUrl').textContent=!/^https?:$/.test(location.protocol)?'Пульт работает только через сервер (npm start).'
+    :r?(online?r.joinUrl.replace(/^https?:\/\//,''):'Нет связи с сервером, переподключаемся…'):'Подключаемся к серверу…';
+  $('#roomGuests').textContent=online&&RT.guests?'Подключено телефонов: '+RT.guests:'';
+  document.querySelectorAll('[data-join]').forEach(function(box){
+    box.hidden=!online;
+    if(!online)return;
+    box.querySelector('[data-code]').textContent=r.code;
+    var u=box.querySelector('[data-url]');if(u)u.textContent=r.joinUrl.replace(/^https?:\/\//,'');
+  });
+}
+function showBigQr(){
+  var r=RT.room;if(!r)return;
+  var box=h('div',{class:'qr-big',role:'dialog','aria-label':'Вход с телефона',onclick:function(){box.remove();}},
+    h('img',{src:'/api/qr?code='+r.code,alt:'QR-код для входа с телефона'}),
+    h('b',{text:r.code}),
+    h('p',{text:r.joinUrl.replace(/^https?:\/\//,'')}));
+  document.body.append(box);
+}
+
+/* ---------- вкладки ---------- */
+var TABS={queue:['#tabQueue','#paneQueue'],catalog:['#tabCatalog','#paneCatalog'],songs:['#tabSongs','#paneSongs'],evening:['#tabEvening','#paneEvening']};
+function setTab(name){
+  Object.keys(TABS).forEach(function(k){
+    var on=(k===name);
+    $(TABS[k][0]).setAttribute('aria-selected',on?'true':'false');
+    $(TABS[k][1]).hidden=!on;
+  });
+}
+Object.keys(TABS).forEach(function(k){$(TABS[k][0]).addEventListener('click',function(){setTab(k);});});
+
+/* ---------- добавление по ссылке ---------- */
+var draft=null;
+function fetchTitle(vid){
+  var url='https://www.youtube.com/oembed?format=json&url='+encodeURIComponent('https://www.youtube.com/watch?v='+vid);
+  return fetch(url).then(function(r){if(!r.ok)throw new Error();return r.json();}).then(function(j){return j.title||'';}).catch(function(){return '';});
+}
+function onUrlInput(){
+  var v=$('#urlInput').value.trim();
+  var vid=parseVid(v);
+  var pv=$('#preview');
+  if(!v){draft=null;pv.hidden=true;$('#urlHint').textContent='';return;}
+  if(!vid){draft=null;pv.hidden=true;$('#urlHint').textContent='Это не похоже на ссылку YouTube.';return;}
+  $('#urlHint').textContent='';
+  if(draft&&draft.vid===vid)return;
+  draft={vid:vid};
+  $('#pvThumb').src=thumb(vid);
+  $('#pvTitle').value='';
+  pv.hidden=false;
+  fetchTitle(vid).then(function(t){
+    if(draft&&draft.vid===vid&&!$('#pvTitle').value)$('#pvTitle').value=t;
+  });
+}
+function draftSong(){
+  if(!draft)return null;
+  return {vid:draft.vid,title:($('#pvTitle').value||'').trim()||'Без названия'};
+}
+function clearDraft(){draft=null;$('#urlInput').value='';$('#preview').hidden=true;$('#pvTitle').value='';}
+
+/* ---------- кнопки и клавиши ---------- */
+function toggleFull(){
+  if(document.fullscreenElement){document.exitFullscreen();return;}
+  var el=document.documentElement;
+  var r=el.requestFullscreen&&el.requestFullscreen();
+  if(r&&r.catch)r.catch(function(){toast('Полный экран здесь недоступен.');});
+  else if(!r)toast('Полный экран здесь недоступен.');
+}
+function toggleFocus(){
+  var on=document.body.classList.toggle('focus');
+  $('#btnFocus').setAttribute('aria-pressed',on?'true':'false');
+}
+
+function init(){
+  $('#btnFocus').append(ico('focus'));
+  $('#btnFull').append(ico('full'));
+  $('#btnRestart').append(ico('restart'));
+  $('#btnNext').append(ico('next'));
+  $('#singer').value=S.singer;
+  renderAll();renderCatalog();
+  if(!S.queue.length)setTab('catalog');
+
+  $('#btnFocus').addEventListener('click',toggleFocus);
+  $('#btnFull').addEventListener('click',toggleFull);
+  $('#btnPlay').addEventListener('click',togglePlay);
+  $('#btnNext').addEventListener('click',playNext);
+  $('#btnRestart').addEventListener('click',restart);
+  $('#idleStart').addEventListener('click',playNext);
+  $('#interSkip').addEventListener('click',endIntro);
+  $('#roomQr').addEventListener('click',showBigQr);
+  document.querySelectorAll('[data-mode]').forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.mode);});});
+  document.querySelectorAll('[data-rate]').forEach(function(b){b.addEventListener('click',function(){setRate(+b.dataset.rate);});});
+  $('#btnSummary').addEventListener('click',showSummary);
+  var newTimer,newArmed=false;
+  $('#btnNewEvening').addEventListener('click',function(){
+    var b=$('#btnNewEvening');
+    if(!newArmed){
+      newArmed=true;b.textContent='Начать заново?';
+      newTimer=setTimeout(function(){newArmed=false;b.textContent='Новый вечер';},3000);
+    }else{
+      clearTimeout(newTimer);newArmed=false;b.textContent='Новый вечер';
+      // избранное и история певцов остаются, обнуляется только журнал вечера
+      S.evening={started:Date.now(),log:[]};save();renderEvening();renderReacts();
+      toast('Новый вечер начат. Избранное и история певцов сохранены.');
+    }
+  });
+  renderEvening();
+  setInterval(function(){if(!$('#paneEvening').hidden)renderEvening();},60000);
+
+  $('#singer').addEventListener('input',function(e){S.singer=e.target.value;save();});
+  $('#filter').addEventListener('input',renderLibrary);
+  $('#catQ').addEventListener('input',function(e){F.q=e.target.value;renderCatalog();});
+  $('#btnRandom').addEventListener('click',randomSong);
+  $('#urlInput').addEventListener('input',onUrlInput);
+  $('#addQueue').addEventListener('click',function(){
+    var s=draftSong();if(!s)return;
+    saveToLibrary(s);enqueue(s);clearDraft();
+  });
+  $('#addLib').addEventListener('click',function(){
+    var s=draftSong();if(!s)return;
+    toast(saveToLibrary(s)?'Сохранено в моих песнях':'Уже есть в моих песнях');
+    clearDraft();
+  });
+
+  var clearTimer,armed=false;
+  $('#clearQ').addEventListener('click',function(){
+    var b=$('#clearQ');
+    if(!S.queue.length)return;
+    if(!armed){
+      armed=true;b.textContent='Точно очистить?';
+      clearTimer=setTimeout(function(){armed=false;b.textContent='Очистить';},3000);
+    }else{
+      clearTimeout(clearTimer);armed=false;b.textContent='Очистить';
+      S.queue=[];save();renderAll();
+    }
+  });
+
+  document.addEventListener('keydown',function(e){
+    var t=e.target;
+    if(e.metaKey||e.ctrlKey||e.altKey)return;
+    if(t&&t.matches&&t.matches('input,textarea,select'))return;
+    if(e.code==='Space'&&t===document.body){e.preventDefault();togglePlay();}
+    else if(e.code==='KeyN'){playNext();}
+    else if(e.code==='KeyF'){toggleFull();}
+    else if(e.code==='KeyP'){toggleFocus();}
+    else if(e.code==='Escape'){var b=$('.qr-big');if(b)b.remove();closeSummary();}
+  });
+
+  connectRoom();
+  loadCatalog();
+  loadYT();
+}
+init();
+})();
+</script>
+</body>
+</html>

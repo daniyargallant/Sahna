@@ -1,0 +1,13 @@
+# Render Blueprint: бесплатный веб-сервис. Комнаты живут в памяти; после сна сервиса экран сам пересоздаст комнату с тем же кодом.
+services:
+  - type: web
+    name: scena
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/catalog
+    envVars:
+      - key: NODE_VERSION
+        value: "20"

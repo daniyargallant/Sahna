@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120e1d">
+<title>Сцена — пульт</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+/* Пульт гостя: телефон, одна колонка. Токены те же, что у экрана. */
+:root{
+  --ink:#120e1d;
+  --panel:#1b1630;
+  --panel-2:#251e3e;
+  --line:#392f5e;
+  --text:#f5f0ff;
+  --muted:#a9a1c6;
+  --pink:#ff4f8b;
+  --pink-ink:#2a0615;
+  --amber:#ffc24a;
+  --f-display:'Unbounded','Onest',system-ui,sans-serif;
+  --f-body:'Onest',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{
+  margin:0;min-height:100dvh;
+  background-color:var(--ink);
+  background-image:radial-gradient(700px 360px at 10% -10%,#2f1853 0%,transparent 62%);
+  background-attachment:fixed;
+  color:var(--text);
+  font:400 16px/1.45 var(--f-body);
+  -webkit-font-smoothing:antialiased;
+}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+.app{max-width:640px;margin:0 auto;padding:14px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-right,0px))}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.brand{font:700 22px/1 var(--f-display);letter-spacing:-.02em;display:flex;align-items:center;gap:10px;margin:0}
+.brand i{width:11px;height:11px;border-radius:50%;background:var(--pink);box-shadow:0 0 16px 3px #ff4f8b99}
+.pill{padding:6px 12px;border-radius:999px;background:var(--panel-2);border:1px solid var(--line);font-weight:600;font-size:14px;font-variant-numeric:tabular-nums}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:14px}
+.eyebrow{margin:0;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.card h1{font:700 26px/1.1 var(--f-display);letter-spacing:-.02em;margin:6px 0 8px;text-wrap:balance}
+.card h2{font:500 19px/1.25 var(--f-display);margin:6px 0 2px;overflow-wrap:anywhere}
+.hint{margin:0;color:var(--muted);font-size:14px}
+.err{color:#ff9db8}
+label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:12px 0 6px}
+.field{width:100%;min-height:50px;padding:0 14px;background:var(--ink);border:1px solid var(--line);border-radius:12px;color:var(--text);font-size:17px}
+.field::placeholder{color:#7d74a0}
+.field.code{font:700 26px var(--f-display);letter-spacing:.3em;text-align:center}
+
+.btn{min-height:44px;padding:0 18px;border-radius:12px;border:1px solid var(--line);background:var(--panel-2);font-weight:600;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
+.btn.primary{background:var(--pink);border-color:var(--pink);color:var(--pink-ink)}
+.btn.block{width:100%;min-height:52px;margin-top:16px;font-size:16px}
+.btn.small{min-height:38px;padding:0 14px;font-size:14px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.link{background:none;border:0;padding:0;color:var(--amber);font-weight:600;cursor:pointer;font-size:14px}
+
+.status{margin:0 0 14px;padding:10px 12px;border-radius:12px;background:#ffc24a14;border:1px solid #ffc24a55;font-size:14px}
+.me{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 2px 14px;color:var(--muted);font-size:14px}
+.me b{color:var(--text)}
+
+.tabs{display:flex;gap:6px;padding:6px;background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;position:sticky;top:8px;z-index:5}
+.tab{flex:1;min-height:44px;border:0;border-radius:10px;background:transparent;color:var(--muted);font-weight:600;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.tab[aria-selected=true]{background:var(--pink);color:var(--pink-ink)}
+.badge{min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:#ffffff1f;font-size:13px;display:inline-grid;place-items:center;font-variant-numeric:tabular-nums}
+.tab[aria-selected=true] .badge{background:#2a061526}
+
+.filters{display:grid;gap:8px;margin:12px 0}
+.frow{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.frow::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text);font-size:14px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--amber);border-color:var(--amber);color:var(--pink-ink);font-weight:600}
+
+.list{list-style:none;margin:0;padding:0}
+.row{display:flex;gap:12px;align-items:center;padding:10px;margin-bottom:8px;background:var(--panel-2);border-radius:14px}
+.row.mine{box-shadow:inset 0 0 0 2px var(--amber)}
+.idx{width:22px;text-align:center;color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums;flex:none}
+.thumb{width:72px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:#000;flex:none}
+.thumb.ph{display:grid;place-items:center;font:700 18px var(--f-display);color:#ffffffb3;background:linear-gradient(135deg,#3a1d63,#6e1b45)}
+.meta{flex:1;min-width:0}
+.meta .t{margin:0;font-weight:600;font-size:15px;line-height:1.3;overflow-wrap:anywhere}
+.meta .s{margin:2px 0 0;color:var(--amber);font-size:14px;font-weight:500}
+.meta .tg{margin:2px 0 0;color:var(--muted);font-size:12px}
+.empty{padding:22px 8px;text-align:center;color:var(--muted)}
+.empty strong{display:block;color:var(--text);font:500 17px var(--f-display);margin-bottom:6px}
+
+.reacts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.react{min-height:56px;border-radius:14px;border:1px solid var(--line);background:var(--panel-2);font-size:28px;cursor:pointer;touch-action:manipulation;transition:transform .12s}
+.react:active,.react.pop{transform:scale(1.15);background:#ff4f8b33;border-color:var(--pink)}
+.star{width:40px;height:40px;flex:none;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--muted);font-size:20px;cursor:pointer;display:grid;place-items:center}
+.star[aria-pressed=true]{color:var(--amber);border-color:var(--amber)}
+.acts{display:flex;gap:6px;align-items:center;flex:none}
+.score{border-color:#ffc24a66}
+.meter{height:12px;border-radius:6px;background:var(--ink);overflow:hidden;margin:12px 0 8px}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--pink));transition:width .08s linear}
+.score .big{font:700 44px/1 var(--f-display);font-variant-numeric:tabular-nums;margin:8px 0 2px}
+.sec{font:500 16px var(--f-display);margin:4px 0 10px}
+
+.toast{position:fixed;left:0;right:0;margin-inline:auto;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateY(20px);width:fit-content;max-width:min(92vw,520px);padding:12px 18px;border-radius:14px;background:var(--text);color:var(--ink);font-weight:500;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
+.toast.show{opacity:1;transform:none}
+.toast.bad{background:#ffd1de}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <p class="brand"><i aria-hidden="true"></i>Сцена</p>
+    <span class="pill" id="roomPill" hidden></span>
+  </header>
+
+  <form class="card" id="joinForm" hidden>
+    <p class="eyebrow">Пульт</p>
+    <h1>Добавляйте песни с телефона</h1>
+    <p class="hint">Песня встанет в очередь на большом экране.</p>
+    <div id="codeBox">
+      <label for="code">Код комнаты с экрана</label>
+      <input class="field code" id="code" inputmode="numeric" pattern="\d{4}" maxlength="4" autocomplete="off" placeholder="0000">
+    </div>
+    <label for="name">Ваше имя</label>
+    <input class="field" id="name" type="text" maxlength="30" autocomplete="nickname" placeholder="Как вас объявить">
+    <p class="hint err" id="joinErr" style="margin-top:10px" hidden></p>
+    <button class="btn primary block" type="submit" id="joinBtn">Войти</button>
+  </form>
+
+  <main id="main" hidden>
+    <p class="status" id="status" hidden></p>
+    <section class="card" aria-live="polite">
+      <p class="eyebrow" id="nowLabel">На сцене</p>
+      <h2 id="nowTitle">Пока тихо</h2>
+      <p class="hint" id="nowSinger"></p>
+      <div class="reacts" id="reacts" hidden>
+        <button class="react" type="button" data-kind="clap" aria-label="Аплодисменты">👏</button>
+        <button class="react" type="button" data-kind="fire" aria-label="Огонь">🔥</button>
+        <button class="react" type="button" data-kind="heart" aria-label="Сердце">❤️</button>
+        <button class="react" type="button" data-kind="lol" aria-label="Смех">😂</button>
+      </div>
+    </section>
+
+    <section class="card score" id="scoreCard" hidden>
+      <p class="eyebrow">Ваш выход · счёт по микрофону</p>
+      <p class="hint" id="scoreHint">Телефон слушает громкость и ритм пения. Это игра: с оригиналом голос не сравнивается, звук никуда не отправляется.</p>
+      <div id="scoreLive" hidden>
+        <div class="meter"><i id="meter"></i></div>
+        <p class="big" id="scoreNow">0</p>
+        <p class="hint">очков сейчас, итог — в конце песни</p>
+      </div>
+      <button class="btn primary block" id="micBtn" type="button">Включить микрофон</button>
+    </section>
+    <div class="me"><span>Вы поёте как <b id="meName"></b></span><button class="link" id="rename" type="button">Сменить имя</button></div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tabCat" aria-controls="paneCat" aria-selected="true" type="button">Каталог</button>
+      <button class="tab" role="tab" id="tabQueue" aria-controls="paneQueue" aria-selected="false" type="button">Очередь <span class="badge" id="cntQueue">0</span></button>
+      <button class="tab" role="tab" id="tabMine" aria-controls="paneMine" aria-selected="false" type="button">Моё</button>
+    </div>
+
+    <section id="paneCat" role="tabpanel" aria-labelledby="tabCat">
+      <input class="field" id="q" type="search" placeholder="Название или исполнитель" autocomplete="off">
+      <div class="filters" id="filters"></div>
+      <p class="hint" id="catCount" style="margin-bottom:10px"></p>
+      <ul class="list" id="catList"></ul>
+    </section>
+
+    <section id="paneQueue" role="tabpanel" aria-labelledby="tabQueue" hidden>
+      <ul class="list" id="queueList"></ul>
+    </section>
+
+    <section id="paneMine" role="tabpanel" aria-labelledby="tabMine" hidden>
+      <h2 class="sec">Избранное</h2>
+      <ul class="list" id="favList"></ul>
+      <h2 class="sec" style="margin-top:18px">Вы уже пели</h2>
+      <ul class="list" id="histList"></ul>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+'use strict';
+
+function $(s){return document.querySelector(s);}
+function h(tag,props){
+  var n=document.createElement(tag);
+  props=props||{};
+  Object.keys(props).forEach(function(k){
+    var v=props[k];
+    if(v===false||v==null)return;
+    if(k==='class')n.className=v;
+    else if(k==='text')n.textContent=v;
+    else if(k.indexOf('on')===0)n.addEventListener(k.slice(2),v);
+    else n.setAttribute(k,v===true?'':v);
+  });
+  for(var i=2;i<arguments.length;i++){
+    [].concat(arguments[i]).forEach(function(kid){
+      if(kid==null||kid===false)return;
+      n.append(kid.nodeType?kid:document.createTextNode(kid));
+    });
+  }
+  return n;
+}
+var toastTimer;
+function toast(msg,bad){
+  var t=$('#toast');
+  t.textContent=msg;t.classList.toggle('bad',!!bad);t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(function(){t.classList.remove('show');},3800);
+}
+function norm(s){return (s||'').toLowerCase().replace(/ё/g,'е');}
+function label(it){return it.artist?it.artist+' — '+it.title:it.title;}
+function thumbEl(vid,name){
+  return vid
+    ?h('img',{class:'thumb',src:'https://i.ytimg.com/vi/'+vid+'/mqdefault.jpg',alt:'',loading:'lazy'})
+    :h('div',{class:'thumb ph','aria-hidden':'true',text:(name||'?').trim().charAt(0).toUpperCase()});
+}
+
+/* ---------- состояние ---------- */
+var NAME_KEY='scena.name';
+var G={code:'',name:'',ws:null,joined:false,retry:0,hostOnline:true,state:null,pending:{},favs:[],history:[]};
+var m=location.pathname.match(/^\/r\/(\d{4})\/?$/);
+G.code=m?m[1]:'';
+try{G.name=localStorage.getItem(NAME_KEY)||'';}catch(e){}
+
+/* ---------- вход ---------- */
+function showJoin(err){
+  $('#joinForm').hidden=false;$('#main').hidden=true;
+  $('#codeBox').hidden=!!G.code&&!err;
+  $('#code').value=G.code;$('#name').value=G.name;
+  $('#joinErr').hidden=!err;$('#joinErr').textContent=err||'';
+  $('#roomPill').hidden=!G.code;$('#roomPill').textContent='Комната '+G.code;
+  setTimeout(function(){(G.code&&!err?$('#name'):$('#code')).focus();},50);
+}
+$('#joinForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var code=$('#code').value.replace(/\D/g,''),name=$('#name').value.replace(/\s+/g,' ').trim();
+  if(!/^\d{4}$/.test(code)){showJoin('Код комнаты — 4 цифры, он показан на экране.');return;}
+  if(!name){$('#joinErr').hidden=false;$('#joinErr').textContent='Введите имя, чтобы ведущий знал, кого звать.';$('#name').focus();return;}
+  G.code=code;G.name=name;
+  try{localStorage.setItem(NAME_KEY,name);}catch(x){}
+  if(location.pathname!=='/r/'+code)history.replaceState(null,'','/r/'+code);
+  $('#joinBtn').disabled=true;$('#joinBtn').textContent='Входим…';
+  connect();
+});
+$('#rename').addEventListener('click',function(){
+  var n=prompt('Ваше имя',G.name);
+  n=(n||'').replace(/\s+/g,' ').trim().slice(0,30);
+  if(!n)return;
+  G.name=n;
+  try{localStorage.setItem(NAME_KEY,n);}catch(x){}
+  send({t:'name',name:n});
+  send({t:'me'});
+  render();
+});
+
+/* ---------- связь с сервером ---------- */
+function send(msg){if(G.ws&&G.ws.readyState===1){G.ws.send(JSON.stringify(msg));return true;}return false;}
+function connect(){
+  if(G.ws)return;
+  var ws=new WebSocket((location.protocol==='https:'?'wss://':'ws://')+location.host+'/ws');
+  G.ws=ws;
+  ws.onopen=function(){G.retry=0;ws.send(JSON.stringify({t:'join',code:G.code,name:G.name}));};
+  ws.onmessage=function(e){
+    var msg;try{msg=JSON.parse(e.data);}catch(x){return;}
+    if(msg.t==='joined'){
+      G.joined=true;G.hostOnline=msg.hostOnline;G.state=msg.state;
+      $('#joinForm').hidden=true;$('#main').hidden=false;
+      $('#roomPill').hidden=false;$('#roomPill').textContent='Комната '+G.code;
+      loadCatalog();render();
+      send({t:'me'});
+    }
+    else if(msg.t==='me'){G.favs=msg.favs||[];G.history=msg.history||[];renderMine();renderCatalog();}
+    else if(msg.t==='error'){
+      G.joined=false;G.stop=true;ws.close();
+      resetJoinBtn();showJoin(msg.text);
+    }
+    else if(msg.t==='state'){G.state=msg.state;render();}
+    else if(msg.t==='host'){G.hostOnline=msg.online;render();}
+    else if(msg.t==='ack'){
+      var b=G.pending[msg.rid];delete G.pending[msg.rid];
+      if(b){b.disabled=false;b.textContent='Спеть';}
+      toast(msg.text,!msg.ok);
+      if(msg.ok&&navigator.vibrate)navigator.vibrate(30);
+    }
+  };
+  ws.onclose=function(){
+    if(G.ws===ws)G.ws=null;
+    Object.keys(G.pending).forEach(function(k){var b=G.pending[k];b.disabled=false;b.textContent='Спеть';});
+    G.pending={};
+    if(G.stop){G.stop=false;return;}
+    if(!G.joined){resetJoinBtn();showJoin('Не удалось подключиться к серверу. Проверьте, что телефон в той же Wi-Fi сети, что и экран.');return;}
+    render();
+    setTimeout(connect,Math.min(8000,800*Math.pow(2,G.retry++)));
+  };
+}
+function resetJoinBtn(){$('#joinBtn').disabled=false;$('#joinBtn').textContent='Войти';}
+// после блокировки экрана телефона соединение часто уже мёртвое — переподключаемся сразу
+document.addEventListener('visibilitychange',function(){if(!document.hidden&&G.joined&&!G.ws)connect();});
+
+/* ---------- каталог ---------- */
+var CAT={songs:[],byId:{},ready:false};
+var F={q:'',lang:'',decade:'',genre:''};
+var LANGS=[['','Все'],['ru','Русские'],['kk','Қазақша'],['en','Зарубежные']];
+function dkey(d){return d==null?'classic':String(d);}
+function decadeLabel(d){return d==null?'Классика':(d>=2000?d+'-е':String(d).slice(2)+'-е');}
+function loadCatalog(){
+  if(CAT.ready)return;
+  fetch('/api/catalog').then(function(r){if(!r.ok)throw new Error();return r.json();}).then(function(j){
+    (j.songs||[]).forEach(function(s){CAT.byId[s.id]=s;});
+    CAT.songs=(j.songs||[]).filter(function(s){return s.videos.length;});CAT.ready=true;
+    renderFilters();renderCatalog();renderMine();
+  }).catch(function(){$('#catCount').textContent='Не удалось загрузить каталог. Обновите страницу.';});
+}
+function filtered(){
+  var q=norm(F.q.trim());
+  return CAT.songs.filter(function(s){
+    return (!F.lang||s.language===F.lang)&&(!F.decade||dkey(s.decade)===F.decade)&&(!F.genre||s.genre===F.genre)
+      &&(!q||norm(s.title+' '+s.artist).indexOf(q)!==-1);
+  });
+}
+function chipRow(title,opts,key){
+  return h('div',{class:'frow',role:'group','aria-label':title},opts.map(function(o){
+    return h('button',{class:'chip',type:'button','aria-pressed':F[key]===o[0]?'true':'false',text:o[1],onclick:function(){
+      F[key]=(F[key]===o[0])?'':o[0];renderFilters();renderCatalog();
+    }});
+  }));
+}
+function renderFilters(){
+  var dec={},gen={};
+  CAT.songs.forEach(function(s){dec[dkey(s.decade)]=s.decade;gen[s.genre]=(gen[s.genre]||0)+1;});
+  var decs=Object.keys(dec).sort(function(a,b){return a==='classic'?-1:b==='classic'?1:a-b;});
+  var gens=Object.keys(gen).sort(function(a,b){return gen[b]-gen[a];});
+  $('#filters').replaceChildren(
+    chipRow('Язык',LANGS,'lang'),
+    chipRow('Годы',[['','Все годы']].concat(decs.map(function(k){return [k,decadeLabel(dec[k])];})),'decade'),
+    chipRow('Жанр',[['','Все жанры']].concat(gens.map(function(g){return [g,g];})),'genre'));
+}
+function renderCatalog(){
+  var ul=$('#catList');
+  ul.replaceChildren();
+  if(!CAT.ready)return;
+  if(!CAT.songs.length){ul.append(h('li',{class:'empty'},h('strong',{text:'Каталог пока пуст'}),'Ведущий ещё не подготовил видео для песен.'));$('#catCount').textContent='';return;}
+  var list=filtered();
+  $('#catCount').textContent=(list.length===CAT.songs.length?'Всего песен: ':'Найдено: ')+list.length;
+  if(!list.length){ul.append(h('li',{class:'empty'},h('strong',{text:'Ничего не нашли'}),'Попробуйте другое слово или снимите фильтры.'));return;}
+  list.forEach(function(s){ul.append(songRow(s));});
+}
+// tg — третья строка (по умолчанию годы, жанр, теги)
+function songRow(s,tg){
+  var fav=G.favs.indexOf(s.id)!==-1,ok=s.videos.length>0;
+  return h('li',{class:'row'},
+    thumbEl(s.videos[0],s.artist),
+    h('div',{class:'meta'},
+      h('p',{class:'t',text:s.title}),
+      h('p',{class:'s',text:s.artist}),
+      h('p',{class:'tg',text:tg||[decadeLabel(s.decade),s.genre].concat(s.tags||[]).join(' · ')})),
+    h('div',{class:'acts'},
+      h('button',{class:'star',type:'button','aria-pressed':fav?'true':'false','aria-label':fav?'Убрать из избранного':'В избранное',text:fav?'★':'☆',onclick:function(){toggleFav(s);}}),
+      ok?h('button',{class:'btn primary small',type:'button',text:'Спеть',onclick:function(e){addSong(s,e.currentTarget);}})
+        :h('button',{class:'btn small',type:'button',disabled:true,text:'Нет видео'})));
+}
+function toggleFav(s){
+  var on=G.favs.indexOf(s.id)===-1;
+  if(!send({t:'fav',songId:s.id,on:on})){toast('Нет связи с сервером, переподключаемся…',true);return;}
+  G.favs=G.favs.filter(function(id){return id!==s.id;});
+  if(on)G.favs.unshift(s.id);
+  if(!G.hostOnline)toast('Экран не в сети — избранное сохранится, когда он вернётся.',true);
+  renderCatalog();renderMine();
+}
+function renderMine(){
+  var fl=$('#favList'),hl=$('#histList');
+  fl.replaceChildren();hl.replaceChildren();
+  if(!CAT.ready)return;
+  var favs=G.favs.map(function(id){return CAT.byId[id];}).filter(Boolean);
+  if(!favs.length)fl.append(h('li',{class:'empty'},h('strong',{text:'Пока пусто'}),'Отмечайте песни звёздочкой ☆ в каталоге — они будут ждать вас здесь под вашим именем.'));
+  favs.forEach(function(s){fl.append(songRow(s));});
+  if(!G.history.length)hl.append(h('li',{class:'empty'},h('strong',{text:'Вы ещё не пели'}),'Спетые песни появятся здесь.'));
+  G.history.forEach(function(x){
+    var s=x.songId&&CAT.byId[x.songId];
+    var when=new Date(x.at).toLocaleString('ru-RU',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+    hl.append(s?songRow(s,'Пели '+when):h('li',{class:'row'},h('div',{class:'meta'},h('p',{class:'t',text:label(x)}),h('p',{class:'tg',text:'Пели '+when}))));
+  });
+}
+
+/* ---------- реакции ---------- */
+var lastReact=0;
+document.querySelectorAll('[data-kind]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=Date.now();
+    if(t-lastReact<250)return;
+    lastReact=t;
+    if(!send({t:'react',kind:b.dataset.kind}))return;
+    b.classList.add('pop');setTimeout(function(){b.classList.remove('pop');},150);
+    if(navigator.vibrate)navigator.vibrate(10);
+  });
+});
+
+/* ---------- счёт по микрофону ---------- */
+// Развлекательный счёт: присутствие голоса, громкость, динамика и ровность ритма атак.
+// Звук анализируется только на телефоне, на сервер уходит одно число.
+var MIC={on:false,uid:null};
+function micSupported(){return !!(window.isSecureContext&&navigator.mediaDevices&&navigator.mediaDevices.getUserMedia);}
+function startMic(){
+  var now=(G.state||{}).now;
+  if(!now)return;
+  if(!micSupported()){toast('Браузер даёт микрофон только по https. Откройте сайт по защищённому адресу.',true);return;}
+  navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}}).then(function(stream){
+    var Ctx=window.AudioContext||window.webkitAudioContext,ctx=new Ctx();
+    var an=ctx.createAnalyser();an.fftSize=1024;
+    ctx.createMediaStreamSource(stream).connect(an);
+    MIC={on:true,uid:now.uid,stream:stream,ctx:ctx,an:an,buf:new Float32Array(an.fftSize),
+      frames:0,voiced:0,sum:0,sumSq:0,onsets:[],smooth:0,floor:0.02,lastOnset:0,timer:null};
+    MIC.timer=setInterval(micTick,50);
+    render();
+  }).catch(function(){toast('Нет доступа к микрофону. Разрешите его в настройках браузера.',true);});
+}
+function micTick(){
+  var st=(G.state||{}).now;
+  if(!st||st.phase!=='play')return;
+  MIC.an.getFloatTimeDomainData(MIC.buf);
+  var s=0;for(var i=0;i<MIC.buf.length;i++)s+=MIC.buf[i]*MIC.buf[i];
+  var rms=Math.sqrt(s/MIC.buf.length),t=Date.now();
+  // порог шума медленно подстраивается под комнату
+  if(rms<MIC.floor)MIC.floor=rms;else MIC.floor+=(rms-MIC.floor)*0.002;
+  var thr=Math.max(0.01,MIC.floor*2.5);
+  MIC.frames++;
+  if(rms>thr){
+    var db=20*Math.log10(rms);
+    MIC.voiced++;MIC.sum+=db;MIC.sumSq+=db*db;
+    if(rms>MIC.smooth*1.6&&t-MIC.lastOnset>150){MIC.onsets.push(t);MIC.lastOnset=t;if(MIC.onsets.length>120)MIC.onsets.shift();}
+  }
+  MIC.smooth=MIC.smooth*0.8+rms*0.2;
+  $('#meter').style.width=Math.min(100,rms/thr*35)+'%';
+  if(MIC.frames%20===0)$('#scoreNow').textContent=String(micScore());
+}
+function micScore(){
+  var M=MIC;
+  if(M.frames<20)return 0;
+  var clamp=function(x){return Math.max(0,Math.min(1,x));};
+  var presence=clamp(M.voiced/M.frames/0.6);
+  var mean=M.voiced?M.sum/M.voiced:-90;
+  var loud=clamp((mean+45)/30);
+  var std=M.voiced>1?Math.sqrt(Math.max(0,M.sumSq/M.voiced-mean*mean)):0;
+  var dyn=clamp(std/8);
+  var rhythm=0;
+  if(M.onsets.length>=6){
+    var iv=[];for(var i=1;i<M.onsets.length;i++)iv.push(M.onsets[i]-M.onsets[i-1]);
+    var avg=iv.reduce(function(a,b){return a+b;},0)/iv.length;
+    var sd=Math.sqrt(iv.reduce(function(a,b){return a+(b-avg)*(b-avg);},0)/iv.length);
+    rhythm=clamp(1-sd/avg);
+  }
+  // база 30, чтобы никто не уходил с нулём
+  return Math.round(30+70*(0.4*presence+0.25*loud+0.15*dyn+0.2*rhythm));
+}
+function stopMic(sendScore){
+  if(!MIC.on)return;
+  clearInterval(MIC.timer);
+  MIC.stream.getTracks().forEach(function(tr){tr.stop();});
+  MIC.ctx.close();
+  var score=micScore(),enough=MIC.frames>=200,uid=MIC.uid; // не меньше 10 секунд пения
+  MIC={on:false,uid:null};
+  if(!sendScore)return;
+  if(!enough){toast('Слишком короткое выступление для счёта.');return;}
+  send({t:'score',uid:uid,score:score});
+  toast('🎤 Ваш счёт: '+score+'! Он уже на экране.');
+}
+$('#micBtn').addEventListener('click',function(){if(MIC.on)stopMic(true);else startMic();render();});
+function addSong(s,b){
+  var rid=Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+  if(!send({t:'add',songId:s.id,rid:rid})){toast('Нет связи с сервером, переподключаемся…',true);return;}
+  b.disabled=true;b.textContent='…';
+  G.pending[rid]=b;
+  setTimeout(function(){
+    if(G.pending[rid]){delete G.pending[rid];b.disabled=false;b.textContent='Спеть';toast('Экран не ответил. Попробуйте ещё раз.',true);}
+  },8000);
+}
+
+/* ---------- отрисовка ---------- */
+function render(){
+  var st=G.state||{},now=st.now,queue=st.queue||[];
+  var status=$('#status');
+  status.hidden=!!(G.ws&&G.hostOnline);
+  status.textContent=!G.ws?'Нет связи с сервером, переподключаемся…':'Экран сейчас не в сети. Песни можно будет добавить, когда он вернётся.';
+  $('#meName').textContent=G.name;
+  $('#nowLabel').textContent=now?(now.phase==='intro'?'Готовимся':'Поёт сейчас'):'На сцене';
+  $('#nowTitle').textContent=now?label(now):'Пока тихо';
+  var mine=!!(now&&now.singer&&norm(now.singer)===norm(G.name)),playing=!!(now&&now.phase==='play');
+  $('#nowSinger').textContent=now&&now.singer?(mine?'Вы! Ваш выход':now.singer):'';
+  $('#reacts').hidden=!playing||!G.ws||!G.hostOnline;
+  // песня сменилась — итог счёта уходит на экран
+  if(MIC.on&&(!now||now.uid!==MIC.uid))stopMic(true);
+  $('#scoreCard').hidden=!(MIC.on||(mine&&playing));
+  $('#scoreLive').hidden=!MIC.on;
+  var sup=micSupported();
+  $('#micBtn').hidden=!sup;
+  $('#micBtn').textContent=MIC.on?'Закончить и отправить счёт':'Включить микрофон';
+  $('#scoreHint').textContent=sup
+    ?'Телефон слушает громкость и ритм пения. Это игра: с оригиналом голос не сравнивается, звук никуда не отправляется.'
+    :'Счёт по микрофону работает, когда сайт открыт по https (например, на Render). По адресу в домашней сети браузер не даёт доступ к микрофону.';
+  $('#cntQueue').textContent=queue.length;
+  var ul=$('#queueList');
+  ul.replaceChildren();
+  if(!queue.length){ul.append(h('li',{class:'empty'},h('strong',{text:'Очередь пуста'}),'Выберите песню в каталоге, и она сразу зазвучит.'));}
+  queue.forEach(function(it,i){
+    var mine=norm(it.singer)===norm(G.name);
+    ul.append(h('li',{class:'row'+(mine?' mine':'')},
+      h('span',{class:'idx',text:String(i+1)}),
+      h('div',{class:'meta'},h('p',{class:'t',text:label(it)}),it.singer?h('p',{class:'s',text:mine?it.singer+' (вы)':it.singer}):null)));
+  });
+  if(st.mode==='round')ul.append(h('li',{class:'hint',style:'text-align:center;padding:6px',text:'Очередь по кругу: певцы чередуются.'}));
+}
+
+var TABS={cat:['#tabCat','#paneCat'],queue:['#tabQueue','#paneQueue'],mine:['#tabMine','#paneMine']};
+function setTab(name){
+  Object.keys(TABS).forEach(function(k){
+    $(TABS[k][0]).setAttribute('aria-selected',k===name?'true':'false');
+    $(TABS[k][1]).hidden=k!==name;
+  });
+  if(name==='mine')send({t:'me'});
+}
+Object.keys(TABS).forEach(function(k){$(TABS[k][0]).addEventListener('click',function(){setTab(k);});});
+$('#q').addEventListener('input',function(e){F.q=e.target.value;renderCatalog();});
+
+if(G.code&&G.name){connect();}else{showJoin();}
+})();
+</script>
+</body>
+</html>
