@@ -127,15 +127,21 @@ button,input{font:inherit;color:inherit}
 .empty .btn{margin-top:14px}
 
 /* Комната: QR и код для входа с телефона. */
-.room{display:flex;gap:14px;align-items:center;margin:0 16px 14px;padding:12px;background:var(--panel-2);border-radius:16px}
-.qr{width:104px;height:104px;flex:none;border-radius:10px;background:#fff;padding:4px;cursor:zoom-in}
-.room .code{margin:2px 0;font:700 34px/1 var(--f-display);letter-spacing:.08em;font-variant-numeric:tabular-nums}
-.room .hint{overflow-wrap:anywhere}
-.room.off .code{color:var(--muted)}
+/* Под видео: «Поёт сейчас» и рядом QR для гостей. */
+.bar{display:flex;gap:12px;align-items:stretch}
+.bar .now{flex:1;min-width:0}
+.room{display:flex;gap:12px;align-items:center;flex:none;max-width:330px;padding:10px 12px 10px 10px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.qr{width:88px;height:88px;flex:none;border-radius:10px;background:#fff;padding:4px;cursor:zoom-in}
+.room .scan{margin:0;font:500 15px/1.25 var(--f-display);text-wrap:balance}
+.room .hint{margin-top:6px;overflow-wrap:anywhere}
+.room.off .qr{opacity:.35}
+.room .tv{display:none;flex-direction:column;gap:6px;padding-left:10px;border-left:1px solid var(--line)}
+.room .tv .ib{width:36px;height:36px}
+body.focus .room .tv{display:flex}
 .join{display:flex;gap:14px;align-items:center;margin-top:8px;padding:10px 14px 10px 10px;border-radius:16px;background:#ffffff0d;text-align:left}
 .join .qr{width:clamp(72px,11cqw,140px);height:clamp(72px,11cqw,140px);cursor:default}
 .join p{margin:0;color:var(--muted);font-size:clamp(13px,1.6cqw,18px)}
-.join b{display:block;color:var(--text);font:700 clamp(22px,3.4cqw,40px)/1.1 var(--f-display);letter-spacing:.08em}
+.join b{display:block;color:var(--text);font:500 clamp(16px,2.4cqw,30px)/1.2 var(--f-display)}
 .inter .join{margin-top:0}
 .inter .join .qr{width:clamp(48px,7cqw,96px);height:clamp(48px,7cqw,96px)}
 .qr-big{position:fixed;inset:0;z-index:60;display:grid;place-content:center;justify-items:center;gap:18px;background:#0d0916f2;text-align:center;padding:24px;cursor:zoom-out}
@@ -206,6 +212,8 @@ details.block[open] summary{margin-bottom:10px}
 }
 @media (max-width:959px){
   .grid{grid-template-columns:minmax(0,1fr)}
+  .bar{flex-wrap:wrap}
+  .room{max-width:none;flex:1 1 100%}
   .app{padding:14px max(16px,env(safe-area-inset-left,0px)) 24px max(16px,env(safe-area-inset-right,0px))}
   .side{padding-bottom:12px}
   .pane{overflow:visible}
@@ -215,10 +223,17 @@ details.block[open] summary{margin-bottom:10px}
   .acts{width:100%;justify-content:flex-end}
   .brand{font-size:22px}
 }
+/* Экран для гостей (по умолчанию): без шапки и панели ведущего — только видео, «Поёт сейчас» и QR. */
 body.focus .grid{grid-template-columns:minmax(0,1fr)}
 body.focus .side{display:none}
 @media (min-width:960px){
-  body.focus .stage{width:min(100%,calc((100dvh - 240px) * 16 / 9));margin-inline:auto}
+  body.focus .top{display:none}
+  body.focus .stage-col{width:min(100%,calc((100dvh - 152px) * 16 / 9));margin-inline:auto}
+  body.focus .now{padding:10px 16px}
+  body.focus .now-extra{flex-wrap:nowrap}
+  body.focus .now-extra>.tempo,body.focus .now-extra>.rcount{flex:none}
+  body.focus .now h2{font-size:clamp(18px,1.6vw,22px)}
+  body.focus .ib.big{width:48px;height:48px}
 }
 @media (prefers-reduced-motion:reduce){.toast{transition:none}}
 </style>
@@ -228,7 +243,7 @@ body.focus .side{display:none}
   <header class="top">
     <h1 class="brand"><i aria-hidden="true"></i>Сцена</h1>
     <div class="top-actions">
-      <button class="ib" id="btnFocus" type="button" aria-pressed="false" aria-label="Только видео (P)" title="Только видео (P)"></button>
+      <button class="ib" id="btnFocus" type="button" aria-pressed="true" aria-label="Панель ведущего (P)" title="Панель ведущего (P)"></button>
       <button class="ib" id="btnFull" type="button" aria-label="На весь экран (F)" title="На весь экран (F)"></button>
     </div>
   </header>
@@ -239,9 +254,9 @@ body.focus .side{display:none}
         <div id="player"></div>
         <div class="idle" id="idle">
           <h2>Сцена свободна</h2>
-          <p id="idleText">Выберите песню в каталоге, и она сразу зазвучит.</p>
+          <p id="idleText">Выберите песню на телефоне, и она сразу зазвучит.</p>
           <button class="btn primary" id="idleStart" type="button" hidden>Начать с первой песни</button>
-          <div class="join" data-join hidden><img class="qr" alt=""><div><p>Добавляйте песни с телефона</p><b data-code></b><p data-url></p></div></div>
+          <div class="join" data-join hidden><img class="qr" alt=""><div><b>Отсканируйте на телефоне</b><p>и добавляйте песни в очередь</p></div></div>
         </div>
         <div class="inter" id="inter" role="status" hidden>
           <h2 id="interHead"></h2>
@@ -249,9 +264,10 @@ body.focus .side{display:none}
           <p class="art" id="interArt"></p>
           <div class="count" id="interCount" aria-hidden="true"></div>
           <button class="btn primary" id="interSkip" type="button">Пропустить</button>
-          <div class="join" data-join hidden><img class="qr" alt=""><div><p>Хотите спеть? Код комнаты</p><b data-code></b></div></div>
+          <div class="join" data-join hidden><img class="qr" alt=""><div><p>Хотите спеть?</p><b>Отсканируйте на телефоне</b></div></div>
         </div>
       </div>
+      <div class="bar">
       <div class="now">
         <div class="now-meta">
           <p class="eyebrow"><span id="nowLabel">На сцене</span><span class="singer" id="nowSinger" hidden></span></p>
@@ -275,18 +291,21 @@ body.focus .side{display:none}
           <button class="ib big" id="btnNext" type="button" aria-label="Следующая песня (N)" title="Следующая песня (N)"></button>
         </div>
       </div>
-    </section>
-
-    <aside class="side" aria-label="Песни">
       <div class="room off" id="room">
         <img class="qr" id="roomQr" alt="QR-код для входа с телефона" title="Показать крупно" hidden>
         <div>
-          <p class="eyebrow">Пульт на телефоне</p>
-          <p class="code" id="roomCode">····</p>
-          <p class="hint" id="roomUrl">Подключаемся к серверу…</p>
-          <p class="hint" id="roomGuests"></p>
+          <p class="scan">Отсканируйте на телефоне</p>
+          <p class="hint" id="roomGuests">Подключаемся к серверу…</p>
         </div>
+        <span class="tv">
+          <button class="ib" id="btnPanelTv" type="button" aria-pressed="false" aria-label="Панель ведущего (P)" title="Панель ведущего (P)"></button>
+          <button class="ib" id="btnFullTv" type="button" aria-label="На весь экран (F)" title="На весь экран (F)"></button>
+        </span>
       </div>
+      </div>
+    </section>
+
+    <aside class="side" aria-label="Песни">
       <div class="who">
         <label for="singer">Кто поёт следующим</label>
         <input class="field" id="singer" type="text" placeholder="Имя певца" autocomplete="off">
@@ -892,7 +911,7 @@ function renderNow(){
   var c=S.current,n=orderedQueue()[0];
   $('#idle').hidden=!!c;
   $('#idleStart').hidden=!(!c&&S.queue.length);
-  $('#idleText').textContent=S.queue.length?'В очереди уже есть песни. Нажмите, чтобы начать.':'Выберите песню в каталоге, и она сразу зазвучит.';
+  $('#idleText').textContent=S.queue.length?'В очереди уже есть песни. Нажмите, чтобы начать.':'Выберите песню на телефоне, и она сразу зазвучит.';
   $('#nowLabel').textContent=c?(phase==='intro'?'Готовимся':'Поёт сейчас'):'На сцене';
   $('#nowTitle').textContent=c?label(c):'Пока тихо';
   var sg=$('#nowSinger');
@@ -1039,16 +1058,11 @@ function renderRoom(){
     document.querySelectorAll('[data-join] img').forEach(function(img){img.src=qr.src;});
   }
   qr.hidden=!r;
-  $('#roomCode').textContent=r?r.code:'····';
-  $('#roomUrl').textContent=!/^https?:$/.test(location.protocol)?'Пульт работает только через сервер (npm start).'
-    :r?(online?r.joinUrl.replace(/^https?:\/\//,''):'Нет связи с сервером, переподключаемся…'):'Подключаемся к серверу…';
-  $('#roomGuests').textContent=online&&RT.guests?'Подключено телефонов: '+RT.guests:'';
-  document.querySelectorAll('[data-join]').forEach(function(box){
-    box.hidden=!online;
-    if(!online)return;
-    box.querySelector('[data-code]').textContent=r.code;
-    var u=box.querySelector('[data-url]');if(u)u.textContent=r.joinUrl.replace(/^https?:\/\//,'');
-  });
+  // код и ссылка видны только в крупном QR по клику — на экране гостям хватает картинки
+  $('#roomGuests').textContent=!/^https?:$/.test(location.protocol)?'Пульт работает только через сервер (npm start).'
+    :!r?'Подключаемся к серверу…':!online?'Нет связи с сервером, переподключаемся…'
+    :RT.guests?'Подключено телефонов: '+RT.guests:'Пока никто не подключился';
+  document.querySelectorAll('[data-join]').forEach(function(box){box.hidden=!online;});
 }
 function showBigQr(){
   var r=RT.room;if(!r)return;
@@ -1106,22 +1120,33 @@ function toggleFull(){
   if(r&&r.catch)r.catch(function(){toast('Полный экран здесь недоступен.');});
   else if(!r)toast('Полный экран здесь недоступен.');
 }
-function toggleFocus(){
-  var on=document.body.classList.toggle('focus');
-  $('#btnFocus').setAttribute('aria-pressed',on?'true':'false');
+// focus — экран для гостей без панели ведущего; выбор запоминается
+var PANEL_KEY='scena.panel';
+function setFocus(on){
+  document.body.classList.toggle('focus',on);
+  ['#btnFocus','#btnPanelTv'].forEach(function(s){$(s).setAttribute('aria-pressed',on?'false':'true');});
+  try{localStorage.setItem(PANEL_KEY,on?'0':'1');}catch(e){}
 }
+function toggleFocus(){setFocus(!document.body.classList.contains('focus'));}
 
 function init(){
   $('#btnFocus').append(ico('focus'));
   $('#btnFull').append(ico('full'));
+  $('#btnPanelTv').append(ico('focus'));
+  $('#btnFullTv').append(ico('full'));
   $('#btnRestart').append(ico('restart'));
   $('#btnNext').append(ico('next'));
   $('#singer').value=S.singer;
+  var panel='0';
+  try{panel=localStorage.getItem(PANEL_KEY)||'0';}catch(e){}
+  setFocus(panel!=='1');
   renderAll();renderCatalog();
   if(!S.queue.length)setTab('catalog');
 
   $('#btnFocus').addEventListener('click',toggleFocus);
   $('#btnFull').addEventListener('click',toggleFull);
+  $('#btnPanelTv').addEventListener('click',toggleFocus);
+  $('#btnFullTv').addEventListener('click',toggleFull);
   $('#btnPlay').addEventListener('click',togglePlay);
   $('#btnNext').addEventListener('click',playNext);
   $('#btnRestart').addEventListener('click',restart);
