@@ -66,8 +66,9 @@ button,input{font:inherit;color:inherit}
 .now-meta{min-width:0;flex:1 1 260px}
 .eyebrow{margin:0;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
 .now h2{font:500 clamp(18px,2.2vw,24px)/1.2 var(--f-display);margin:6px 0 4px;text-wrap:balance;overflow-wrap:anywhere}
-.now .singer{margin:0;color:var(--text);font-weight:600}
-.now .next{margin:8px 0 0;color:var(--muted);font-size:15px;overflow-wrap:anywhere}
+.now .singer{color:var(--text);letter-spacing:.08em}
+.now .singer::before{content:' · ';color:var(--amber)}
+.now .next{margin:0;color:var(--muted);font-size:15px;overflow-wrap:anywhere;min-width:0}
 .ctl{display:flex;gap:10px;align-items:center}
 
 .btn{min-height:44px;padding:0 18px;border-radius:12px;border:1px solid var(--line);background:var(--panel-2);font-weight:600;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
@@ -100,7 +101,7 @@ button,input{font:inherit;color:inherit}
 .tab[aria-selected=true]{background:var(--pink);color:var(--pink-ink)}
 .badge{min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:#ffffff1f;font-size:13px;display:inline-grid;place-items:center;font-variant-numeric:tabular-nums}
 .tab[aria-selected=true] .badge{background:#2a061526}
-@media (max-width:1199px){
+@media (min-width:960px){
   .tabs{gap:3px;padding:4px}
   .tab{font-size:13px;gap:4px;min-width:0}
   .badge{min-width:20px;height:20px;padding:0 5px;font-size:12px}
@@ -151,8 +152,9 @@ button,input{font:inherit;color:inherit}
 .rx span{position:absolute;bottom:-40px;font-size:34px;line-height:1;animation:rise 2.4s cubic-bezier(.2,.7,.3,1) forwards;filter:drop-shadow(0 4px 10px #0008)}
 .rx span small{display:block;margin-top:2px;font:600 11px var(--f-body);color:var(--text);text-align:center;white-space:nowrap}
 @keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:1}70%{opacity:1}100%{transform:translateY(-150px) scale(1.15) rotate(var(--r,0deg));opacity:0}}
-.rcount{margin:8px 0 0;color:var(--muted);font-size:15px;font-variant-numeric:tabular-nums;display:flex;gap:12px;flex-wrap:wrap}
-.tempo{display:flex;align-items:center;gap:8px;margin-top:10px;color:var(--muted);font-size:13px;font-weight:600}
+.now-extra{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap;margin-top:10px}
+.rcount{margin:0;color:var(--muted);font-size:15px;font-variant-numeric:tabular-nums;display:flex;gap:12px;flex-wrap:wrap}
+.tempo{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;font-weight:600}
 .tempo .seg .chip{min-height:30px;padding:0 10px;font-size:13px}
 @media (prefers-reduced-motion:reduce){.rx span{animation-duration:1.2s}}
 
@@ -193,8 +195,14 @@ details.block[open] summary{margin-bottom:10px}
 .toast a{color:#a3124a;font-weight:600}
 
 @media (min-width:960px){
-  .app{height:100dvh;overflow:hidden}
-  .stage-col{overflow:auto}
+  .app{height:100dvh;overflow:hidden;padding:12px 20px 16px;gap:12px}
+  /* Видео по высоте окна (минус шапка и панель «Поёт сейчас»), список песен берёт остаток. */
+  .grid{grid-template-columns:minmax(0,calc((100dvh - 218px) * 16 / 9)) minmax(344px,1fr);gap:16px}
+  .stage-col{overflow:auto;gap:12px}
+  .stage{flex:none}
+  .now{padding:12px 18px}
+  .now h2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:4px 0 6px}
+  .now .next{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:0 1 auto}
 }
 @media (max-width:959px){
   .grid{grid-template-columns:minmax(0,1fr)}
@@ -246,17 +254,18 @@ body.focus .side{display:none}
       </div>
       <div class="now">
         <div class="now-meta">
-          <p class="eyebrow" id="nowLabel">На сцене</p>
+          <p class="eyebrow"><span id="nowLabel">На сцене</span><span class="singer" id="nowSinger" hidden></span></p>
           <h2 id="nowTitle">Пока тихо</h2>
-          <p class="singer" id="nowSinger" hidden></p>
-          <p class="next" id="nowNext"></p>
-          <p class="rcount" id="nowReacts" hidden></p>
-          <div class="tempo" id="tempo" hidden>Темп
-            <div class="seg" role="group" aria-label="Темп">
-              <button class="chip" type="button" data-rate="0.75">0,75×</button>
-              <button class="chip" type="button" data-rate="1">1×</button>
-              <button class="chip" type="button" data-rate="1.25">1,25×</button>
+          <div class="now-extra">
+            <p class="next" id="nowNext"></p>
+            <div class="tempo" id="tempo" hidden>Темп
+              <div class="seg" role="group" aria-label="Темп">
+                <button class="chip" type="button" data-rate="0.75">0,75×</button>
+                <button class="chip" type="button" data-rate="1">1×</button>
+                <button class="chip" type="button" data-rate="1.25">1,25×</button>
+              </div>
             </div>
+            <p class="rcount" id="nowReacts" hidden></p>
           </div>
         </div>
         <div class="rx" id="rx" aria-hidden="true"></div>
