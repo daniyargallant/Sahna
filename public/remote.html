@@ -102,6 +102,9 @@ label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:12p
 .meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--pink));transition:width .08s linear}
 .score .big{font:700 44px/1 var(--f-display);font-variant-numeric:tabular-nums;margin:8px 0 2px}
 .sec{font:500 16px var(--f-display);margin:4px 0 10px}
+.skip{margin-top:10px;min-height:48px}
+.sheet{position:fixed;inset:0;z-index:40;display:grid;align-items:end;padding:16px max(16px,env(safe-area-inset-left,0px)) calc(16px + env(safe-area-inset-bottom,0px));background:#0d0916cc}
+.sheet .card{width:100%;max-width:520px;margin:0 auto;box-shadow:0 -10px 40px #0008}
 
 .toast{position:fixed;left:0;right:0;margin-inline:auto;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateY(20px);width:fit-content;max-width:min(92vw,520px);padding:12px 18px;border-radius:14px;background:var(--text);color:var(--ink);font-weight:500;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
 .toast.show{opacity:1;transform:none}
@@ -142,6 +145,7 @@ label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:12p
         <button class="react" type="button" data-kind="heart" aria-label="Сердце">❤️</button>
         <button class="react" type="button" data-kind="lol" aria-label="Смех">😂</button>
       </div>
+      <button class="btn block skip" id="skipBtn" type="button" hidden>⏭ Следующая песня</button>
     </section>
 
     <section class="card score" id="scoreCard" hidden>
@@ -180,6 +184,15 @@ label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:12p
       <ul class="list" id="histList"></ul>
     </section>
   </main>
+</div>
+<div class="sheet" id="skipSheet" role="dialog" aria-modal="true" aria-labelledby="skipTitle" hidden>
+  <div class="card">
+    <p class="eyebrow">Внимание</p>
+    <h2 id="skipTitle">Переключить песню на телевизоре?</h2>
+    <p class="hint" id="skipText"></p>
+    <button class="btn primary block" id="skipYes" type="button">Да, переключить</button>
+    <button class="btn block" id="skipNo" type="button" style="margin-top:10px">Отмена</button>
+  </div>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -402,6 +415,31 @@ document.querySelectorAll('[data-kind]').forEach(function(b){
   });
 });
 
+/* ---------- следующая песня ---------- */
+// Предупреждаем: песня прервётся на телевизоре для всех. Запоминаем, какую песню видел гость,
+// чтобы экран не пропустил уже следующую, если она успела смениться.
+var skipUid=null;
+function openSkip(){
+  var now=(G.state||{}).now;
+  if(!now)return;
+  skipUid=now.uid;
+  var who=now.singer?(norm(now.singer)===norm(G.name)?'Это ваша песня':'Сейчас поёт '+now.singer):'';
+  $('#skipText').textContent='На телевизоре сразу включится следующая песня, «'+label(now)+'» прервётся для всех.'+(who?' '+who+'.':'');
+  $('#skipSheet').hidden=false;
+  $('#skipNo').focus();
+}
+function closeSkip(){$('#skipSheet').hidden=true;skipUid=null;}
+$('#skipBtn').addEventListener('click',openSkip);
+$('#skipNo').addEventListener('click',closeSkip);
+$('#skipSheet').addEventListener('click',function(e){if(e.target===e.currentTarget)closeSkip();});
+$('#skipYes').addEventListener('click',function(){
+  var uid=skipUid;
+  closeSkip();
+  if(!uid)return;
+  if(!send({t:'skip',uid:uid,rid:'s'+Date.now().toString(36)}))toast('Нет связи с сервером, переподключаемся…',true);
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!$('#skipSheet').hidden)closeSkip();});
+
 /* ---------- счёт по микрофону ---------- */
 // Развлекательный счёт: присутствие голоса, громкость, динамика и ровность ритма атак.
 // Звук анализируется только на телефоне, на сервер уходит одно число.
@@ -494,6 +532,8 @@ function render(){
   var mine=!!(now&&now.singer&&norm(now.singer)===norm(G.name)),playing=!!(now&&now.phase==='play');
   $('#nowSinger').textContent=now&&now.singer?(mine?'Вы! Ваш выход':now.singer):'';
   $('#reacts').hidden=!playing||!G.ws||!G.hostOnline;
+  $('#skipBtn').hidden=!now||!G.ws||!G.hostOnline;
+  if(!now)closeSkip();
   // песня сменилась — итог счёта уходит на экран
   if(MIC.on&&(!now||now.uid!==MIC.uid))stopMic(true);
   $('#scoreCard').hidden=!(MIC.on||(mine&&playing));

@@ -144,8 +144,8 @@ function fromHost(ws, m) {
   }
 }
 
-// Гость может только добавлять песни, реагировать, вести избранное и присылать свой счёт.
-// Пауза и пропуск — только у экрана, такие сообщения сюда не доходят.
+// Гость может добавлять песни, реагировать, вести избранное, присылать свой счёт
+// и переключать на следующую песню (телефон спрашивает подтверждение). Пауза — только у экрана.
 const REACTS = { clap: 1, fire: 1, heart: 1, lol: 1 };
 function fromGuest(ws, m) {
   const room = ws.room, now = Date.now();
@@ -168,6 +168,11 @@ function fromGuest(ws, m) {
     if (ws.reacts.length >= 12) return; // не даём засыпать экран
     ws.reacts.push(now);
     out.kind = m.kind;
+  } else if (m.t === 'skip') {
+    if (now - (ws.lastSkip || 0) < 5e3) return send(ws, { t: 'ack', rid: m.rid, ok: false, text: 'Подождите пару секунд перед следующим переключением.' });
+    if (!room.host) return send(ws, { t: 'ack', rid: m.rid, ok: false, text: 'Экран сейчас не в сети.' });
+    ws.lastSkip = now;
+    Object.assign(out, { uid: String(m.uid || '').slice(0, 20), rid: m.rid });
   } else if (m.t === 'score') {
     const s = Math.round(+m.score);
     if (!(s >= 0 && s <= 100)) return;

@@ -228,20 +228,20 @@ body.focus .grid{grid-template-columns:minmax(0,1fr)}
 body.focus .side{display:none}
 @media (min-width:960px){
   body.focus .top{display:none}
-  /* Видео прижато влево (размер прежний), справа в узкой колонке — «Поёт сейчас» и QR друг под другом. */
-  body.focus .stage-col{display:grid;grid-template-columns:minmax(0,calc((100dvh - 152px) * 16 / 9)) minmax(200px,1fr);align-items:start;gap:12px}
-  body.focus .bar{flex-direction:column;gap:12px}
-  body.focus .now{flex-direction:column;align-items:stretch;gap:12px;padding:14px}
-  body.focus .now-meta{flex:none}
-  body.focus .now h2{font-size:clamp(17px,1.3vw,22px);white-space:normal;text-overflow:clip;overflow-wrap:anywhere;margin:6px 0 8px}
-  body.focus .now-extra{flex-direction:column;align-items:flex-start;gap:10px}
-  body.focus .now .next{white-space:normal;font-size:14px}
-  body.focus .tempo{flex-wrap:wrap}
-  body.focus .ctl{justify-content:center}
+  /* Видео прижато влево, под ним полоса «Поёт сейчас», справа на всю высоту — QR. */
+  body.focus .stage-col{display:grid;grid-template-columns:minmax(0,calc((100dvh - 152px) * 16 / 9)) minmax(200px,1fr);grid-template-rows:auto 1fr;gap:12px}
+  body.focus .bar{display:contents}
+  body.focus .stage{grid-column:1;grid-row:1}
+  body.focus .now{grid-column:1;grid-row:2;padding:10px 16px;align-items:center}
+  body.focus .now-extra{flex-wrap:nowrap}
+  body.focus .now-extra>.tempo,body.focus .now-extra>.rcount{flex:none}
+  body.focus .now h2{font-size:clamp(18px,1.6vw,22px)}
   body.focus .ib.big{width:48px;height:48px}
-  body.focus .room{flex-direction:column;max-width:none;text-align:center;padding:14px;gap:10px}
-  body.focus .room .qr{width:min(100%,160px);height:auto;aspect-ratio:1}
-  body.focus .room .tv{flex-direction:row;padding:10px 0 0;border-left:0;border-top:1px solid var(--line);align-self:stretch;justify-content:center}
+  body.focus .room{grid-column:2;grid-row:1 / span 2;flex-direction:column;justify-content:center;max-width:none;text-align:center;padding:16px 14px;gap:12px}
+  body.focus .room .qr{width:min(100%,200px);height:auto;aspect-ratio:1}
+  body.focus .room .scan{font-size:17px}
+  body.focus .room .tv{flex-direction:row;margin-top:auto;padding:12px 0 0;border-left:0;border-top:1px solid var(--line);align-self:stretch;justify-content:center}
+  body.focus .room>.qr{margin-top:auto}
 }
 @media (prefers-reduced-motion:reduce){.toast{transition:none}}
 </style>
@@ -1038,6 +1038,7 @@ function connectRoom(){
     else if(m.t==='fav'){remoteFav(m);}
     else if(m.t==='me'){sendMe(m.gid,m.singer);}
     else if(m.t==='score'){remoteScore(m);}
+    else if(m.t==='skip'){remoteSkip(m);}
     else if(m.t==='replaced'){RT.stop=true;toast('Эта комната открыта на другом экране.');}
   };
   ws.onclose=function(){
@@ -1056,6 +1057,17 @@ function remoteAdd(m){
   if(S.current===it)return ack(true,'«'+it.title+'» уже играет. Ваш выход!');
   var pos=orderedQueue().indexOf(it)+1;
   ack(true,'«'+it.title+'» в очереди, '+(pos===1?'следующая.':'место '+pos+'.'));
+}
+// Переключение с телефона: только если на экране всё ещё та песня, которую видел гость,
+// иначе два гостя, нажавшие одновременно, пропустили бы две песни.
+function remoteSkip(m){
+  var ack=function(ok,text){wsSend({t:'ack',gid:m.gid,rid:m.rid,ok:ok,text:text});};
+  var c=S.current;
+  if(!c)return ack(false,'Сейчас ничего не играет.');
+  if(c.uid!==m.uid)return ack(false,'Песня уже сменилась.');
+  toast((m.singer||'Гость')+' переключает: «'+c.title+'»');
+  ack(true,'Переключили: «'+c.title+'».');
+  playNext();
 }
 function renderRoom(){
   var r=RT.room,online=!!(RT.ws&&RT.ws.readyState===1&&r);
