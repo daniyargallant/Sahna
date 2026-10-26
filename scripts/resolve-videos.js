@@ -52,7 +52,19 @@ function seconds(iso) { // PT3M41S -> 221
   const m = (iso || '').match(/^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/);
   return m ? (+m[1] || 0) * 3600 + (+m[2] || 0) * 60 + (+m[3] || 0) : 0;
 }
-function norm(s) { return (s || '').toLowerCase().replace(/ё/g, 'е').replace(/[^\p{L}\p{N}]+/gu, ' ').trim(); }
+// Kazakh letters fold to Russian ones: video titles often spell Қайрат as Кайрат.
+const FOLD = { 'ё': 'е', 'қ': 'к', 'ғ': 'г', 'ү': 'у', 'ұ': 'у', 'ө': 'о', 'ә': 'а', 'і': 'и', 'ң': 'н', 'һ': 'х' };
+function norm(s) { return (s || '').normalize('NFC').toLowerCase().replace(/[ёқғүұөәіңһ]/g, (c) => FOLD[c]).replace(/[^\p{L}\p{N}]+/gu, ' ').trim(); }
+// Video title must name the song: whole title (spaces ignored) or at least half of its words,
+// a word counting as found when a video word starts the same way (притяжения ~ притяженья).
+function titleMatch(song, videoTitle) {
+  const t = norm(videoTitle), want = norm(song.title);
+  if (t.replace(/ /g, '').includes(want.replace(/ /g, ''))) return true;
+  const words = want.split(' ').filter((w) => w.length >= 3), have = t.split(' ');
+  if (!words.length) return false;
+  const hit = words.filter((w) => have.some((h) => h.slice(0, Math.min(5, w.length)) === w.slice(0, Math.min(5, w.length)))).length;
+  return hit >= Math.ceil(words.length / 2);
+}
 function decode(s) { return (s || '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>'); }
 
 class ApiError extends Error {
@@ -81,8 +93,16 @@ function score(song, v) {
   return s + Math.log10(1 + v.views) / 3;
 }
 
+// First by artist + title; if no video names the song, once more by title alone
+// (folk songs and covers are often uploaded under another singer's name).
 async function resolve(song, bad) {
-  const q = song.artist + ' ' + song.title + (song.language === 'en' ? ' karaoke' : ' караоке');
+  const word = song.language === 'en' ? ' karaoke' : ' караоке';
+  const first = await search(song, bad, song.artist + ' ' + song.title + word);
+  if (first.candidates.length) return first;
+  const second = await search(song, bad, song.title + word);
+  return second.candidates.length ? second : first;
+}
+async function search(song, bad, q) {
   const found = await yt('search', {
     part: 'id', q, type: 'video', videoEmbeddable: 'true', videoSyndicated: 'true', maxResults: '5'
   });
@@ -96,7 +116,7 @@ async function resolve(song, bad) {
     seconds: seconds(v.contentDetails.duration),
     views: +(v.statistics && v.statistics.viewCount) || 0,
     embeddable: v.status.embeddable && v.status.privacyStatus !== 'private'
-  })).filter((v) => v.embeddable && v.seconds >= 120 && v.seconds <= 480 && KARAOKE.test(v.title) && !bad[v.id]);
+  })).filter((v) => v.embeddable && v.seconds >= 120 && v.seconds <= 480 && KARAOKE.test(v.title) && titleMatch(song, v.title) && !bad[v.id]);
   ok.sort((a, b) => score(song, b) - score(song, a));
   return { q, candidates: ok.slice(0, 3).map(({ id, title, channel, seconds }) => ({ id, title, channel, seconds })) };
 }
@@ -105,6 +125,17 @@ async function main() {
   const catalog = readJson('catalog.json', []);
   const videos = readJson('videos.json', {});
   const bad = readJson('bad-videos.json', {});
+  // Earlier runs kept videos of other songs; drop them (no quota needed). Such songs get searched again.
+  let pruned = 0;
+  for (const s of catalog) {
+    const v = videos[s.id];
+    if (!v || !v.candidates.length) continue;
+    const keep = v.candidates.filter((c) => titleMatch(s, c.title));
+    if (keep.length === v.candidates.length) continue;
+    pruned += v.candidates.length - keep.length;
+    if (keep.length) v.candidates = keep; else delete videos[s.id];
+  }
+  if (pruned) { writeJson('videos.json', videos); console.log('Убрано видео других песен: ' + pruned); }
   const usable = (id) => videos[id] && videos[id].candidates.some((c) => !bad[c.id]);
   const needs = (s) => ONLY ? ONLY.includes(s.id) : !videos[s.id] || (!usable(s.id) && (RETRY || videos[s.id].candidates.length));
   const todo = catalog.filter(needs);
@@ -146,7 +177,7 @@ async function main() {
   const empty = catalog.filter((s) => videos[s.id] && !usable(s.id)).length;
   console.log('\nЗа этот запуск: обработано ' + done + ', найдено видео для ' + found + '.');
   if (stop) console.log(stop);
-  console.log('Осталось найти: ' + left + ' песен' + (left ? ' (≈ ' + Math.ceil(left * COST / DAILY) + ' дн.)' : '') + '.' + (empty ? ' Без рабочих видео: ' + empty + ' (повторить: --retry).' : ''));
+  console.log('Осталось найти песен: ' + left + (left ? ' (≈ ' + Math.ceil(left * COST / DAILY) + ' дн.)' : '') + '.' + (empty ? ' Без рабочих видео: ' + empty + ' (повторить: --retry).' : ''));
 }
 
 main().catch((e) => { console.error(e); process.exitCode = 1; });

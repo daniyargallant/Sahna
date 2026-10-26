@@ -1,1 +1,2336 @@
-{}
+{
+  "ru-001": {
+    "query": "Кино Группа крови караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "WBQJuApdKls",
+        "title": "Группа крови - Кино (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 241
+      },
+      {
+        "id": "ecinhHEzVB0",
+        "title": "Виктор Цой - Группа крови (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 263
+      },
+      {
+        "id": "3cy3ayu4J6k",
+        "title": "Группа кино - Группа крови Live Караоке ",
+        "channel": "Фанат группы кино ",
+        "seconds": 291
+      }
+    ]
+  },
+  "ru-002": {
+    "query": "Кино Звезда по имени Солнце караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "rfmcH4dL9hw",
+        "title": "Кино - Звезда по имени Солнце. Минус для соло-гитары с вокалом",
+        "channel": "Иван Чарушников",
+        "seconds": 192
+      },
+      {
+        "id": "FZxI62c34RA",
+        "title": "Виктор Цой - Звезда по имени Солнце (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 229
+      },
+      {
+        "id": "jGNC6SvE7-c",
+        "title": "Виктор Цой | Звезда по имени Солнце | Караоке (Кавер минус)",
+        "channel": "Karaoke4U",
+        "seconds": 228
+      }
+    ]
+  },
+  "ru-003": {
+    "query": "Кино Пачка сигарет караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "rj7PXJMb9Gs",
+        "title": "Виктор Цой - Пачка сигарет (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 264
+      }
+    ]
+  },
+  "ru-004": {
+    "query": "Кино Кукушка караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "jmh6SIycywU",
+        "title": "Кино- Кукушка караоке (без голоса)",
+        "channel": "Студия музыки Ligamento",
+        "seconds": 391
+      },
+      {
+        "id": "m-j4jBiTdEQ",
+        "title": "Кино - Кукушка ● караоке | PIANO_KARAOKE ● ᴴᴰ + НОТЫ & MIDI | Виктор Цой",
+        "channel": "MnogoNotka. Com",
+        "seconds": 336
+      },
+      {
+        "id": "lB6BS-yL9yU",
+        "title": "Полина Гагарина - Кукушка (Караоке)",
+        "channel": "Калинка Live",
+        "seconds": 229
+      }
+    ]
+  },
+  "ru-005": {
+    "query": "Кино Хочу перемен караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "1_yGh4NgFac",
+        "title": "Виктор Цой (Кино) - Хочу перемен [MINUS vocal; Karaoke]",
+        "channel": "MINUS vocal; Karaoke",
+        "seconds": 298
+      },
+      {
+        "id": "yMzyCjihg3A",
+        "title": "Кино - Перемен (Виктор Цой) | Piano_Tutorial | Разбор | КАРАОКЕ | НОТЫ + MIDI",
+        "channel": "МногоНотка Лимонка",
+        "seconds": 304
+      },
+      {
+        "id": "BgFkOZcavy4",
+        "title": "Кино - Перемен караоке [Oficial Video  караоке] сам делал",
+        "channel": "Фанат группы кино ",
+        "seconds": 283
+      }
+    ]
+  },
+  "ru-006": {
+    "query": "ДДТ Что такое осень караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "-lfcoiEYBb4",
+        "title": "Что такое осень - ДДТ (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 298
+      },
+      {
+        "id": "wAd2LJSWKIQ",
+        "title": "ДДТ - Что такое осень (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 293
+      }
+    ]
+  },
+  "ru-007": {
+    "query": "ДДТ Это всё караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "5mwl3KGLiJY",
+        "title": "ДДТ - Это всё (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 334
+      },
+      {
+        "id": "dUlwFPaO27I",
+        "title": "Калинка караоке \" Это всё \", ДДТ. Минус, тон Ам+1",
+        "channel": "AGK_cool ( AG Cool )",
+        "seconds": 459
+      },
+      {
+        "id": "33KNcMzk1TY",
+        "title": "ДДТ – Это всё… | Караоке под пианино | Минус с текстом | Это всё что останется после меня",
+        "channel": "ПодФоно",
+        "seconds": 395
+      }
+    ]
+  },
+  "ru-008": {
+    "query": "Наутилус Помпилиус Я хочу быть с тобой караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "V0ZrZ9Mvk5Y",
+        "title": "Я хочу быть с тобой - Наутилус Помпилиус (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 268
+      },
+      {
+        "id": "KfvitHrMKpk",
+        "title": "Наутилус Помпилиус - Я хочу быть с тобой (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 301
+      },
+      {
+        "id": "_sFyJARwCZ0",
+        "title": "Я хочу быть с тобой  |  Караоке  |  Оригинальное  |  Наутилус Помпилиус",
+        "channel": "Original Karaoke",
+        "seconds": 261
+      }
+    ]
+  },
+  "ru-009": {
+    "query": "Наутилус Помпилиус Прогулки по воде караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "ozQ1fXs5nsg",
+        "title": "Наутилус Помпилиус - Прогулки по воде (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 209
+      },
+      {
+        "id": "ix3_TaGz9dQ",
+        "title": "Наутилус помпилиус Прогулки по воде караоке 1",
+        "channel": "А.Н. Пушкин",
+        "seconds": 231
+      },
+      {
+        "id": "OtJBElLMZhw",
+        "title": "Nautilus Pompilius - Прогулки по воде (Караоке)",
+        "channel": "Караоке Чо",
+        "seconds": 224
+      }
+    ]
+  },
+  "ru-010": {
+    "query": "Сплин Выхода нет караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "f0sSqEFiAcU",
+        "title": "Сплин - Выхода нет (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 229
+      },
+      {
+        "id": "RJVZga3Fk40",
+        "title": "Сплин-Выхода нет(КАРАОКЕ с бэк-вокалом).",
+        "channel": "ОКкараОК",
+        "seconds": 226
+      },
+      {
+        "id": "Jax24erg9kk",
+        "title": "Сплин - Выхода нет (Караоке)",
+        "channel": "KAS Karaoke All Stars ",
+        "seconds": 243
+      }
+    ]
+  },
+  "ru-011": {
+    "query": "Сплин Орбит без сахара караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "jdn4knNKAUs",
+        "title": "Сплин - Орбит без сахара (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 177
+      },
+      {
+        "id": "sk7MgswONAY",
+        "title": "Сплин - Орбит без сахара (Караоке)",
+        "channel": "KAS Karaoke All Stars ",
+        "seconds": 138
+      }
+    ]
+  },
+  "ru-012": {
+    "query": "Би-2 Полковнику никто не пишет караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "M8XXsxO5PzQ",
+        "title": "Би-2 - Полковнику никто не пишет (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 293
+      },
+      {
+        "id": "D9I_qPTKPw8",
+        "title": "Би 2   Полковнику никто не пишет Караоке",
+        "channel": "KUZYA",
+        "seconds": 293
+      }
+    ]
+  },
+  "ru-013": {
+    "query": "Би-2 и Чичерина Мой рок-н-ролл караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "3L3sxOWA5vQ",
+        "title": "Би-2 - Мой рок-н-ролл (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 371
+      },
+      {
+        "id": "yzlIn-Hoxyg",
+        "title": "Би-2 – \"Мой рок-н-ролл\" | КАРАОКЕ В ОРИГИНАЛЬНОЙ ТОНАЛЬНОСТИ",
+        "channel": "Алексей По",
+        "seconds": 327
+      },
+      {
+        "id": "52hWhkBMUf4",
+        "title": "Би-2 и Чичерина - Мой рокнролл (Караоке) Короткая версия",
+        "channel": "Караоке | Lyrics | Stepnoy",
+        "seconds": 220
+      }
+    ]
+  },
+  "ru-014": {
+    "query": "Земфира Хочешь? караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "E4i3Crw6Qws",
+        "title": "Хочешь? - Земфира (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 187
+      },
+      {
+        "id": "QZ3mk7r7D10",
+        "title": "Земфира - Хочешь? (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 203
+      },
+      {
+        "id": "vioGKUKF8jU",
+        "title": "Земфира — Хочешь? | Piano_Tutorial | Разбор | КАРАОКЕ | НОТЫ + MIDI",
+        "channel": "МногоНотка Лимонка",
+        "seconds": 211
+      }
+    ]
+  },
+  "ru-015": {
+    "query": "Земфира Искала караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "HXKUDAFAvV4",
+        "title": "Земфира - Искала (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 216
+      },
+      {
+        "id": "lKbYnAeerCg",
+        "title": "Искала - Земфира (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 217
+      }
+    ]
+  },
+  "ru-016": {
+    "query": "Земфира Ариведерчи караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "9c6w-M_Pee8",
+        "title": "Земфира - Ариведерчи (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 174
+      },
+      {
+        "id": "nhVMhRU_hkM",
+        "title": "ЗЕМФИРА - АРИВЕДЕРЧИ  | КАРАОКЕ | ОТ LANGER MIAMI",
+        "channel": "Langer Miami Karaoke",
+        "seconds": 174
+      },
+      {
+        "id": "RQhg52y8br0",
+        "title": "Земфира - Ариведерчи (караоке)",
+        "channel": "Поём Караоке",
+        "seconds": 183
+      }
+    ]
+  },
+  "ru-017": {
+    "query": "Мумий Тролль Утекай караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "oox0-wEWw94",
+        "title": "Мумий Тролль - Утекай (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 152
+      },
+      {
+        "id": "qVwzcHS0dpo",
+        "title": "Мумий Тролль - Утекай [MINUS vocal; Karaoke]",
+        "channel": "MINUS vocal; Karaoke",
+        "seconds": 150
+      }
+    ]
+  },
+  "ru-018": {
+    "query": "Мумий Тролль Владивосток 2000 караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "fHQjy07YG-U",
+        "title": "Мумий Тролль - Владивосток 2000 (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 166
+      },
+      {
+        "id": "8kc7aQ9esMo",
+        "title": "Владивосток 2000 - КАРАОКЕ - Мумий Тролль. Поём песни караоке онлайн. Русские хиты.",
+        "channel": "Песни Караоке Онлайн",
+        "seconds": 161
+      }
+    ]
+  },
+  "ru-019": {
+    "query": "Ленинград В Питере — пить караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "RZVLcbLq2XQ",
+        "title": "Ленинград - В Питере — пить (Караоке / Бэк)",
+        "channel": "Калинка Караоке",
+        "seconds": 225
+      },
+      {
+        "id": "NZZdb-ehmEw",
+        "title": "Ленинград - В Питере — пить (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 225
+      }
+    ]
+  },
+  "ru-020": {
+    "query": "Ленинград Экспонат караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "pvdIuLCmWik",
+        "title": "Ленинград - Экспонат (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 246
+      },
+      {
+        "id": "dHeCO3Vm628",
+        "title": "Ленинград | Экспонат (караоке)",
+        "channel": "maxbery music",
+        "seconds": 238
+      }
+    ]
+  },
+  "ru-021": {
+    "query": "Любэ Конь караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "bC5VzIZyUbc",
+        "title": "ЛЮБЭ - Конь (Караоке)",
+        "channel": "Калинка Live",
+        "seconds": 241
+      },
+      {
+        "id": "yXgzeeo00JM",
+        "title": "Конь - Любэ (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 242
+      },
+      {
+        "id": "JfEWowFXnU8",
+        "title": "Любе   конь  КАРАОКЕ",
+        "channel": "Караоке-Шмараоке",
+        "seconds": 241
+      }
+    ]
+  },
+  "ru-022": {
+    "query": "Любэ Позови меня тихо по имени караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "fB0saQxKKuA",
+        "title": "ЛЮБЭ - Позови меня тихо по имени (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 162
+      },
+      {
+        "id": "kQCGKCQe6PE",
+        "title": "Любэ — Позови меня тихо по имени (Караоке)",
+        "channel": "Караоке | Lyrics | Stepnoy",
+        "seconds": 163
+      }
+    ]
+  },
+  "ru-023": {
+    "query": "Алла Пугачёва Миллион алых роз караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "nKcHzu182Ns",
+        "title": "Алла Пугачёва - Миллион алых роз (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 336
+      },
+      {
+        "id": "lg_hh8s_F6Y",
+        "title": "Миллион алых роз от Алла Пугачова караоке",
+        "channel": "Cont DeLaFere",
+        "seconds": 340
+      }
+    ]
+  },
+  "ru-024": {
+    "query": "Алла Пугачёва Позови меня с собой караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "TFLN8j21QN4",
+        "title": "Алла Пугачёва - Позови меня с собой (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 258
+      },
+      {
+        "id": "iAYYaEJwDZs",
+        "title": "PALINA - Позови меня с собой (ориг.Татьяна Снежина)| Piano_Tutorial | Разбор | КАРАОКЕ | НОТЫ + MIDI",
+        "channel": "МногоНотка Лимонка",
+        "seconds": 188
+      },
+      {
+        "id": "wGY1DWU1lVU",
+        "title": "Алла Пугачёва - Позови меня с собой (Караоке +)",
+        "channel": "Ваше Караоке+",
+        "seconds": 260
+      }
+    ]
+  },
+  "ru-025": {
+    "query": "Алла Пугачёва Айсберг караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "39fW1mJbWXk",
+        "title": "Айсберг - Алла Пугачева (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 294
+      },
+      {
+        "id": "pjwZrBHn4Ew",
+        "title": "Алла Пугачёва - Айсберг (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 293
+      },
+      {
+        "id": "Y8Ko9Ysacew",
+        "title": "Алла Пугачева - Айсберг | Piano_Tutorial | Разбор | КАРАОКЕ | НОТЫ + MIDI",
+        "channel": "МногоНотка Лимонка",
+        "seconds": 297
+      }
+    ]
+  },
+  "ru-026": {
+    "query": "Алла Пугачёва Арлекино караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "kax3CgABH9U",
+        "title": "Алла Пугачёва - Арлекино (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 297
+      },
+      {
+        "id": "iYdv4Mzq66E",
+        "title": "Алла Пугачёва, Alex Terrible, Geoffrey Day - Арлекино (Atomic Heart OST) Karaoke (26) [Instrumental]",
+        "channel": "Karaoke 26",
+        "seconds": 261
+      },
+      {
+        "id": "r1jkR_jxp64",
+        "title": "Арлекино Karaoke Tenerife",
+        "channel": "Karaoke Tenerife",
+        "seconds": 279
+      }
+    ]
+  },
+  "ru-027": {
+    "query": "Филипп Киркоров Зайка моя караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "aUvfcpv0c-k",
+        "title": "Филипп Киркоров - Зайка моя (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 206
+      },
+      {
+        "id": "MSGPXAuMlkU",
+        "title": "Филипп Киркоров - Единственная моя (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 279
+      }
+    ]
+  },
+  "ru-028": {
+    "query": "Валерий Меладзе Самба белого мотылька караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "5rvqWJrP0oY",
+        "title": "Валерий Меладзе - Самба белого мотылька (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 251
+      },
+      {
+        "id": "Fa6L6OYN8tU",
+        "title": "Валерий Меладзе - Самба Белого Мотылька | Караоке | От Langer Miami",
+        "channel": "Langer Miami Karaoke",
+        "seconds": 233
+      },
+      {
+        "id": "YMcYgbE-Evw",
+        "title": "Валерий Меладзе — Самба белого мотылька (Караоке)",
+        "channel": "This is Karaoke",
+        "seconds": 243
+      }
+    ]
+  },
+  "ru-029": {
+    "query": "Валерий Меладзе и ВИА Гра Притяжения больше нет караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "MllcaHHT11k",
+        "title": "Притяженья больше нет - Валерий Меладзе & ВиаГра (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 276
+      },
+      {
+        "id": "pf-UR_Jd3f0",
+        "title": "Валерий Меладзе и Виа Гра - Притяженья больше нет (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 270
+      }
+    ]
+  },
+  "ru-030": {
+    "query": "ВИА Гра Попытка № 5 караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "duE31vme6lU",
+        "title": "Попытка № 5 - ВиаГра (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 213
+      },
+      {
+        "id": "hAbWiqXH3e4",
+        "title": "ВИА Гра - Попытка номер 5 (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 203
+      }
+    ]
+  },
+  "ru-031": {
+    "query": "Руки Вверх! Крошка моя караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "GlZ4dP-QUSE",
+        "title": "РУКИ ВВЕРХ!  - КРОШКА МОЯ (караоке)",
+        "channel": "MUZZLOFT КАРАОКЕ",
+        "seconds": 251
+      },
+      {
+        "id": "TIQXRqHPpE8",
+        "title": "Руки Вверх - Крошка моя (Караоке)",
+        "channel": "KAS Karaoke All Stars ",
+        "seconds": 242
+      },
+      {
+        "id": "yzTG6ze-JH0",
+        "title": "Руки вверх! - Крошка моя (караоке)",
+        "channel": "MUZZLOFT КАРАОКЕ",
+        "seconds": 257
+      }
+    ]
+  },
+  "ru-032": {
+    "query": "Руки Вверх! 18 мне уже караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "bMiydIZ4fvo",
+        "title": "Руки Вверх - 18 мне уже (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 244
+      },
+      {
+        "id": "Sb65v-Tbkxc",
+        "title": "Руки Вверх - 18 мне уже (Караоке)",
+        "channel": "KAS Karaoke All Stars ",
+        "seconds": 262
+      }
+    ]
+  },
+  "ru-033": {
+    "query": "Иванушки International Тучи караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "HOsKTmo_5BQ",
+        "title": "ИВАНУШКИ INTERNATIONAL - ТУЧИ  | КАРАОКЕ | ОТ LANGER MIAMI",
+        "channel": "Langer Miami Karaoke",
+        "seconds": 251
+      },
+      {
+        "id": "z4avdXy2P8U",
+        "title": "Иванушки International - Тучи караоке",
+        "channel": "densabaka",
+        "seconds": 256
+      },
+      {
+        "id": "vpCM-g0wm48",
+        "title": "Иванушки International - Тучи (без беквокал) [MINUS vocal; Karaoke]",
+        "channel": "MINUS vocal; Karaoke",
+        "seconds": 257
+      }
+    ]
+  },
+  "ru-034": {
+    "query": "Иванушки International Тополиный пух караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "YQFQ9uYAiGg",
+        "title": "Иванушки - Тополиный пух (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 231
+      },
+      {
+        "id": "pTNLMzBbjAk",
+        "title": "Иванушки International - Тополиный Пух Караоке",
+        "channel": "Sputnik Karaoke",
+        "seconds": 232
+      },
+      {
+        "id": "zb6I0rix0kA",
+        "title": "Иванушки International - Тополиный Пуx (КАРАОКЕ МИНУС)",
+        "channel": "Ваше Караоке+",
+        "seconds": 229
+      }
+    ]
+  },
+  "ru-035": {
+    "query": "Мираж Музыка нас связала караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "EDSt_4ozGK0",
+        "title": "Музыка нас связала  |  Караоке  |  Оригинальное  |  Мираж",
+        "channel": "Original Karaoke",
+        "seconds": 251
+      },
+      {
+        "id": "15g1Jg3ynJQ",
+        "title": "Караоке — Музыка нас связала — Мираж",
+        "channel": "VibeMic-v",
+        "seconds": 269
+      },
+      {
+        "id": "i5sv8urwiDc",
+        "title": "Мираж - Музыка нас связала (Караоке)",
+        "channel": "HitMix",
+        "seconds": 259
+      }
+    ]
+  },
+  "ru-036": {
+    "query": "Ласковый май Белые розы караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "wl-tg3YWSU4",
+        "title": "Ласковый Май | Белые розы | Кавер минус",
+        "channel": "Karaoke4U",
+        "seconds": 313
+      },
+      {
+        "id": "xAFk8iK_SKM",
+        "title": "Белые розы - Юрий Шатунов КАРАОКЕ HD",
+        "channel": "Айдаш Монгуш (Tuva)",
+        "seconds": 286
+      },
+      {
+        "id": "ojDEayLOVy0",
+        "title": "Юрий Шатунов - Белые Розы (караоке)",
+        "channel": "WM Piano Karaoke",
+        "seconds": 275
+      }
+    ]
+  },
+  "ru-037": {
+    "query": "Татьяна Буланова Не плачь караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "HpCDkBdREmY",
+        "title": "Татьяна Буланова - Не плачь (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 333
+      },
+      {
+        "id": "vzthOWeWk7A",
+        "title": "Буланова Т Не плачь КараокЕ",
+        "channel": "Cаша Ровин",
+        "seconds": 325
+      }
+    ]
+  },
+  "ru-038": {
+    "query": "Агата Кристи Как на войне караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "pUFwU4wRN38",
+        "title": "Агата Кристи - Как на войне (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 251
+      },
+      {
+        "id": "0dqhsQQ0pCA",
+        "title": "Агата Кристи - Как на войне (Караоке)",
+        "channel": "Караоке Чо",
+        "seconds": 246
+      },
+      {
+        "id": "C48TaYq2JWY",
+        "title": "Как на войне - Агата Кристи (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 246
+      }
+    ]
+  },
+  "ru-039": {
+    "query": "Сектор Газа Лирика караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "wCT2IBAdQOs",
+        "title": "Сектор Газа - Лирика (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 289
+      },
+      {
+        "id": "0BgBXbbqHHQ",
+        "title": "Сектор Газа - Лирика (минус)! Душевная музыка !!!!",
+        "channel": "Mercer",
+        "seconds": 297
+      },
+      {
+        "id": "mbdZyeCh2Nk",
+        "title": "FILATOV & KARAS feat. Masha - Лирика (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 218
+      }
+    ]
+  },
+  "ru-040": {
+    "query": "Чайф Аргентина — Ямайка 5:0 караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "JFtzzrXtFjE",
+        "title": "Чайф - Аргентина Ямайка 5:0 (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 205
+      },
+      {
+        "id": "G2MS1ka3nKk",
+        "title": "Аргентина - Ямайка 5:0 (караоке)",
+        "channel": "MidiRadio",
+        "seconds": 201
+      }
+    ]
+  },
+  "ru-041": {
+    "query": "Чиж & Co Фантом караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "acuD6ri9zQA",
+        "title": "Чиж & Co - Фантом (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 246
+      },
+      {
+        "id": "VT_sAOhtKUU",
+        "title": "Фантом - Чиж и Со (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 225
+      },
+      {
+        "id": "jq37Af_qGqs",
+        "title": "Караоке - Фантом - Чиж & Co",
+        "channel": "Sing With Friends",
+        "seconds": 233
+      }
+    ]
+  },
+  "ru-042": {
+    "query": "Машина времени Поворот караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "IEIHtIp93MM",
+        "title": "Машина времени - Поворот (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 225
+      },
+      {
+        "id": "Xzm_XgYchEc",
+        "title": "Машина Времени - Поворот (Караоке)",
+        "channel": "KAS Karaoke All Stars ",
+        "seconds": 241
+      }
+    ]
+  },
+  "ru-043": {
+    "query": "Ария Беспечный ангел караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "pWn4PE6Qre4",
+        "title": "Ария - Беспечный ангел (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 244
+      },
+      {
+        "id": "tbbIu3JlfOA",
+        "title": "Ария - Беспечный ангел (Караоке)",
+        "channel": "Рок Караоке",
+        "seconds": 235
+      }
+    ]
+  },
+  "ru-044": {
+    "query": "Король и Шут Лесник караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "F-HMALR8YIc",
+        "title": "Король и Шут - Лесник (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 193
+      },
+      {
+        "id": "mAY0NNPr8ZE",
+        "title": "Король и Шут Лесник Караоке",
+        "channel": "ShUrkaSl",
+        "seconds": 187
+      },
+      {
+        "id": "Agk4jL2u0Ck",
+        "title": "Лесник караоке Король и шут минус",
+        "channel": "Караоке Рок группы",
+        "seconds": 193
+      }
+    ]
+  },
+  "ru-045": {
+    "query": "Король и Шут Кукла колдуна караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "x64zGYlq2hA",
+        "title": "Король и Шут - Кукла Колдуна (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 204
+      },
+      {
+        "id": "eOZsQkijhqI",
+        "title": "король и шут - кукла колдуна караоке",
+        "channel": "GIMN SHUTA",
+        "seconds": 205
+      }
+    ]
+  },
+  "ru-046": {
+    "query": "Звери Районы-кварталы караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "F9dZTIXUxMM",
+        "title": "Звери | Районы кварталы | Караоке",
+        "channel": "Karaoke4U",
+        "seconds": 204
+      },
+      {
+        "id": "rLCbN4P7SJE",
+        "title": "Калинка караоке \" Районы, кварталы \", группа Звери. Минус, тон Am-1",
+        "channel": "AGK_cool ( AG Cool )",
+        "seconds": 202
+      },
+      {
+        "id": "ENipgglKhgw",
+        "title": "Звери - Районы-кварталы (Караоке)",
+        "channel": "KAS Karaoke All Stars ",
+        "seconds": 220
+      }
+    ]
+  },
+  "ru-047": {
+    "query": "Звери Всё, что тебя касается караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "UTjBFCVuXrA",
+        "title": "Звери - Всё Что Тебя Касается (КАРАОКЕ МИНУС)",
+        "channel": "Ваше Караоке+",
+        "seconds": 212
+      },
+      {
+        "id": "LJq6_PnVsNI",
+        "title": "Звери - Все что тебя касается (Караоке)",
+        "channel": "Takaren Караоке",
+        "seconds": 209
+      },
+      {
+        "id": "NImVsjlTHRA",
+        "title": "ЗВЕРИ - ВСЁ, ЧТО ТЕБЯ КАСАЕТСЯ | КАРАОКЕ | ОТ LANGER MIAMI",
+        "channel": "Langer Miami Karaoke",
+        "seconds": 214
+      }
+    ]
+  },
+  "ru-048": {
+    "query": "t.A.T.u. Нас не догонят караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "Lol4qn2ysgk",
+        "title": "Тату - Нас не догонят (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 262
+      },
+      {
+        "id": "Vd6dRisZH84",
+        "title": "Тату - Нас не догонят (Караоке)",
+        "channel": "My Karaoke",
+        "seconds": 279
+      }
+    ]
+  },
+  "ru-049": {
+    "query": "t.A.T.u. Я сошла с ума караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "gkcIiZeWu4E",
+        "title": "Тату - Я сошла с ума | Piano_Tutorial | Разбор | КАРАОКЕ | НОТЫ + MIDI",
+        "channel": "МногоНотка Лимонка",
+        "seconds": 249
+      },
+      {
+        "id": "WB0OP4pg4Lg",
+        "title": "Тату - Я сошла с ума (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 215
+      },
+      {
+        "id": "Iar43QYgU6U",
+        "title": "t.A.T.u - Я сошла с ума [MINUS vocal; Karaoke]",
+        "channel": "MINUS vocal; Karaoke",
+        "seconds": 218
+      }
+    ]
+  },
+  "ru-050": {
+    "query": "Глюк'oZa Жениха хотела караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "rj6fA3th400",
+        "title": "Глюкоза и Верка Сердючка - Жениха хотела (Караоке)",
+        "channel": "Артём Ваганов",
+        "seconds": 209
+      },
+      {
+        "id": "Y7AYGdmwDKc",
+        "title": "Караоке - Глюкоза - жениха хотела",
+        "channel": "ofonasiev",
+        "seconds": 202
+      },
+      {
+        "id": "9z4Z8StQazc",
+        "title": "Верка Сердючка и Глюкоза. Жениха хотела (Караоке)",
+        "channel": "Игорь NBA",
+        "seconds": 207
+      }
+    ]
+  },
+  "ru-051": {
+    "query": "Дима Билан Невозможное возможно караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "a3-snKv9TaI",
+        "title": "Дима Билан - Невозможное возможно -`♡´- Караоке",
+        "channel": "As",
+        "seconds": 193
+      },
+      {
+        "id": "EmwyKxhax_M",
+        "title": "Дима Билан | Невозможное возможно (караоке)",
+        "channel": "maxbery music",
+        "seconds": 197
+      },
+      {
+        "id": "J_LjyfCjRJo",
+        "title": "Дима Билан — Невозможное возможно (Караоке)",
+        "channel": "Караоке | Lyrics | Stepnoy",
+        "seconds": 192
+      }
+    ]
+  },
+  "ru-052": {
+    "query": "Ёлка Прованс караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "sILtN5weCuo",
+        "title": "Ёлка - Прованс (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 210
+      },
+      {
+        "id": "ICbSgK5j66I",
+        "title": "Прованс - Елка (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 207
+      }
+    ]
+  },
+  "ru-053": {
+    "query": "Валерия Часики караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "5qoicXPsJXA",
+        "title": "Валерия - Часики текст песни караоке LYRICS",
+        "channel": "Biggest Lyrics Libraries🎧",
+        "seconds": 185
+      },
+      {
+        "id": "zxFA-eZj8iM",
+        "title": "Валерия - Часики (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 196
+      },
+      {
+        "id": "F-fjiqQe6t4",
+        "title": "Егор Крид и Валерия - Часики (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 195
+      }
+    ]
+  },
+  "ru-054": {
+    "query": "Максим Знаешь ли ты караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "AJFHUiFof9M",
+        "title": "МакSим - Знаешь ли ты (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 261
+      },
+      {
+        "id": "h2rDjkC-qCk",
+        "title": "МакSим - Знаешь ли ты  ● караоке на пианино | PIANO_KARAOKE ● ᴴᴰ + НОТЫ & MIDI",
+        "channel": "MnogoNotka. Com",
+        "seconds": 223
+      }
+    ]
+  },
+  "ru-055": {
+    "query": "Григорий Лепс и Ани Лорак Зеркала караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "tZhq8oB5jBk",
+        "title": "Григорий Лепс и Ани Лорак - Зеркала (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 226
+      }
+    ]
+  },
+  "ru-056": {
+    "query": "Григорий Лепс Рюмка водки на столе караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "O0zfIadaPJ4",
+        "title": "Григорий Лепс - Рюмка водки на столе (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 257
+      },
+      {
+        "id": "vVR906ksJFY",
+        "title": "Григорий Лепс | Рюмка водки на столе | Караоке (Кавер минус)",
+        "channel": "Karaoke4U",
+        "seconds": 269
+      }
+    ]
+  },
+  "ru-057": {
+    "query": "Григорий Лепс Натали караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "bucyeCLLffc",
+        "title": "Григорий Лепс - Натали (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 285
+      },
+      {
+        "id": "TOi50I7iGIQ",
+        "title": "лепс натали караоке",
+        "channel": "карао-марао",
+        "seconds": 282
+      },
+      {
+        "id": "vvWOOujL3FQ",
+        "title": "Григорий Лепс - Натали караоке версия",
+        "channel": "KaraokeLove1",
+        "seconds": 300
+      }
+    ]
+  },
+  "ru-058": {
+    "query": "Високосный год Тихий огонёк моей души караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "C13DyJeNUQI",
+        "title": "Високосный год - Тихий огонек (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 257
+      },
+      {
+        "id": "8w2hYILy1r4",
+        "title": "Високосный год - Тихий огонёк (Караоке)",
+        "channel": "Рок Караоке",
+        "seconds": 257
+      },
+      {
+        "id": "XDKwGFpBc98",
+        "title": "Високосный год - Тихий огонёк (КАРАОКЕ МИНУС)",
+        "channel": "Ваше Караоке+",
+        "seconds": 260
+      }
+    ]
+  },
+  "ru-059": {
+    "query": "Uma2rmaH Проститься караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "Ms-J-JvrON0",
+        "title": "Uma2rman - Проститься (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 302
+      },
+      {
+        "id": "kjR6EnC8GKo",
+        "title": "Уматурман (Uma2rmaN) Проститься Караоке",
+        "channel": "KaraOk",
+        "seconds": 300
+      },
+      {
+        "id": "H-6XzabWVF0",
+        "title": "Проститься - Уматурман(Караоке)",
+        "channel": "Караоке",
+        "seconds": 306
+      }
+    ]
+  },
+  "ru-060": {
+    "query": "Монеточка Каждый раз караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "kP7RP_01G0U",
+        "title": "Монеточка - Каждый раз ● караоке | PIANO_KARAOKE ● ᴴᴰ + НОТЫ & MIDI",
+        "channel": "MnogoNotka. Com",
+        "seconds": 248
+      },
+      {
+        "id": "O8Y3eaOx6GM",
+        "title": "Монеточка - Каждый раз (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 213
+      },
+      {
+        "id": "xTeD6osxzmw",
+        "title": "Монеточка - Каждый раз (Караоке)",
+        "channel": "KAS Karaoke All Stars ",
+        "seconds": 229
+      }
+    ]
+  },
+  "ru-061": {
+    "query": "Баста Сансара караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "rDcLtXqqWwo",
+        "title": "Баста - Сансара (Караоке)",
+        "channel": "Калинка Live",
+        "seconds": 335
+      },
+      {
+        "id": "qfobnF-FqlU",
+        "title": "Баста - Сансара (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 335
+      }
+    ]
+  },
+  "ru-062": {
+    "query": "Макс Корж Мотылёк караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "R1Z-2Fl8l0c",
+        "title": "Макс Корж - Мотылёк (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 214
+      },
+      {
+        "id": "uXzTyYwOUuQ",
+        "title": "Караоке Макс Корж - Мотылек  // Maks Korzh - Motylek Karaoke",
+        "channel": "Gevorg Babayan",
+        "seconds": 255
+      }
+    ]
+  },
+  "ru-063": {
+    "query": "Jony Комета караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "xdBzTdqXrG8",
+        "title": "JONY - Комета (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 154
+      }
+    ]
+  },
+  "ru-064": {
+    "query": "HammAli & Navai Пустите меня на танцпол караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "9jSfVoUb7XI",
+        "title": "HammAli & Navai - Пустите меня на танцпол (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 251
+      },
+      {
+        "id": "goDZeNGT8CM",
+        "title": "Hammali & Navai | Пустите меня на танцпол | (Кавер минус от Studio-Man)",
+        "channel": "Karaoke4U",
+        "seconds": 264
+      }
+    ]
+  },
+  "ru-065": {
+    "query": "Artik & Asti Под гипнозом караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "JRuMaoedOs0",
+        "title": "Artik & Asti - Под гипнозом (  слова песни, текст песни, караоке)",
+        "channel": "Music A2",
+        "seconds": 211
+      },
+      {
+        "id": "ZEA50fjMnOw",
+        "title": "ARTIK & ASTI - Под гипнозом (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 215
+      }
+    ]
+  },
+  "ru-066": {
+    "query": "Zivert Life караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "8Kv-y1CGIPU",
+        "title": "Zivert - Life (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 182
+      },
+      {
+        "id": "Ae-M91iKEf8",
+        "title": "ZIVERT - LIFE (слова, текст песни, караоке) поем онлайн",
+        "channel": "Music A2",
+        "seconds": 186
+      }
+    ]
+  },
+  "ru-067": {
+    "query": "Jah Khalib Медина караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "vhpdZulHEz0",
+        "title": "Jah Khalib - Медина ● караоке | PIANO_KARAOKE ● ᴴᴰ + НОТЫ & MIDI",
+        "channel": "MnogoNotka. Com",
+        "seconds": 231
+      },
+      {
+        "id": "Jiv94uKf2ak",
+        "title": "Jah Khalib - Медина (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 219
+      },
+      {
+        "id": "GNDnQcF9GNA",
+        "title": "Jah Khalib | Медина | Кавер минус",
+        "channel": "Karaoke4U",
+        "seconds": 231
+      }
+    ]
+  },
+  "ru-068": {
+    "query": "Ирина Аллегрова Младший лейтенант караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "A5p6vB7ZQUk",
+        "title": "Младший лейтенант - Ирина Аллегрова (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 226
+      },
+      {
+        "id": "GKJgpT-husg",
+        "title": "Ирина Аллегрова - Младший лейтенант (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 228
+      }
+    ]
+  },
+  "ru-069": {
+    "query": "Верка Сердючка Всё будет хорошо караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "IJ8jKiBRHRU",
+        "title": "Верка Сердючка - Всё будет хорошо (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 194
+      },
+      {
+        "id": "CS4ay2UvGv0",
+        "title": "Верка Сердючка хорошо все будет хорошо Караоке (Перезалив видео с канала Калина Караоке)",
+        "channel": "B.S ВОЛК",
+        "seconds": 199
+      },
+      {
+        "id": "Rx-29UST1Ig",
+        "title": "Все будет хорошо   караоке",
+        "channel": "Maks Feodorov",
+        "seconds": 214
+      }
+    ]
+  },
+  "ru-070": {
+    "query": "Леонид Агутин Хоп хей лала лей караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "g-uZMyGg71A",
+        "title": "🎙️Леонид Агутин - Хоп Хей Лала-Лей #караоке #luckyfamilymusic #lfmusic #luckyfamilychannel",
+        "channel": "#CU КАЖДЫЙ УНИКАЛЕН",
+        "seconds": 206
+      },
+      {
+        "id": "g2_7eGfEW9E",
+        "title": "Леонид Агутин - Хоп Хей Лала Лей (КАРАОКЕ МИНУС)",
+        "channel": "Ваше Караоке+",
+        "seconds": 224
+      }
+    ]
+  },
+  "ru-071": {
+    "query": "Михаил Круг Владимирский централ караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "B6N-rNOLgh4",
+        "title": "Михаил Круг - Владимирский централ (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 261
+      }
+    ]
+  },
+  "ru-072": {
+    "query": "Владимир Высоцкий Кони привередливые караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "Ypt2KYBXH7k",
+        "title": "Высоцкий Кони привередливые караоке",
+        "channel": "edyard63",
+        "seconds": 340
+      },
+      {
+        "id": "k11SiMuk1YQ",
+        "title": "Высоцкий В. - Кони Привередливые Караоке By KARAOKE MUSIC STUDIO",
+        "channel": "KARAOKE MUSIC STUDIO",
+        "seconds": 345
+      }
+    ]
+  },
+  "ru-073": {
+    "query": "Юрий Антонов Крыша дома твоего караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "qERONCUZvB0",
+        "title": "Юрий Антонов - Крыша дома твоего (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 156
+      },
+      {
+        "id": "3YS4JUnSxxw",
+        "title": "Ю. Антонов. -  Крыша дома твоего.   (караоке)",
+        "channel": "Саша Шурик Караоке",
+        "seconds": 166
+      },
+      {
+        "id": "NNEMdAcC6-c",
+        "title": "Юрий Антонов - Крыша дома твоего (КАРАОКЕ оригинальная аранжировка)",
+        "channel": "ОКкараОК",
+        "seconds": 158
+      }
+    ]
+  },
+  "ru-074": {
+    "query": "Земляне Трава у дома караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "1gJrXuRU-PQ",
+        "title": "Земляне - Трава у дома (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 237
+      },
+      {
+        "id": "UKteGZhXamc",
+        "title": "ЗЕМЛЯНЕ — \"Трава у дома\" (караоке из минусовки в оригинальной тональности)",
+        "channel": "Алексей По",
+        "seconds": 287
+      }
+    ]
+  },
+  "ru-075": {
+    "query": "Белый орёл Как упоительны в России вечера караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "GSaVdNhnajI",
+        "title": "Белый Орёл - Как упоительны в России вечера (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 237
+      },
+      {
+        "id": "mcRpRqaYeFI",
+        "title": "Как упоительны в России вечера - Белый орёл(Караоке)",
+        "channel": "Караоке",
+        "seconds": 242
+      }
+    ]
+  },
+  "ru-076": {
+    "query": "А'Студио Джулия караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "V8DT9qzvQF0",
+        "title": "A'Studio - Джулия (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 306
+      },
+      {
+        "id": "y8GT9Sw7Ws0",
+        "title": "Джулия (Official Audio) караоке (текст) Батырхан Шукенов Дождь. текст песни караоке",
+        "channel": "Q-VIP",
+        "seconds": 292
+      }
+    ]
+  },
+  "ru-077": {
+    "query": "Роза Рымбаева Любовь настала караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "7GMcMggcgEA",
+        "title": "Роза Рымбаева – Любовь настала Караоке",
+        "channel": "Дмитрий Куклинов",
+        "seconds": 249
+      },
+      {
+        "id": "b4vjRnVgZ2g",
+        "title": "Любовь настала   караоке",
+        "channel": "Отдыхаем всей семьёй",
+        "seconds": 218
+      }
+    ]
+  },
+  "ru-078": {
+    "query": "Полина Гагарина Спектакль окончен караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "X8tD0wfoL8o",
+        "title": "Спектакль окончен - Полина Гагарина (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 247
+      },
+      {
+        "id": "3N_mLkiKDn0",
+        "title": "Полина Гагарина - Спектакль окончен (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 250
+      },
+      {
+        "id": "zKs3MarXhqA",
+        "title": "Пoлинa Гaгapина | Спектакль окончен (караоке) оригинал + бэк-вокал",
+        "channel": "maxbery music",
+        "seconds": 246
+      }
+    ]
+  },
+  "ru-079": {
+    "query": "Нюша Выбирать чудо караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "MPcZfDWiu4s",
+        "title": "Нюша - Выбирать чудо (Караоке)",
+        "channel": "KAS Karaoke All Stars ",
+        "seconds": 286
+      },
+      {
+        "id": "4QoJztdsCG0",
+        "title": "Nyusha / Нюша - Выбирать чудо (Официальный минус)",
+        "channel": "Merinova UVR",
+        "seconds": 266
+      },
+      {
+        "id": "-hLWtssnFNk",
+        "title": "Нюша - Чудо (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 271
+      }
+    ]
+  },
+  "kk-001": {
+    "query": "Ninety One Айыптама караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "54hLb8Yk3WQ",
+        "title": "Ninety One- Айыптама ТЕКСТ КАРАОКЕ",
+        "channel": "music",
+        "seconds": 226
+      },
+      {
+        "id": "pVY1lMqHqkY",
+        "title": "Ninety One - Айыптама (КАРАОКЕ)",
+        "channel": "SALEEM KARAOKE",
+        "seconds": 237
+      },
+      {
+        "id": "X6B3Rh6LAiU",
+        "title": "Айыптама - Ninety one | karaoke | караоке | минусовка",
+        "channel": "Hobby Karaoke",
+        "seconds": 230
+      }
+    ]
+  },
+  "kk-003": {
+    "query": "Қайрат Нұртас Ауырмайды жүрек караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "MIOuvXj1yZ8",
+        "title": "\"КАРАОКЕ | Ауырмайды жүрек - Қайрат Нұртас\"",
+        "channel": "karaoke. bek",
+        "seconds": 279
+      },
+      {
+        "id": "Ib-gJgB-svA",
+        "title": "Ауырмайды жүрек - Kairat Nurtas | Караоке",
+        "channel": "QazKaraokeHits",
+        "seconds": 265
+      }
+    ]
+  },
+  "kk-004": {
+    "query": "Мұзарт Әке караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "y_D1S1jP3Vg",
+        "title": "Әке туралы жыр (караоке,текст) | Жас едім өмірге еркін бойламаған",
+        "channel": "BalMuzDuck",
+        "seconds": 198
+      }
+    ]
+  },
+  "kk-007": {
+    "query": "Dos-Mukasan Той жыры караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "Fo8wLp3EkLY",
+        "title": "Той жыры - Dos Mukasan | Дос-Мукасан| Караоке Инструментал",
+        "channel": "qazkaraoke_com",
+        "seconds": 130
+      },
+      {
+        "id": "fgmuH2BrykQ",
+        "title": "Дос-Мұқасан - Той жыры | караоке, минус, текст",
+        "channel": "әuen",
+        "seconds": 135
+      }
+    ]
+  },
+  "kk-008": {
+    "query": "Шәмші Қалдаяқов Менің Қазақстаным караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "vG0WIoixR3M",
+        "title": "Менің Қазақстаным (Шәмші әнімен шалқиды) Әні Ғайния Дауылбаева, сөзі Сұлушаш Сұлтанова   Караоке (+)",
+        "channel": "Абай Сарсет",
+        "seconds": 146
+      },
+      {
+        "id": "QG2CYBjMFHA",
+        "title": "Қазақстаным отаным \\ Қазақша ән \\ Балалар әні \\  Караоке \\ минус",
+        "channel": "Музыка минус",
+        "seconds": 165
+      },
+      {
+        "id": "PEIclsuuEwE",
+        "title": "Қазақстаным менің Караоке (+)",
+        "channel": "Абай Сарсет",
+        "seconds": 220
+      }
+    ]
+  },
+  "kk-009": {
+    "query": "Шәмші Қалдаяқов Ақ бантик караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "NvzTkSeLGk8",
+        "title": "караоке қазақ әндері ШӘМШІ__\"АҚ БАНТИК\"___SHA'MSHI----Aq bantik-----cover_SAGA MyrzaSaQa",
+        "channel": "Saga Myrza",
+        "seconds": 193
+      },
+      {
+        "id": "9yI9jBr84iI",
+        "title": "ШӘМШІ ҚАЛДАЯҚОВ - АҚ БАНТИК (КАРАОКЕ)",
+        "channel": "Көңіл толқыны",
+        "seconds": 212
+      },
+      {
+        "id": "96JMmvBTYuM",
+        "title": "Шәмші Қалдаяқов   Ақ бантик  Караоке  Бірге ән салайық",
+        "channel": "QazzaQ",
+        "seconds": 193
+      }
+    ]
+  },
+  "kk-010": {
+    "query": "Шәмші Қалдаяқов Бақыт құшағында караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "53Vf005kFVM",
+        "title": "караоке қазақ әндері \"БАҚЫТ ҚҰШАҒЫНДА\"_ШӘМШІ_SHA'MSHI----Baqyt qushag'ynda----cover_SAGA Myrza/SaQa/",
+        "channel": "Saga Myrza",
+        "seconds": 214
+      },
+      {
+        "id": "6YY44G3_ylo",
+        "title": "Шәмші Қалдаяқов Бақыт Құшағында караоке гитара",
+        "channel": "Караоке Live",
+        "seconds": 215
+      },
+      {
+        "id": "pI9kqCrLAUk",
+        "title": "Караоке - Бақыт құшағында",
+        "channel": "Qaz Karaoke",
+        "seconds": 270
+      }
+    ]
+  },
+  "kk-011": {
+    "query": "Ескендір Хасанғалиев Атамекен караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "BO6HnkGe8yk",
+        "title": "Караоке - Атамекен (Ескендір Хасанғалиев)",
+        "channel": "Qaz Karaoke",
+        "seconds": 198
+      },
+      {
+        "id": "5hyQvvJIEy0",
+        "title": "Атамекен әні караоке",
+        "channel": "moto-qazaqstan",
+        "seconds": 193
+      },
+      {
+        "id": "vDdYAiBsEYs",
+        "title": "Атамекен. Караоке (минус)",
+        "channel": "Думан Байтлеуов",
+        "seconds": 185
+      }
+    ]
+  },
+  "kk-012": {
+    "query": "Народная Елім-ай караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "6LzMfeZtzcw",
+        "title": "Халық әні / Елім ай / караоке +",
+        "channel": "KazWords / Путешествие в Мир казахской культуры",
+        "seconds": 235
+      },
+      {
+        "id": "VIZbRcf6uP0",
+        "title": "Елім ай әні 2021 3 сынып   Елім ай әні караоке 3 сынып   Елим ай караоке 3 сынып",
+        "channel": "БАЛАЛАР ӘЛЕМІ",
+        "seconds": 187
+      },
+      {
+        "id": "t6rCmfMmh9w",
+        "title": "Халық әні / Елім ай / караоке / минус",
+        "channel": "KazWords / Путешествие в Мир казахской культуры",
+        "seconds": 235
+      }
+    ]
+  },
+  "kk-013": {
+    "query": "Народная Қараторғай караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "rrRDuSNpa1c",
+        "title": "Димаш Кудайбергенов Караторгай Караоке",
+        "channel": "karaoke_kz",
+        "seconds": 221
+      }
+    ]
+  },
+  "kk-014": {
+    "query": "Народная Дударай караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "mbA62Yx7aGg",
+        "title": "Караоке - Дударай",
+        "channel": "Qaz Karaoke",
+        "seconds": 205
+      },
+      {
+        "id": "C-m9vzO2AtA",
+        "title": "Дударай караоке текст",
+        "channel": "K. A. B. A07",
+        "seconds": 228
+      },
+      {
+        "id": "k0c6GlfJ-Fg",
+        "title": "🎶Дударай текст | Караоке - Dudarai lyrics | Karaoke | Қазақша ән",
+        "channel": "Music life",
+        "seconds": 228
+      }
+    ]
+  },
+  "kk-016": {
+    "query": "Үкілі Ыбырай Гаухартас караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "oCogyIg0kRE",
+        "title": "Гауһар тас әні караоке",
+        "channel": "Shamziya Bakina",
+        "seconds": 271
+      },
+      {
+        "id": "eEA67mGKEbc",
+        "title": "Гауһартас - Мөлдір Әуелбекова #халықәні  #текстпесни #lyrics #love #караоке #music #махаббат",
+        "channel": "Оралбаева Мөлдір",
+        "seconds": 218
+      }
+    ]
+  },
+  "kk-017": {
+    "query": "Абай Құнанбайұлы Көзімнің қарасы караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "xQMsrXWJgoc",
+        "title": "караоке қазақ әндері АБАЙ_\"КӨЗІМНІҢ ҚАРАСЫ\"___ABAI----Ko'zimnin' Qarasy----cover_Saga Myrza(SaQa)",
+        "channel": "Saga Myrza",
+        "seconds": 158
+      },
+      {
+        "id": "x22ZYFkVzKo",
+        "title": "Абай Құнанбаев - Көзімнің қарасы / Караоке / минусовка",
+        "channel": "Hobby Karaoke",
+        "seconds": 206
+      },
+      {
+        "id": "P5ug_ZzLX2s",
+        "title": "Караоке - Көзімнің қарасы",
+        "channel": "Qaz Karaoke",
+        "seconds": 190
+      }
+    ]
+  },
+  "kk-018": {
+    "query": "Абай Құнанбайұлы Желсіз түнде жарық ай караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "GJ-zwVWX0lc",
+        "title": "Караоке - Желсіз түнде жарық ай",
+        "channel": "Qaz Karaoke",
+        "seconds": 186
+      },
+      {
+        "id": "sGUA6v9dSo0",
+        "title": "Желсіз түнде жарық ай (караоке) | Zhelsiz tunde zharyq ai (lyrics)",
+        "channel": "Ringtone TV",
+        "seconds": 246
+      },
+      {
+        "id": "7PVBcq02J20",
+        "title": "\"Желсіз түнде жарық ай\" (karaoke)",
+        "channel": "Қараоқы & Karaoke",
+        "seconds": 220
+      }
+    ]
+  },
+  "kk-019": {
+    "query": "Абай Құнанбайұлы Айттым сәлем, Қаламқас караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "WKDHPecTJ-M",
+        "title": "\"Айттым сәлем,Қаламқас\" караоке (минус)",
+        "channel": "Қазақша караоке",
+        "seconds": 196
+      },
+      {
+        "id": "qwT3PKBewqg",
+        "title": "Айттым сәлем, Қаламқас | Алтынай | Әннің минусы - 2000 тг.  WhatsApp: +7 705 409 90 60",
+        "channel": "erbol_bekbolatov",
+        "seconds": 236
+      }
+    ]
+  },
+  "kk-020": {
+    "query": "Ақан сері Құлагер караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "rOxv5DDGfO0",
+        "title": "караоке еркін нұржанов кеш мені (құлагер) минус",
+        "channel": "TOP-FACT",
+        "seconds": 224
+      }
+    ]
+  },
+  "kk-021": {
+    "query": "Ақан сері Балқадиша караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "MVD1ZV47tiA",
+        "title": "Балқадиша / Balkadisha / караоке +",
+        "channel": "KazWords / Путешествие в Мир казахской культуры",
+        "seconds": 255
+      }
+    ]
+  },
+  "kk-022": {
+    "query": "Ақан сері Маңмаңгер караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "6ICzHgyBK1w",
+        "title": "Ақан серінің әні \"Маңмаңгер\"  Караоке (+)",
+        "channel": "Абай Сарсет",
+        "seconds": 321
+      },
+      {
+        "id": "mFsBfl7C5cE",
+        "title": "Маңмаңгер әні 2021 6 сынып   Маңмаңгер әні караоке 6 сынып   Манмангер караоке 6 сынып",
+        "channel": "БАЛАЛАР ӘЛЕМІ",
+        "seconds": 190
+      },
+      {
+        "id": "0IIfmWWxoCU",
+        "title": "Маңмаңгер караоке",
+        "channel": "factwondering",
+        "seconds": 155
+      }
+    ]
+  },
+  "kk-023": {
+    "query": "Біржан сал Ләйлім шырақ караоке",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "RsFpgwjTiU0",
+        "title": "Ләйлімшырақ - Dos Mukasan | Дос-Мукасан| Karaoke Текст/Lyrics",
+        "channel": "QazKaraoke",
+        "seconds": 146
+      },
+      {
+        "id": "M7b_4OPoPqU",
+        "title": "Ләйлімшырақ - Dos Mukasan | Дос-Мукасан| Караоке",
+        "channel": "QazKaraokeHits",
+        "seconds": 146
+      },
+      {
+        "id": "6ZjBy9pKqLY",
+        "title": "Ләйлімшырақ - Dos Mukasan | Дос-Мукасан| Караоке Инструментал",
+        "channel": "qazkaraoke_com",
+        "seconds": 146
+      }
+    ]
+  },
+  "en-001": {
+    "query": "Frank Sinatra My Way karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "n1uJplvI1LE",
+        "title": "Frank Sinatra - My Way (Karaoke)",
+        "channel": "Starlight Karaoke",
+        "seconds": 297
+      },
+      {
+        "id": "c7qAHxBt-z4",
+        "title": "MY WAY - Frank Sinatra (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 287
+      },
+      {
+        "id": "TFoXx8WmOZE",
+        "title": "Frank Sinatra - My Way (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 280
+      }
+    ]
+  },
+  "en-002": {
+    "query": "Elvis Presley Can't Help Falling in Love karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "ypq4HQ1NqRk",
+        "title": "CAN'T HELP FALLING IN LOVE - Elvis Presley/FEMALE KEY (KARAOKE VERSION)",
+        "channel": "CoversPH",
+        "seconds": 186
+      },
+      {
+        "id": "9rSgAeKmGRc",
+        "title": "Can't Help Falling In Love - (HD Karaoke) (Original Version!) Elvis Presley",
+        "channel": "RLucra Music",
+        "seconds": 181
+      },
+      {
+        "id": "Js6zYy77TnU",
+        "title": "Elvis Presley - Can't Help Falling In Love (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 188
+      }
+    ]
+  },
+  "en-003": {
+    "query": "Ben E. King Stand by Me karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "fpl0bWMigRE",
+        "title": "Stand by me - Ben E. King (Acoustic karaoke)",
+        "channel": "Acoustic Lounge",
+        "seconds": 195
+      },
+      {
+        "id": "Ve5tKGh1t8o",
+        "title": "Ben E. King - Stand By Me (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 187
+      },
+      {
+        "id": "akxd_qtP_W4",
+        "title": "KARAOKE - STAND BY ME - BEN E. KING (EPIC BLUES GUITAR)",
+        "channel": "karaoke dos Ursos",
+        "seconds": 252
+      }
+    ]
+  },
+  "en-004": {
+    "query": "The Beatles Let It Be karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "XKiK7Wc4I3U",
+        "title": "LET IT BE  Beatles - The Beatles (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 252
+      },
+      {
+        "id": "8MeGHWRQyag",
+        "title": "The Beatles - Let It Be (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 228
+      },
+      {
+        "id": "4-cpEAYafaw",
+        "title": "Let It Be - The Beatles | Piano Karaoke by Andre Panggabean",
+        "channel": "Andre Panggabean",
+        "seconds": 241
+      }
+    ]
+  },
+  "en-005": {
+    "query": "Neil Diamond Sweet Caroline karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "UcWEfvu6F_s",
+        "title": "SWEET CAROLINE - Neil Diamond (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 225
+      },
+      {
+        "id": "4Vgstvv3u1M",
+        "title": "Neil Diamond - Sweet Caroline (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 238
+      },
+      {
+        "id": "CgVhqLL1duA",
+        "title": "Neil Diamond - Sweet Caroline (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 271
+      }
+    ]
+  },
+  "en-006": {
+    "query": "Marvin Gaye & Tammi Terrell Ain't No Mountain High Enough karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "0XC39zKT_Dk",
+        "title": "Marvin Gaye And Tammi Terrell - Ain't No Mountain High Enough (Karaoke Version) Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 161
+      },
+      {
+        "id": "l1gQH7k5BmA",
+        "title": "Ain't No Mountain High Enough - Marvin Gaye & Tammi Terrel | Karaoke | Male Part Only",
+        "channel": "Tolets Duets 🎶",
+        "seconds": 174
+      },
+      {
+        "id": "oxI2IVYcWdM",
+        "title": "Marvin Gaye & Tammi Terrell – Ain't No Mountain High Enough (karaoke)",
+        "channel": "Lemmy Caution Karaoke",
+        "seconds": 171
+      }
+    ]
+  },
+  "en-007": {
+    "query": "ABBA Dancing Queen karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "qjMSGIfB1j8",
+        "title": "DANCING QUEEN -  ABBA (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 233
+      },
+      {
+        "id": "a3vO3thiYV4",
+        "title": "ABBA - Dancing Queen (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 223
+      },
+      {
+        "id": "GDWdjKE-esY",
+        "title": "Dancing Queen - Abba (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 219
+      }
+    ]
+  },
+  "en-008": {
+    "query": "ABBA Mamma Mia karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "U9UDH5N2K9o",
+        "title": "Mamma Mia - ABBA (Original Karaoke Version)",
+        "channel": "Soon Best Karaoke",
+        "seconds": 223
+      },
+      {
+        "id": "PBRqCYfGhWo",
+        "title": "Mamma Mia - Abba (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 230
+      },
+      {
+        "id": "xh7zsIFQ6Wc",
+        "title": "Abba - Mamma Mia (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 229
+      }
+    ]
+  },
+  "en-009": {
+    "query": "ABBA The Winner Takes It All karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "2Zqv4FKWilc",
+        "title": "The Winner Takes It All - ABBA (Original Karaoke Version)",
+        "channel": "Soon Best Karaoke",
+        "seconds": 322
+      },
+      {
+        "id": "fUW4iMmEiHU",
+        "title": "ABBA - The Winner Takes It All (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 305
+      },
+      {
+        "id": "LEh7Ii9pM6Q",
+        "title": "The Winner Takes It All - ABBA  | KARAOKE PIANO",
+        "channel": "Karaoke Piano",
+        "seconds": 274
+      }
+    ]
+  },
+  "en-010": {
+    "query": "Queen Bohemian Rhapsody karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "xyF04rAhHaQ",
+        "title": "Queen - Bohemian Rhapsody (Karaoke)",
+        "channel": "Starlight Karaoke",
+        "seconds": 346
+      },
+      {
+        "id": "_ih5L6S7Ejk",
+        "title": "Queen Bohemian Rhapsody Karaoke",
+        "channel": "Karaoke KING",
+        "seconds": 354
+      },
+      {
+        "id": "yvEcMrstp80",
+        "title": "Queen - Bohemian Rhapsody (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 365
+      }
+    ]
+  },
+  "en-011": {
+    "query": "Queen We Will Rock You karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "Wv2Pb1TIRmk",
+        "title": "We Will Rock You - Queen (Karaoke Songs With Lyrics)",
+        "channel": "Musisi Karaoke",
+        "seconds": 136
+      },
+      {
+        "id": "GZSJ0kRMKk4",
+        "title": "Queen - We Will Rock You (Backing Vocals) (Original Karaoke Version)",
+        "channel": "Karaoke Original",
+        "seconds": 132
+      },
+      {
+        "id": "gto3riqkM38",
+        "title": "We Will Rock You - Queen (KARAOKE)",
+        "channel": "MrEntertainerKaraoke",
+        "seconds": 137
+      }
+    ]
+  },
+  "en-012": {
+    "query": "Queen Don't Stop Me Now karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "5yebPm09eM0",
+        "title": "Queen - Don't Stop Me Now (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 229
+      },
+      {
+        "id": "5l9sPhPzWMQ",
+        "title": "QUEEN - DON'T STOP ME NOW (karaoke + backing vocals)",
+        "channel": "Do Mayor",
+        "seconds": 220
+      },
+      {
+        "id": "7cjzY8jLs44",
+        "title": "Queen   Don't Stop Me Now Karaoke Real Queen Music low",
+        "channel": "Axelzero82",
+        "seconds": 226
+      }
+    ]
+  },
+  "en-013": {
+    "query": "Gloria Gaynor I Will Survive karaoke",
+    "checked": "2026-10-26",
+    "candidates": [
+      {
+        "id": "HwzIjdiNlhM",
+        "title": "Gloria Gaynor - I Will Survive (Karaoke with Lyrics)",
+        "channel": "Stingray Karaoke",
+        "seconds": 226
+      },
+      {
+        "id": "ehqhfZvaPNM",
+        "title": "Gloria Gaynor - I Will Survive (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 237
+      },
+      {
+        "id": "ycotHxAZTLE",
+        "title": "I WILL SURVIVE - Gloria Gaynor (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 215
+      }
+    ]
+  }
+}
