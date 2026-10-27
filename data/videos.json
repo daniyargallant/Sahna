@@ -1661,6 +1661,30 @@
       }
     ]
   },
+  "kk-002": {
+    "query": "Қайда караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "FJB-oSpFzWc",
+        "title": "Ерке Есмахан - Кайда?  ● караоке | PIANO_KARAOKE ● ᴴᴰ + НОТЫ & MIDI",
+        "channel": "MnogoNotka. Com",
+        "seconds": 186
+      },
+      {
+        "id": "Q27w6IZSdrI",
+        "title": "Ерке Есмахан - Қайда (КАРАОКЕ)",
+        "channel": "SALEEM KARAOKE",
+        "seconds": 209
+      },
+      {
+        "id": "0WO1qB3sdPc",
+        "title": "Төреғали Төреәлі & Диана Исмаил   Уәде қайда(караоке,текст,сөзі, lyrics)",
+        "channel": "Qazaq Музыка Әндер",
+        "seconds": 228
+      }
+    ]
+  },
   "kk-003": {
     "query": "Қайрат Нұртас Ауырмайды жүрек караоке",
     "checked": "2026-10-26",
@@ -1688,6 +1712,54 @@
         "title": "Әке туралы жыр (караоке,текст) | Жас едім өмірге еркін бойламаған",
         "channel": "BalMuzDuck",
         "seconds": 198
+      }
+    ]
+  },
+  "kk-005": {
+    "query": "Өзіңе караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "wpKmVrnl0wo",
+        "title": "QARAKESEK І ӨЗІҢ БІЛСЕҢ, ӨЗІҢЕ СЕН І КАРАОКЕ",
+        "channel": "kz kz",
+        "seconds": 207
+      },
+      {
+        "id": "orqy7CmId3c",
+        "title": "\"Өзің білсен өзіне сен\" Караоке Каракесек",
+        "channel": "Qarakesek fan",
+        "seconds": 219
+      },
+      {
+        "id": "KQw2Nlf-bB8",
+        "title": "QaRaKeSeK - Өзің білсең, өзіңе сен (караоке, текст, минус)",
+        "channel": "Azik_ko02",
+        "seconds": 200
+      }
+    ]
+  },
+  "kk-006": {
+    "query": "Қайран елім караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "ozrRPw3XgD4",
+        "title": "Егемен елім Караоке (+)🎵🎶🎵🎶🎹🎹",
+        "channel": "Абай Сарсет",
+        "seconds": 247
+      },
+      {
+        "id": "j2KE6mWZJyc",
+        "title": "🔔БЕКБОЛАТ - ТІЛЕУХАН🎧 «ЕЛІМ МЕНІҢ». КАРАОКЕ🎵 | HD-КАЧЕСТВО |",
+        "channel": "NUR BALA TV",
+        "seconds": 242
+      },
+      {
+        "id": "m-iE5vax6Uo",
+        "title": "Өз елім (karaoke)",
+        "channel": "Қараоқы & Karaoke",
+        "seconds": 238
       }
     ]
   },
@@ -1864,6 +1936,11 @@
         "seconds": 228
       }
     ]
+  },
+  "kk-015": {
+    "query": "Народная Кең жайлау караоке",
+    "checked": "2026-10-27",
+    "candidates": []
   },
   "kk-016": {
     "query": "Үкілі Ыбырай Гаухартас караоке",
@@ -2330,6 +2407,2292 @@
         "title": "I WILL SURVIVE - Gloria Gaynor (HD Karaoke)",
         "channel": "Atomic Karaoke... ",
         "seconds": 215
+      }
+    ]
+  },
+  "en-014": {
+    "query": "Boney M. Rasputin karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "b5L_dR5qbp0",
+        "title": "Boney M - Rasputin KARAOKE",
+        "channel": "Nixervik",
+        "seconds": 281
+      },
+      {
+        "id": "NW7kHx5u-kg",
+        "title": "Boney M - Rasputin (Melody) (Karaoke Version)",
+        "channel": "ZZang KARAOKE",
+        "seconds": 278
+      },
+      {
+        "id": "vTcqiBmu_Hc",
+        "title": "Boney M - Rasputin (Duet) - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 298
+      }
+    ]
+  },
+  "en-015": {
+    "query": "Bee Gees Stayin' Alive karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "hVwtABjAH0c",
+        "title": "The Bee Gees - Stayin' Alive (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 270
+      },
+      {
+        "id": "s3UKX6zsmL4",
+        "title": "Bee Gees - Stayin' Alive (Karaoke) • Sing Club",
+        "channel": "Sing Club • The Karaoke Channel",
+        "seconds": 260
+      },
+      {
+        "id": "JYJyhfulS7g",
+        "title": "Bee Gees - Stayin' Alive KARAOKE instrumental",
+        "channel": "KEEP THE BEST ALIVE",
+        "seconds": 291
+      }
+    ]
+  },
+  "en-016": {
+    "query": "Elton John & Kiki Dee Don't Go Breaking My Heart karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Q4n99u6L9K8",
+        "title": "Elton John And Kiki Dee - Don't Go Breaking My Heart (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 263
+      },
+      {
+        "id": "kMHKliJuzrI",
+        "title": "Don't Go Breaking My Heart - Elton John and Kiki Dee | Karaoke | Male Part Only",
+        "channel": "Tolets Duets 🎶",
+        "seconds": 306
+      },
+      {
+        "id": "gIU2mwvynlw",
+        "title": "Don't Go Breaking My Heart (Karaoke) - Elton John feat. Kiki Dee",
+        "channel": "Tracks Planet Karaoke",
+        "seconds": 228
+      }
+    ]
+  },
+  "en-017": {
+    "query": "John Travolta & Olivia Newton-John You're the One That I Want karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "QfUcL9FTOZ4",
+        "title": "You're The One That I Want (Danny Part Only - Karaoke) - Grease",
+        "channel": "Clark On Stage",
+        "seconds": 154
+      },
+      {
+        "id": "XLXMaz6iwiE",
+        "title": "Grease - You're The One That I Want (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 175
+      },
+      {
+        "id": "aAQm5HNm2ic",
+        "title": "You're The One That I Want (Sandy's Part Only - Karaoke) - Grease",
+        "channel": "Sing With Nat Mansi",
+        "seconds": 169
+      }
+    ]
+  },
+  "en-018": {
+    "query": "Village People Y.M.C.A. karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "wwQCD7Youiw",
+        "title": "Village People - Y.M.C.A. (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 233
+      },
+      {
+        "id": "nYyt-YrluSs",
+        "title": "Y M C A - Village People (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 244
+      },
+      {
+        "id": "H4uqkAYmerw",
+        "title": "The Village People - YMCA (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 234
+      }
+    ]
+  },
+  "en-019": {
+    "query": "Earth, Wind & Fire September karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "V81sR30RPU8",
+        "title": "September in the Style of \"Earth, Wind & Fire\" karaoke video with lyrics (no lead vocal)",
+        "channel": "Stingray Karaoke",
+        "seconds": 227
+      },
+      {
+        "id": "GdUQv12UHNc",
+        "title": "Earth Wind And Fire - September - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 231
+      },
+      {
+        "id": "tY_wXDDrllk",
+        "title": "Earth, Wind & Fire - September (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 228
+      }
+    ]
+  },
+  "en-020": {
+    "query": "John Denver Take Me Home, Country Roads karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "ps8vopZaouw",
+        "title": "TAKE ME HOME COUNTRY ROADS - John Denver (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 210
+      },
+      {
+        "id": "NzLTH93B620",
+        "title": "John Denver - Take Me Home, Country Roads (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 197
+      },
+      {
+        "id": "jdgLNKa1iNo",
+        "title": "John Denver - Take Me Home, Country Roads (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 221
+      }
+    ]
+  },
+  "en-021": {
+    "query": "Michael Jackson Billie Jean karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "z0JdwWvPX3U",
+        "title": "Michael Jackson - Billie Jean (CC) 🎤 [Karaoke] [Instrumental]",
+        "channel": "CC Karaoke X",
+        "seconds": 380
+      },
+      {
+        "id": "2HGEFy7aXwc",
+        "title": "Michael Jackson - Billie Jean (Original Karaoke Version)",
+        "channel": "Karaoke Original",
+        "seconds": 387
+      },
+      {
+        "id": "zJgMZ_123zI",
+        "title": "Karaoke♬ Billie Jean - Michael Jackson 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 296
+      }
+    ]
+  },
+  "en-022": {
+    "query": "Whitney Houston I Wanna Dance with Somebody karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "QMmc5ed_cgY",
+        "title": "Whitney Houston - I Wanna Dance With Somebody (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 306
+      },
+      {
+        "id": "9GtmJpcBEew",
+        "title": "Whitney Houston - I Wanna Dance With Somebody (Karaoke)",
+        "channel": "Starlight Karaoke",
+        "seconds": 250
+      },
+      {
+        "id": "_uHMopThWDk",
+        "title": "I WANNA DANCE WITH SOMEBODY - Whitney Houston (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 239
+      }
+    ]
+  },
+  "en-023": {
+    "query": "Whitney Houston I Will Always Love You karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "MZxvu2sXzug",
+        "title": "Whitney Houston I Will Always Love You Karaoke",
+        "channel": "jodiepm",
+        "seconds": 288
+      },
+      {
+        "id": "6BXivcr9uvE",
+        "title": "Whitney Houston - I Will Always Love You (Karaoke With Lyrics) @StingrayKaraoke",
+        "channel": "Stingray Karaoke",
+        "seconds": 282
+      },
+      {
+        "id": "CiJoUo-2_X4",
+        "title": "Whitney Houston - I Will Always Love You (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 286
+      }
+    ]
+  },
+  "en-024": {
+    "query": "Cyndi Lauper Girls Just Want to Have Fun karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "TA2J4GaUAm4",
+        "title": "Girls Just Want to Have Fun • Cyndi Lauper • KaraoKe (Original With Backing)",
+        "channel": "dj Glaucio Duarte",
+        "seconds": 235
+      },
+      {
+        "id": "ysqYk6mOHaQ",
+        "title": "Girls Just Want To Have Fun - Cyndi Lauper Karaoke 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 237
+      },
+      {
+        "id": "Wg5CgpX8mMk",
+        "title": "Girls Just Want to Have Fun (Official Instrumental Karaoke) - Cyndi Lauper",
+        "channel": "RIK Real Instrumental Karaokes",
+        "seconds": 227
+      }
+    ]
+  },
+  "en-025": {
+    "query": "Bon Jovi Livin' on a Prayer karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "oVAyWQHzHJI",
+        "title": "Bon Jovi - Livin' on a Prayer (Original) - Karaoke",
+        "channel": "Mihai Doboga",
+        "seconds": 266
+      },
+      {
+        "id": "hzScwAhJY7s",
+        "title": "Bon Jovi - Livin' On A Prayer (Karaoke with Lyrics)",
+        "channel": "Stingray Karaoke",
+        "seconds": 259
+      },
+      {
+        "id": "EV9__xvnRYM",
+        "title": "Bon Jovi - Livin' on a Prayer - Karaoke (Instrumental + Lyrics)",
+        "channel": "Espada Karaoke",
+        "seconds": 261
+      }
+    ]
+  },
+  "en-026": {
+    "query": "Journey Don't Stop Believin' karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "1pOFPExPDCY",
+        "title": "DON'T STOP BELIEVIN' - Journey (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 275
+      },
+      {
+        "id": "gzsSSqAN-jI",
+        "title": "Journey - Don't Stop Believin' (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 274
+      },
+      {
+        "id": "vToOND3CW6U",
+        "title": "Don't Stop Believin' - Journey (Karaoke Version)",
+        "channel": "KaraokeyTV",
+        "seconds": 261
+      }
+    ]
+  },
+  "en-027": {
+    "query": "Europe The Final Countdown karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "qAa3A3_B6lk",
+        "title": "Europe - The Final Countdown - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 316
+      },
+      {
+        "id": "rmswfaw93pc",
+        "title": "EUROPE - THE FINAL COUNTDOWN (KARAOKE WITH THE ORIGINAL BACKING VOCALS!)",
+        "channel": "Miracle Music!",
+        "seconds": 300
+      },
+      {
+        "id": "nDujvWRVMvQ",
+        "title": "Europe - The Final Countdown (ORIGINAL KARAOKE VERSION)",
+        "channel": "Karaoke Original",
+        "seconds": 318
+      }
+    ]
+  },
+  "en-028": {
+    "query": "a-ha Take On Me karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "GK0hisiU6-c",
+        "title": "A-Ha - Take On Me (Official Karaoke Instrumental) | SongJam",
+        "channel": "Songjam: Official Karaoke",
+        "seconds": 215
+      },
+      {
+        "id": "8gCZcyp1dTw",
+        "title": "A-Ha - Take On Me (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 234
+      },
+      {
+        "id": "pW1MXIyVpkg",
+        "title": "Take On Me - a-ha (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 246
+      }
+    ]
+  },
+  "en-029": {
+    "query": "Modern Talking You're My Heart, You're My Soul karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "TsKagtGUsBE",
+        "title": "You're My Heart, You're My Soul - Modern Talking (Karaoke)",
+        "channel": "Dih Paula KaraoK & MusiK",
+        "seconds": 240
+      },
+      {
+        "id": "dfIa4FGXELQ",
+        "title": "YOU'RE MY HEART YOU'RE MY SOUL - Modern Talking (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 224
+      },
+      {
+        "id": "ZEHcNCwDSMI",
+        "title": "You're My Heart, You're My Soul '98 - Modern Talking [KARAOKE in HQ]",
+        "channel": "VL",
+        "seconds": 240
+      }
+    ]
+  },
+  "en-030": {
+    "query": "Bonnie Tyler Total Eclipse of the Heart karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Ul0qKMU1Jpo",
+        "title": "TOTAL ECLIPSE OF THE HEART - Bonnie Tyler (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 289
+      },
+      {
+        "id": "LeSAWoLt4SA",
+        "title": "Total Eclipse Of The Heart - Bonnie Tyler (Karaoke Version)",
+        "channel": "KaraokeyTV",
+        "seconds": 341
+      },
+      {
+        "id": "iCqjf4PzWM8",
+        "title": "Bonnie Tyler - Total Eclipse of the Heart (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 290
+      }
+    ]
+  },
+  "en-031": {
+    "query": "Survivor Eye of the Tiger karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "3Kaiq1gnj7Y",
+        "title": "Survivor - Eye of the Tiger (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 243
+      },
+      {
+        "id": "p0Wu_MS7M1U",
+        "title": "Survivor - Eye of the Tiger (Rocky Soundtrack) - Karaoke Instrumental Lyrics - ObsKure",
+        "channel": "ObsKure Karaoke",
+        "seconds": 247
+      },
+      {
+        "id": "-8PTjTDwf9M",
+        "title": "Survivor - Eye Of The Tiger [CC] [Karaoke Version]",
+        "channel": "CC Karaoke X",
+        "seconds": 259
+      }
+    ]
+  },
+  "en-032": {
+    "query": "Toto Africa karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Zn3hp1BSFV8",
+        "title": "Toto - Africa | Karaoke With Backing Vocals (Original Key)",
+        "channel": "Chris Jackson Music - Professional Backing Tracks",
+        "seconds": 324
+      },
+      {
+        "id": "Wla8EnCggYw",
+        "title": "Toto - Africa | Lower Key Karaoke With Lyrics (No Backing Vox)",
+        "channel": "Chris Jackson Music - Professional Backing Tracks",
+        "seconds": 324
+      },
+      {
+        "id": "JZtIOGYr2_o",
+        "title": "Toto - Africa (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 319
+      }
+    ]
+  },
+  "en-033": {
+    "query": "Bill Medley & Jennifer Warnes (I've Had) The Time of My Life karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "bPCNwfUxNKU",
+        "title": "Bill Medley And Jennifer Warnes - (I've Had) The Time Of My Life - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 302
+      },
+      {
+        "id": "IDAUfLDUNJw",
+        "title": "I've Had The Time Of My Life - Bill Medley & Jennifer Warnes (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 303
+      },
+      {
+        "id": "yr1tDAO5wik",
+        "title": "Bill Medley & Jennifer Warnes - I've Had The Time Of My Life KARAOKE",
+        "channel": "KEEP THE BEST ALIVE",
+        "seconds": 292
+      }
+    ]
+  },
+  "en-034": {
+    "query": "Kenny Rogers & Dolly Parton Islands in the Stream karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "306fj13ywKE",
+        "title": "ISLANDS IN THE STREAM - Kenny Rogers & Dolly Parton (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 266
+      },
+      {
+        "id": "t0y5hMumwo0",
+        "title": "ISLANDS IN THE STREAM - Kenny Rogers & Dolly Parton (Karaoke Version)",
+        "channel": "Global KaraokeyTV",
+        "seconds": 256
+      },
+      {
+        "id": "J8m6jY_-w9s",
+        "title": "Islands In The Stream (Male Part Only - Karaoke) - Dolly Parton ft. Kenny Rogers",
+        "channel": "Clark In Studio",
+        "seconds": 228
+      }
+    ]
+  },
+  "en-035": {
+    "query": "Kool & the Gang Celebration karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Cm_rQ1YUcsw",
+        "title": "Kool And The Gang - Celebration (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 303
+      },
+      {
+        "id": "VWKVATktcdQ",
+        "title": "CKK - Kool And the Gang - Celebration (Karaoke)",
+        "channel": "CerealKiller",
+        "seconds": 298
+      },
+      {
+        "id": "nP7twV4dTEc",
+        "title": "Celebration - Kool & The Gang (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 300
+      }
+    ]
+  },
+  "en-036": {
+    "query": "Madonna La Isla Bonita karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "NnZ-JQsWrWw",
+        "title": "KARAOKE LA ISLA BONITA Madonna",
+        "channel": "ERIKA WALKER DE LA ESPRIELLA",
+        "seconds": 233
+      },
+      {
+        "id": "b0wUnU4rJ0Q",
+        "title": "🎤 Madonna - \"La Isla Bonita\" Karaoke for Advanced Singers!🔥| Instrumental with Backing Vocals ✨",
+        "channel": "Karaoke Star",
+        "seconds": 237
+      },
+      {
+        "id": "OUp2UEZCHWs",
+        "title": "LA ISLA BONITA - Madonna (Karaoke Version)",
+        "channel": "Mic & Magic Karaoke",
+        "seconds": 245
+      }
+    ]
+  },
+  "en-037": {
+    "query": "Roxette It Must Have Been Love karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "7KEUcJIhiB0",
+        "title": "IT MUST HAVE BEEN LOVE - Roxette (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 284
+      },
+      {
+        "id": "yqlt2ZLyD7s",
+        "title": "IT MUST HAVE BEEN LOVE - Roxette (Karaoke Version)",
+        "channel": "Global KaraokeyTV",
+        "seconds": 274
+      },
+      {
+        "id": "e0wkXUh_fYU",
+        "title": "It Must Have Been Love - Roxette (Karaoke Version)",
+        "channel": "KaraokeyTV",
+        "seconds": 279
+      }
+    ]
+  },
+  "en-038": {
+    "query": "Scorpions Wind of Change karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "s9cdVonJvy8",
+        "title": "Scorpions - WIND OF CHANGE. Karaoke",
+        "channel": "Tomybg video",
+        "seconds": 315
+      },
+      {
+        "id": "LtddOnEqNTo",
+        "title": "Wind Of Change - Scorpions  (Karaoke Version)",
+        "channel": "KaraokeyTV",
+        "seconds": 283
+      },
+      {
+        "id": "A-uVkzM3EEY",
+        "title": "The Scorpions - Wind Of Change (With Whistle) - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 315
+      }
+    ]
+  },
+  "en-039": {
+    "query": "George Michael Careless Whisper karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "kunJjHsvJO8",
+        "title": "Careless whisper - George Michael (Acoustic karaoke)",
+        "channel": "Acoustic Lounge",
+        "seconds": 340
+      },
+      {
+        "id": "JeWRnfwtVnI",
+        "title": "Careless Whisper - George Michael (Karaoke Version)",
+        "channel": "KaraokeyTV",
+        "seconds": 308
+      },
+      {
+        "id": "xMNcGK_lJtA",
+        "title": "George Michael - Careless Whisper (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 281
+      }
+    ]
+  },
+  "en-040": {
+    "query": "Wham! Last Christmas karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "h0eUW73q0DQ",
+        "title": "Last Christmas - Wham! (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 290
+      },
+      {
+        "id": "LAvaaQO2L_o",
+        "title": "Wham! - Last Christmas (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 274
+      },
+      {
+        "id": "jgtmmNtPc-k",
+        "title": "WHAM! - LAST CHRISTMAS (KARAOKE WITH THE ORIGINAL BACKING VOCALS!)",
+        "channel": "Miracle Music!",
+        "seconds": 273
+      }
+    ]
+  },
+  "en-041": {
+    "query": "Bryan Adams Summer of '69 karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "CDPujxEQq60",
+        "title": "Summer Of 69 - Bryan Adams (Karaoke version)",
+        "channel": "Bryan Adams",
+        "seconds": 252
+      }
+    ]
+  },
+  "en-042": {
+    "query": "Celine Dion My Heart Will Go On karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "tQOw_R2gx2E",
+        "title": "My Heart Will Go On - Celine Dion Karaoke【With Guide Melody】",
+        "channel": "EdKara",
+        "seconds": 285
+      },
+      {
+        "id": "kXTkjMdgf7Q",
+        "title": "My Heart Will Go On - Céline Dion (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 283
+      },
+      {
+        "id": "Nc6yDqpniHY",
+        "title": "Céline Dion   My Heart Will Go On Karaoke)",
+        "channel": "TheKaraoke Man",
+        "seconds": 283
+      }
+    ]
+  },
+  "en-043": {
+    "query": "Mariah Carey All I Want for Christmas Is You karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "l3iEnBThkIc",
+        "title": "All I Want For Christmas Is You - Mariah Carey (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 272
+      },
+      {
+        "id": "xZjrDKRXlGg",
+        "title": "All I Want For Christmas Is You - Mariah Carey  Karaoke【No Guide Melody】",
+        "channel": "EdKara",
+        "seconds": 242
+      },
+      {
+        "id": "gxiU1D9sdgE",
+        "title": "All I Want For Christmas Is You (Official Instrumental Karaoke w/ Backing Vocals) - Mariah Carey",
+        "channel": "RIK Real Instrumental Karaokes",
+        "seconds": 251
+      }
+    ]
+  },
+  "en-044": {
+    "query": "Backstreet Boys I Want It That Way karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "khnQaSMer90",
+        "title": "I Want It That Way - Backstreet Boys [Official KARAOKE with Backup Vocals in HQ]",
+        "channel": "VL",
+        "seconds": 215
+      },
+      {
+        "id": "d0kXgwre-Xs",
+        "title": "I WANT IT THAT WAY - Backstreet Boys (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 239
+      },
+      {
+        "id": "Jour9Cxc8xM",
+        "title": "The Backstreet Boys - I Want It That Way (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 223
+      }
+    ]
+  },
+  "en-045": {
+    "query": "Spice Girls Wannabe karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "O-xhijZnO8o",
+        "title": "Wannabe Spice Girls Karaoke with backing vocals [Official]",
+        "channel": "Requests4U2sing",
+        "seconds": 172
+      },
+      {
+        "id": "DO1XCUjxrRk",
+        "title": "The Spice Girls - Wannabe - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 183
+      },
+      {
+        "id": "TRyId-TABk4",
+        "title": "Wannabe - Spice Girls (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 181
+      }
+    ]
+  },
+  "en-046": {
+    "query": "Britney Spears ...Baby One More Time karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "VcDrr50sF3I",
+        "title": "Britney Spears - Baby One More Time (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 237
+      },
+      {
+        "id": "r6YH50RK0S0",
+        "title": "Britney Spears - Baby One More Time  [with backing vocals]- Karaoke/Lyrics",
+        "channel": "LyricVibe Karaoke",
+        "seconds": 249
+      },
+      {
+        "id": "dyii_7HSLpE",
+        "title": "Britney Spears - Baby One More Time - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 219
+      }
+    ]
+  },
+  "en-047": {
+    "query": "Britney Spears Toxic karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Q752eSvHjUU",
+        "title": "Toxic (Instrumental Karaoke) - Britney Spears",
+        "channel": "Mannu Alvarado Beltrán",
+        "seconds": 205
+      },
+      {
+        "id": "b64R9mrSHc4",
+        "title": "Britney Spears - Toxic (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 222
+      },
+      {
+        "id": "gY3cwu2GtQw",
+        "title": "Britney Spears - TOXIC in JAZZ style | Karaoke, Instrumental with lyrics",
+        "channel": "InstRoomental",
+        "seconds": 213
+      }
+    ]
+  },
+  "en-048": {
+    "query": "Aqua Barbie Girl karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "ozn8o_U2sE4",
+        "title": "Barbie Girl (Duet Version) - Aqua (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 234
+      },
+      {
+        "id": "BZr5rVzLOJU",
+        "title": "Aqua - Barbie Girl (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 214
+      },
+      {
+        "id": "mPmQ4uWdr3Q",
+        "title": "Aqua - Barbie Girl (Karaoke)",
+        "channel": "Калинка Караоке",
+        "seconds": 209
+      }
+    ]
+  },
+  "en-049": {
+    "query": "Ricky Martin Livin' la Vida Loca karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "U7lx2j4ufBQ",
+        "title": "Ricky Martin - Livin' La Vida Loca (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 278
+      },
+      {
+        "id": "y0Z8egQ1uVE",
+        "title": "Ricky Martin - Livin' La Vida Loca (Original Karaoke Version)",
+        "channel": "Karaoke Original",
+        "seconds": 233
+      },
+      {
+        "id": "aBy8abo4JeE",
+        "title": "Ricky Martin - Livin' La Vida Loca (Official Instrumental)",
+        "channel": "El Rey Del Pop Latino Ricky Martin",
+        "seconds": 225
+      }
+    ]
+  },
+  "en-050": {
+    "query": "Oasis Wonderwall karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "I4RwbQ9zUEU",
+        "title": "Oasis • Wonderwall (CC) 🎤 [Karaoke] [Instrumental Lyrics]",
+        "channel": "CC Karaoke",
+        "seconds": 261
+      },
+      {
+        "id": "i3SeJ6-sr5o",
+        "title": "Wonderwall - Oasis (Acoustic karaoke)",
+        "channel": "Acoustic Lounge",
+        "seconds": 270
+      },
+      {
+        "id": "a1lBdG1ozzQ",
+        "title": "Wonderwall - Oasis [Acoustic Karaoke | Female Key]",
+        "channel": "ACOUSTIOKE",
+        "seconds": 257
+      }
+    ]
+  },
+  "en-051": {
+    "query": "Shania Twain Man! I Feel Like a Woman! karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "bbNXcrMjL6w",
+        "title": "Man I Feel Like A Woman - Shania Twain (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 259
+      },
+      {
+        "id": "VwVuEZeM264",
+        "title": "Shania Twain - Man! I Feel Like A Woman (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 245
+      },
+      {
+        "id": "MV0WIBhycdA",
+        "title": "Shania Twain - Man! I Feel Like A Woman! (Karaoke Version)",
+        "channel": "Stingray Karaoke",
+        "seconds": 248
+      }
+    ]
+  },
+  "en-052": {
+    "query": "Cher Believe karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "UveQwEtU5ds",
+        "title": "Cher - Believe (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 240
+      },
+      {
+        "id": "HODw7tEj-vM",
+        "title": "Believe by Cher (Karaoke : Male Key)",
+        "channel": "Pinoy Karaoke 2019",
+        "seconds": 246
+      },
+      {
+        "id": "Tquggx3M27A",
+        "title": "Believe – Cher (Acoustic Karaoke in E) | No Vocals • 125 BPM",
+        "channel": "JaxTraX (Acoustic Karaoke)",
+        "seconds": 257
+      }
+    ]
+  },
+  "en-053": {
+    "query": "R.E.M. Losing My Religion karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "6vU1KNm9W9I",
+        "title": "LOSING MY RELIGION - R.E.M. (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 277
+      },
+      {
+        "id": "6BqnThoz4xo",
+        "title": "R.E.M. - Losing My Religion - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 272
+      },
+      {
+        "id": "e-gPGTV0FK8",
+        "title": "REM - Losing My Religion  KARAOKE",
+        "channel": "KEEP THE BEST ALIVE",
+        "seconds": 269
+      }
+    ]
+  },
+  "en-054": {
+    "query": "4 Non Blondes What's Up? karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "7JKV9blyuc8",
+        "title": "4 Non Blondes - What's Up (KARAOKE)",
+        "channel": "Mi Balmz Karaoke Tracks",
+        "seconds": 300
+      },
+      {
+        "id": "torveUzcLsc",
+        "title": "What's up - Acoustic karaoke (4 Non Blondes)",
+        "channel": "Acoustic Lounge",
+        "seconds": 311
+      },
+      {
+        "id": "0V0yLCvOrYY",
+        "title": "What's Up - 4 Non Blondes (Karaoke Version)",
+        "channel": "KaraokeyTV",
+        "seconds": 314
+      }
+    ]
+  },
+  "en-055": {
+    "query": "The Cranberries Zombie karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "37cKEVu-Z-Y",
+        "title": "ZOMBIE - The Cranberries (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 253
+      },
+      {
+        "id": "aS2mCY0o12k",
+        "title": "Zombie - The Cranberries (Karaoke version hd)",
+        "channel": "KaraokeyTV",
+        "seconds": 332
+      },
+      {
+        "id": "jCwCQwhpGAY",
+        "title": "The Cranberries - Zombie (Karaoke)",
+        "channel": "Калинка Караоке",
+        "seconds": 307
+      }
+    ]
+  },
+  "en-056": {
+    "query": "Elton John Can You Feel the Love Tonight karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "bbeMVcJ98iw",
+        "title": "CAN YOU FEEL THE LOVE TONIGHT - Elton John (KARAOKE VERSION with lyrics)",
+        "channel": "Agaw Music Karaoke",
+        "seconds": 236
+      },
+      {
+        "id": "8SdNqJ0M6kE",
+        "title": "CAN YOU FEEL THE LOVE TONIGHT - Elton John (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 248
+      },
+      {
+        "id": "cAGZkj8qOA8",
+        "title": "Can You Feel The Love Tonight  |  Karaoke  |  Original  |  Elton John (The Lion King)",
+        "channel": "Original Karaoke",
+        "seconds": 239
+      }
+    ]
+  },
+  "en-057": {
+    "query": "Robbie Williams Angels karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "eQ2FfEP1IKA",
+        "title": "Robbie Williams - Angels Karaoke",
+        "channel": "hyperamli",
+        "seconds": 262
+      },
+      {
+        "id": "zPWPuQIClAM",
+        "title": "Angels - Robbie  Williams (KARAOKE VERSION)",
+        "channel": "Pinoy Videoke Tambayan",
+        "seconds": 272
+      },
+      {
+        "id": "f_syy-8FGYg",
+        "title": "Robbie Williams - Angels (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 249
+      }
+    ]
+  },
+  "en-058": {
+    "query": "Ronan Keating When You Say Nothing at All karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "IpXuQdPhj7Q",
+        "title": "WHEN YOU SAY NOTHING AT ALL - Ronan Keating (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 274
+      },
+      {
+        "id": "oi_WkaZSZpU",
+        "title": "Ronan Keating - When You Say Nothing At All (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 267
+      },
+      {
+        "id": "J3gk5gO_wyA",
+        "title": "When You Say Nothing At All - Ronan Keating (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 268
+      }
+    ]
+  },
+  "en-059": {
+    "query": "Westlife My Love karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "rVFKf53Fc0I",
+        "title": "Westlife - My Love  karaoke with lyrics",
+        "channel": "hyperamli",
+        "seconds": 233
+      },
+      {
+        "id": "aopznAD6m9w",
+        "title": "MY LOVE - Westlife (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 254
+      },
+      {
+        "id": "-wi5Ykrv24E",
+        "title": "My Love - Westlife [Official KARAOKE with Backup Vocals in HQ]",
+        "channel": "VL",
+        "seconds": 232
+      }
+    ]
+  },
+  "en-060": {
+    "query": "Kelly Clarkson Since U Been Gone karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "4nTcu5WtTZM",
+        "title": "Since U Been Gone in the style of \"Kelly Clarkson\" karaoke video with lyrics",
+        "channel": "Stingray Karaoke",
+        "seconds": 209
+      },
+      {
+        "id": "U-NM10P2_X0",
+        "title": "Kelly Clarkson - Since U Been Gone (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 220
+      },
+      {
+        "id": "Yn7pVjO7_2Q",
+        "title": "Kelly Clarkson - Since U Been Gone - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 199
+      }
+    ]
+  },
+  "en-061": {
+    "query": "Avril Lavigne Complicated karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "xNN372Ud0EE",
+        "title": "Complicated - Avril Lavigne Karaoke 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 254
+      },
+      {
+        "id": "UyqfPaIzdTY",
+        "title": "COMPLICATED - Avril Lavigne (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 250
+      },
+      {
+        "id": "dOvy03w9pR4",
+        "title": "Complicated - Avril Lavigne (Acoustic karaoke)",
+        "channel": "Acoustic Lounge",
+        "seconds": 265
+      }
+    ]
+  },
+  "en-062": {
+    "query": "Beyoncé Crazy in Love karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Po2wzSJPTBk",
+        "title": "Crazy in Love feat. Jay-Z - Beyoncé Karaoke 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 242
+      },
+      {
+        "id": "-RwFOzjG6o0",
+        "title": "Beyoncé - Crazy In Love ft. JAY Z (Karaoke With Lyrics)",
+        "channel": "Stingray Karaoke",
+        "seconds": 259
+      },
+      {
+        "id": "YAUd0jOZomw",
+        "title": "Beyonce - Crazy In Love With Rapper - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 246
+      }
+    ]
+  },
+  "en-063": {
+    "query": "Beyoncé Single Ladies (Put a Ring on It) karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "vvoVJNlTtvQ",
+        "title": "Karaoke♬ Single Ladies (Put a Ring on It) - Beyoncé 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 204
+      },
+      {
+        "id": "f7vsfT-NzY4",
+        "title": "Single Ladies (Put A Ring On It) - Beyonce (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 222
+      },
+      {
+        "id": "a6YX9m_M1Tw",
+        "title": "Single Ladies (put A Ring On It) - Beyonce (KARAOKE)",
+        "channel": "MrEntertainerKaraoke",
+        "seconds": 209
+      }
+    ]
+  },
+  "en-064": {
+    "query": "Shakira Hips Don't Lie karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "ZWqxc0sv92E",
+        "title": "Hips Don't Lie - Shakira Feat. Wyclef Jean (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 232
+      },
+      {
+        "id": "uQeW4wYhQUo",
+        "title": "Shakira feat. Wyclef Jean - Hips Don't Lie (KARAOKE) [Instrumental with backing vocals]",
+        "channel": "KaraokeMedia",
+        "seconds": 225
+      },
+      {
+        "id": "aLJaQbpbhuk",
+        "title": "Karaoke♬ Hips Don't Lie ft. Wyclef Jean - Shakira 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 225
+      }
+    ]
+  },
+  "en-065": {
+    "query": "Mark Ronson & Amy Winehouse Valerie karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "jknvd7RMPQ4",
+        "title": "Valerie - Amy Winehouse (Acoustic Soulful Karaoke | Original Key)",
+        "channel": "Sam Backing Tracks",
+        "seconds": 249
+      },
+      {
+        "id": "rKn345EvCiU",
+        "title": "Amy Winehouse - Valerie ('68 Version) - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 248
+      },
+      {
+        "id": "uogD6wdfXR8",
+        "title": "Mark Ronson ft. Amy Winehouse - Valerie (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 225
+      }
+    ]
+  },
+  "en-066": {
+    "query": "The Killers Mr. Brightside karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "NvZyU7ij_bs",
+        "title": "The Killers - Mr Brightside - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 225
+      },
+      {
+        "id": "i5SWOQlFtUI",
+        "title": "The Killers - Mr. Brightside (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 250
+      },
+      {
+        "id": "POsjcsrXcsM",
+        "title": "The Killers - Mr. Brightside (karaoke)",
+        "channel": "KillerBytes Karaoke",
+        "seconds": 226
+      }
+    ]
+  },
+  "en-067": {
+    "query": "Coldplay Yellow karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "n-v2JEkEIJ0",
+        "title": "Yellow - Acoustic karaoke (Coldplay)",
+        "channel": "Acoustic Lounge",
+        "seconds": 278
+      },
+      {
+        "id": "9imme-IIQdc",
+        "title": "Coldplay – Yellow (Karaoke Version)",
+        "channel": "Capleo Music",
+        "seconds": 291
+      },
+      {
+        "id": "1x1d8WqHU_s",
+        "title": "YELLOW - Coldplay (HQ KARAOKE VERSION with lyrics)",
+        "channel": "Agaw Music Karaoke",
+        "seconds": 273
+      }
+    ]
+  },
+  "en-068": {
+    "query": "Coldplay Viva la Vida karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "FSll_OC0L64",
+        "title": "Viva La Vida - Coldplay (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 234
+      },
+      {
+        "id": "2WnP3dU1GGY",
+        "title": "Coldplay-Viva la vida karaoke.avi",
+        "channel": "jesse morax",
+        "seconds": 243
+      },
+      {
+        "id": "BRdS4oyOCWE",
+        "title": "Coldplay - Viva La Vida (Official Karaoke Instrumental) | SongJam",
+        "channel": "Songjam: Official Karaoke",
+        "seconds": 238
+      }
+    ]
+  },
+  "en-069": {
+    "query": "Linkin Park In the End karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "O7xFdFjW0nQ",
+        "title": "Linkin Park - In The End [(CC Karaoke / Instrumental)",
+        "channel": "CC Karaoke X",
+        "seconds": 216
+      },
+      {
+        "id": "tKM1shoaleY",
+        "title": "In the end - Linkin Park (Acoustic karaoke)",
+        "channel": "Acoustic Lounge",
+        "seconds": 231
+      },
+      {
+        "id": "SqNKwnU8la0",
+        "title": "IN THE END (KARAOKE VERSION) by linkin park",
+        "channel": "johnraoke PH",
+        "seconds": 227
+      }
+    ]
+  },
+  "en-070": {
+    "query": "Rihanna Umbrella karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "xCJtwKRysQU",
+        "title": "Umbrella - Rihanna (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 291
+      },
+      {
+        "id": "NRMYKGHNCjg",
+        "title": "Umbrella - Rihanna Karaoke 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 245
+      },
+      {
+        "id": "KHcyb0lLYP0",
+        "title": "Umbrella - Rihanna (Acoustic karaoke)",
+        "channel": "Acoustic Lounge",
+        "seconds": 254
+      }
+    ]
+  },
+  "en-071": {
+    "query": "Lady Gaga Bad Romance karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "xDAnYBvBnPw",
+        "title": "Bad Romance - Lady Gaga (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 328
+      },
+      {
+        "id": "pyp2fnjiegU",
+        "title": "Bad Romance in the Style of \"Lady Gaga\" karaoke video with lyrics (no lead vocal)",
+        "channel": "Stingray Karaoke",
+        "seconds": 311
+      },
+      {
+        "id": "Z7sHRNNElDE",
+        "title": "Lady Gaga - Bad Romance (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 329
+      }
+    ]
+  },
+  "en-072": {
+    "query": "Leona Lewis Bleeding Love karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "vSoboivvIDw",
+        "title": "Bleeding Love - Leona Lewis (Karaoke Version)",
+        "channel": "KaraokeyTV",
+        "seconds": 270
+      },
+      {
+        "id": "CBvUIAouaZc",
+        "title": "Bleeding Love - Leona Lewis Karaoke【No Guide Melody】",
+        "channel": "EdKara",
+        "seconds": 268
+      },
+      {
+        "id": "4VXO6q_AumQ",
+        "title": "Leona Lewis - Bleeding Love (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 272
+      }
+    ]
+  },
+  "en-073": {
+    "query": "The Black Eyed Peas I Gotta Feeling karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "2sYJoGz5fo4",
+        "title": "I Gotta Feeling (Karaoke) - Black Eyed Peas",
+        "channel": "Tracks Planet Karaoke",
+        "seconds": 295
+      },
+      {
+        "id": "GzoTgLGX7IM",
+        "title": "The Black Eyed Peas - I Gotta Feeling (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 256
+      },
+      {
+        "id": "dc5J_FG68qE",
+        "title": "I Gotta Feeling - Black Eyed Peas (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 312
+      }
+    ]
+  },
+  "en-074": {
+    "query": "James Blunt You're Beautiful karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Fgr4azpiWhg",
+        "title": "YOU'RE BEAUTIFUL - James Blunt (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 214
+      },
+      {
+        "id": "Wt632oc5BYU",
+        "title": "James Blunt - You're Beautiful (Official Karaoke Instrumental) | SongJam",
+        "channel": "Songjam: Official Karaoke",
+        "seconds": 219
+      },
+      {
+        "id": "FTQc-lZeHyA",
+        "title": "James Blunt - You're Beautiful - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 215
+      }
+    ]
+  },
+  "en-075": {
+    "query": "Adele Rolling in the Deep karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Gkm449lK9Qw",
+        "title": "Rolling in the Deep - Adele Karaoke【With Guide Melody】",
+        "channel": "EdKara",
+        "seconds": 232
+      },
+      {
+        "id": "B3O1OlTWXSA",
+        "title": "Rolling in The Deep - Adele (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 262
+      },
+      {
+        "id": "SRn4Fh47kok",
+        "title": "Adele - Rolling In The Deep (Karaoke with Lyrics)",
+        "channel": "Stingray Karaoke",
+        "seconds": 241
+      }
+    ]
+  },
+  "en-076": {
+    "query": "Adele Someone Like You karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "ziLic4haqaw",
+        "title": "Someone Like You - Adele Karaoke【No Guide Melody】",
+        "channel": "EdKara",
+        "seconds": 286
+      },
+      {
+        "id": "B5_Sl2Cbzow",
+        "title": "Someone Like You - Adele | Piano Karaoke by Andre Panggabean",
+        "channel": "Andre Panggabean",
+        "seconds": 301
+      },
+      {
+        "id": "xq1d1e6uoQw",
+        "title": "Adele - Someone Like You | With Lyrics HD Vocal-Star Karaoke 4K",
+        "channel": "Vocal Star Karaoke",
+        "seconds": 299
+      }
+    ]
+  },
+  "en-077": {
+    "query": "Bruno Mars Just the Way You Are karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "DIC1AzEgnnw",
+        "title": "Just The Way You Are - Bruno Mars (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 234
+      },
+      {
+        "id": "KtyB1UTaoaE",
+        "title": "Bruno Mars -  Just The Way You Are ( Karaoke )",
+        "channel": "Omar Alshawa",
+        "seconds": 241
+      },
+      {
+        "id": "LNjeFa4mESc",
+        "title": "Just the way you are - Bruno Mars (Acoustic karaoke)",
+        "channel": "Acoustic Lounge",
+        "seconds": 251
+      }
+    ]
+  },
+  "en-078": {
+    "query": "Mark Ronson ft. Bruno Mars Uptown Funk karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "OpRqT1PhPdE",
+        "title": "Uptown Funk ft. Bruno Mars - Mark Ronson Karaoke 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 276
+      },
+      {
+        "id": "F3R6eJKAz4M",
+        "title": "Uptown Funk - Mark Ronson ft. Bruno Mars (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 301
+      },
+      {
+        "id": "qWst8V-P9qw",
+        "title": "Mark Ronson ft. Bruno Mars - Uptown Funk (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 285
+      }
+    ]
+  },
+  "en-079": {
+    "query": "Ed Sheeran Perfect karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "5QBn1B-6cPc",
+        "title": "Perfect - Ed Sheeran (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 278
+      },
+      {
+        "id": "dDrOq7tGU6E",
+        "title": "Perfect - Ed Sheeran (Female Key - Piano Karaoke)",
+        "channel": "KaraoKeysPH | Piano Karaoke Instrumentals",
+        "seconds": 311
+      },
+      {
+        "id": "rcOhj4So5FM",
+        "title": "Perfect - Ed Sheeran | Piano Karaoke by Andre Panggabean",
+        "channel": "Andre Panggabean",
+        "seconds": 308
+      }
+    ]
+  },
+  "en-080": {
+    "query": "Ed Sheeran Shape of You karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Sykj3KRNV7U",
+        "title": "Shape of You - Ed Sheeran Karaoke 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 236
+      },
+      {
+        "id": "2xCsEBLLCE8",
+        "title": "Ed Sheeran - Shape Of You - Karaoke",
+        "channel": "Lugn",
+        "seconds": 241
+      },
+      {
+        "id": "Mbt6nFx4irU",
+        "title": "Ed Sheeran - Shape Of You - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 246
+      }
+    ]
+  },
+  "en-081": {
+    "query": "Pharrell Williams Happy karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "Ocu2UFN1nmU",
+        "title": "Pharrell Williams   Happy (Karaoke)",
+        "channel": "YouSingTheHits",
+        "seconds": 261
+      },
+      {
+        "id": "08IhZQUm7Mc",
+        "title": "Karaoke♬ Happy - Pharrell Williams 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 238
+      },
+      {
+        "id": "76vLNqL7-8w",
+        "title": "Pharrell Williams - Happy (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 266
+      }
+    ]
+  },
+  "en-082": {
+    "query": "Imagine Dragons Believer karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "ZnWO-Wkqlm8",
+        "title": "Imagine Dragons - Believer (Karaoke Version)",
+        "channel": "Sing Note",
+        "seconds": 217
+      },
+      {
+        "id": "_7qp0JMxOTs",
+        "title": "Imagine Dragons - Believer (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 218
+      },
+      {
+        "id": "R4SzxvHedgc",
+        "title": "Believer (Made Popular By Imagine Dragons) [Karaoke Version]",
+        "channel": "Party Tyme Karaoke - Topic",
+        "seconds": 203
+      }
+    ]
+  },
+  "en-083": {
+    "query": "Gotye feat. Kimbra Somebody That I Used to Know karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "_o_PKcdQyvw",
+        "title": "Somebody That I Used To Know (Male Part Only - Karaoke) - Gotye ft. Kimbra",
+        "channel": "Clark In Studio",
+        "seconds": 248
+      },
+      {
+        "id": "BmgzY2R2NBc",
+        "title": "Gotye Feat. Kimbra - Somebody That I Used To Know - Duet Karaoke Instrumental Lyrics - ObsKure",
+        "channel": "ObsKure Karaoke",
+        "seconds": 246
+      },
+      {
+        "id": "4Oci7DS-wRw",
+        "title": "Gotye ft. Kimbra - Somebody That I Used To Know (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 249
+      }
+    ]
+  },
+  "en-084": {
+    "query": "Sia Chandelier karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "H3SLTzySlCU",
+        "title": "Chandelier - Sia Karaoke 【With Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 222
+      },
+      {
+        "id": "g18Z-96l4NU",
+        "title": "Sia - Chandelier (Karaoke Version)",
+        "channel": "Sing Note",
+        "seconds": 228
+      },
+      {
+        "id": "aUVfDFcSZaU",
+        "title": "Sia - Chandelier (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 249
+      }
+    ]
+  },
+  "en-085": {
+    "query": "Lady Gaga & Bradley Cooper Shallow karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "smu-0V7E7wI",
+        "title": "Shallow - Lady Gaga, Bradley Cooper (Karaoke)",
+        "channel": "Mi Balmz Karaoke Tracks",
+        "seconds": 228
+      },
+      {
+        "id": "ujhOYGIvMhw",
+        "title": "Shallow (Bradley Cooper Part Only - Karaoke) - A Star Is Born",
+        "channel": "Clark On Stage",
+        "seconds": 227
+      },
+      {
+        "id": "pOp3ZwUhLjU",
+        "title": "Lady Gaga and Bradley Cooper - Shallow (Karaoke Version) with Lyrics On Screen",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 219
+      }
+    ]
+  },
+  "en-086": {
+    "query": "Christina Perri A Thousand Years karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "evszo_wT7Gs",
+        "title": "A THOUSAND YEARS - Christina Perri (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 280
+      },
+      {
+        "id": "-E0H0DJhd-I",
+        "title": "Christina Perri - A Thousand Years - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 288
+      },
+      {
+        "id": "ndFrL9Et7SQ",
+        "title": "Christina Perri - A Thousand Years (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 286
+      }
+    ]
+  },
+  "en-087": {
+    "query": "John Legend All of Me karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "szROVj0Swcs",
+        "title": "John Legend   \"All Of Me\" Karaoke",
+        "channel": "YouSingTheHits",
+        "seconds": 308
+      },
+      {
+        "id": "x9vVGaxxiyI",
+        "title": "All of Me - John Legend Karaoke 【With Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 286
+      },
+      {
+        "id": "15jT1Kyb3QA",
+        "title": "All Of Me - John Legend (Female Key - Piano Karaoke)",
+        "channel": "KaraoKeysPH | Piano Karaoke Instrumentals",
+        "seconds": 318
+      }
+    ]
+  },
+  "en-088": {
+    "query": "Taylor Swift Shake It Off karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "tCqNQdQDyU4",
+        "title": "Shake It Off - Taylor Swift (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 248
+      },
+      {
+        "id": "KJQ8Gv1HXnw",
+        "title": "Shake It Off - Taylor Swift  Karaoke【With Guide Melody】",
+        "channel": "EdKara",
+        "seconds": 230
+      },
+      {
+        "id": "lbcmfOjBDjM",
+        "title": "►Taylor Swift - Shake It Off (Karaoke Version)",
+        "channel": "Sing Karaoke",
+        "seconds": 250
+      }
+    ]
+  },
+  "en-089": {
+    "query": "Rihanna Diamonds karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "O1tIKPvkIKY",
+        "title": "Diamonds - Rihanna Karaoke 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 231
+      },
+      {
+        "id": "BUz44wtGspk",
+        "title": "Diamonds - Rihanna (Karaoke Songs With Lyrics - Original Key)",
+        "channel": "Musisi Karaoke",
+        "seconds": 253
+      },
+      {
+        "id": "j5rQFzVMTfw",
+        "title": "Rihanna - Diamonds - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 236
+      }
+    ]
+  },
+  "en-090": {
+    "query": "Dua Lipa Don't Start Now karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "zImtuQGAzkI",
+        "title": "Karaoke♬ Don't Start Now - Dua Lipa 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 189
+      },
+      {
+        "id": "LVth714l8Bg",
+        "title": "Dua Lipa - Don't Start Now (Official Karaoke Instrumental) | SongJam",
+        "channel": "Songjam: Official Karaoke",
+        "seconds": 193
+      },
+      {
+        "id": "bwrNX9ae75c",
+        "title": "Dua Lipa - Don't Start Now ( KARAOKE with BACKING VOCALS)",
+        "channel": "S T A R Karaoke KPH",
+        "seconds": 215
+      }
+    ]
+  },
+  "en-091": {
+    "query": "The Weeknd Blinding Lights karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "nGMZQzPRARc",
+        "title": "The Weeknd - Blinding lights (KARAOKE)",
+        "channel": "#azaMart_Сhannel",
+        "seconds": 204
+      },
+      {
+        "id": "2GPacd5cIZ0",
+        "title": "Karaoke♬ Blinding Lights - The Weeknd 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 203
+      },
+      {
+        "id": "-JA6H2-yBm4",
+        "title": "The Weeknd - Blinding Lights - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 214
+      }
+    ]
+  },
+  "en-092": {
+    "query": "Lewis Capaldi Someone You Loved karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "HMqUdSVZuIM",
+        "title": "Someone You Loved - Lewis Capaldi (Female Key - Piano Karaoke)",
+        "channel": "KaraoKeysPH | Piano Karaoke Instrumentals",
+        "seconds": 201
+      },
+      {
+        "id": "K7QUMNlfSeY",
+        "title": "Karaoke♬ Someone You Loved - Lewis Capaldi 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 183
+      },
+      {
+        "id": "Kj_nPo0L4jQ",
+        "title": "Lewis Capaldi - Someone You Loved - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 188
+      }
+    ]
+  },
+  "en-093": {
+    "query": "Billie Eilish bad guy karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "6owmBFBzsEI",
+        "title": "bad guy - Billie Eilish Karaoke 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 196
+      },
+      {
+        "id": "l1aVSxQIWAw",
+        "title": "Billie Eilish - bad guy (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 209
+      },
+      {
+        "id": "8Zat9-7e-mk",
+        "title": "Billie Eilish - bad guy [Karaoke/Instrumental]",
+        "channel": "Cozy Karaoke",
+        "seconds": 195
+      }
+    ]
+  },
+  "en-094": {
+    "query": "Dua Lipa Levitating karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "uHHfklqo3Ig",
+        "title": "Dua Lipa - Levitating (Official Karaoke Instrumental) | SongJam",
+        "channel": "Songjam: Official Karaoke",
+        "seconds": 216
+      },
+      {
+        "id": "MzRU7_ADf70",
+        "title": "Karaoke♬ Levitating - Dua Lipa 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 206
+      },
+      {
+        "id": "Ef2BsTEcN3Y",
+        "title": "Dua Lipa feat. DaBaby - Levitating - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 225
+      }
+    ]
+  },
+  "en-095": {
+    "query": "Miley Cyrus Flowers karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "B9LWeUphKzk",
+        "title": "Flowers by Miley Cyrus (Karaoke with Backup Vocal)",
+        "channel": "Timeless Club",
+        "seconds": 200
+      },
+      {
+        "id": "BG5bJRa3sBQ",
+        "title": "FLOWERS - Miley Cyrus (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 222
+      },
+      {
+        "id": "-5BJDZmAJyU",
+        "title": "Miley Cyrus - Flowers - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 210
+      }
+    ]
+  },
+  "en-096": {
+    "query": "Harry Styles As It Was karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "6Ad20pyHV4s",
+        "title": "Harry Styles - As It Was (Karaoke Version)",
+        "channel": "Sing Note",
+        "seconds": 167
+      },
+      {
+        "id": "io4i9CoTdXA",
+        "title": "Karaoke♬ As It Was - Harry Styles 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 179
+      },
+      {
+        "id": "_H1aURw8X-Q",
+        "title": "Harry Styles - As It Was (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 169
+      }
+    ]
+  },
+  "en-097": {
+    "query": "Olivia Rodrigo drivers license karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "F0CjrFhyskk",
+        "title": "Olivia Rodrigo - Drivers License ( KARAOKE with BACKING VOCALS )",
+        "channel": "S T A R Karaoke KPH",
+        "seconds": 286
+      },
+      {
+        "id": "NSAJnIt8cZ8",
+        "title": "DRIVERS LICENSE - Olivia Rodrigo (KARAOKE VERSION)",
+        "channel": "CoversPH",
+        "seconds": 265
+      },
+      {
+        "id": "8eFjmRmg6hg",
+        "title": "Olivia Rodrigo - drivers license (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 254
+      }
+    ]
+  },
+  "en-098": {
+    "query": "Glass Animals Heat Waves karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "uXl_P1zrv3w",
+        "title": "Glass Animals - Heat Waves (Karaoke Version)",
+        "channel": "Sing Note",
+        "seconds": 247
+      },
+      {
+        "id": "xZTA0MsFC-s",
+        "title": "Karaoke♬ Heat Waves - Glass Animals 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 251
+      },
+      {
+        "id": "uEbJPwqjU-U",
+        "title": "Glass Animals - Heat Waves (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 239
+      }
+    ]
+  },
+  "en-099": {
+    "query": "Elton John & Dua Lipa Cold Heart karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "-3_FzXCUqKc",
+        "title": "Cold Heart Karaoke | Dua Lipa and Elton John Karaoke Version",
+        "channel": "Vocal Star Karaoke",
+        "seconds": 222
+      },
+      {
+        "id": "CvwkoT-kSBg",
+        "title": "Elton John, Dua Lipa - Cold Heart (PNAU Remix) (Karaoke with Lyrics)",
+        "channel": "Stingray Karaoke",
+        "seconds": 209
+      },
+      {
+        "id": "ouPplhEWAWA",
+        "title": "Karaoke♬ Cold Heart (PNAU Remix) - Elton John, Dua Lipa 【No Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 216
+      }
+    ]
+  },
+  "en-100": {
+    "query": "Sabrina Carpenter Espresso karaoke",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "I5JTCGLfdfU",
+        "title": "Karaoke | Espresso (with backing vocals) (same as in the song instrumental) Sabrina Carpenter",
+        "channel": "THE KARAOKE CHANNEL",
+        "seconds": 176
+      },
+      {
+        "id": "EHHcQ30CRVs",
+        "title": "Sabrina Carpenter - Espresso (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 187
+      },
+      {
+        "id": "0fwASWgWTow",
+        "title": "Sabrina Carpenter - Espresso (Karaoke Version) | MrEntertainerKaraoke",
+        "channel": "MrEntertainerKaraoke",
+        "seconds": 188
+      }
+    ]
+  },
+  "ru-080": {
+    "query": "Кино Восьмиклассница караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "WLyAAOZNG3Y",
+        "title": "Кино - Восьмиклассница (Караоке версия)",
+        "channel": "Golden Voice Karaoke",
+        "seconds": 168
+      },
+      {
+        "id": "N_qQN_Cw1oI",
+        "title": "Виктор Цой (Кино) - Восьмиклассница [MINUS vocal; Karaoke]",
+        "channel": "MINUS vocal; Karaoke",
+        "seconds": 169
+      },
+      {
+        "id": "XL8dWolC0u8",
+        "title": "Виктор Цой - Восьмиклассница (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 170
+      }
+    ]
+  },
+  "ru-081": {
+    "query": "ДДТ Родина караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "eRNSTqQQLUI",
+        "title": "ДДТ - Родина (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 289
+      }
+    ]
+  },
+  "ru-082": {
+    "query": "Наутилус Помпилиус Скованные одной цепью караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "PM41hbCQoa8",
+        "title": "Наутилус Помпилиус - Скованные одной цепью (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 302
+      },
+      {
+        "id": "ggWa2xnSOf8",
+        "title": "Скованные Одной Цепью (караоке)",
+        "channel": "Alex0_0",
+        "seconds": 255
+      }
+    ]
+  },
+  "ru-083": {
+    "query": "Сплин Романс караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "yh7gmzN0gT4",
+        "title": "Сплин - Романс (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 201
+      },
+      {
+        "id": "Lfcd7Haq_LE",
+        "title": "Романс - Сплин - пиано караоке со словами + НОТЫ",
+        "channel": "Save As You Sing - караоке под фортепиано",
+        "seconds": 180
+      },
+      {
+        "id": "nDtXGzdqDVQ",
+        "title": "Сплин - Романс | Караоке",
+        "channel": "diana fasber",
+        "seconds": 200
+      }
+    ]
+  },
+  "ru-084": {
+    "query": "Би-2 Варвара караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "HS2Ssrt5oSM",
+        "title": "Би-2 - Варвара (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 309
+      },
+      {
+        "id": "1_WC9SXRmaU",
+        "title": "Би-2 - Варвара (караоке)",
+        "channel": "Ilya Yarunin",
+        "seconds": 309
+      },
+      {
+        "id": "hTn9loJlI5Y",
+        "title": "Би 2 – Варвара / Брат 2 (instrumental)",
+        "channel": "cosmodisc",
+        "seconds": 224
+      }
+    ]
+  },
+  "ru-085": {
+    "query": "Земфира Ромашки караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "COc-cnai790",
+        "title": "Земфира - Ромашки (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 205
+      },
+      {
+        "id": "7GgIkLxPqrY",
+        "title": "Ромашки - Земфира (Karaoke version)",
+        "channel": "Karaoke.online",
+        "seconds": 211
+      },
+      {
+        "id": "YujmHqTMwbE",
+        "title": "Земфира -  Ромашки (Karaoke) Croonify",
+        "channel": "Sergey Arushanyan",
+        "seconds": 211
+      }
+    ]
+  },
+  "ru-086": {
+    "query": "Мумий Тролль Невеста? караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "wORxTYRZir4",
+        "title": "Мумий Тролль - Невеста (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 233
+      },
+      {
+        "id": "8JuTYy66Buk",
+        "title": "мумий тролль - невеста (караоке от ТКУИК ШУМИЛОВ)",
+        "channel": "zero sugar",
+        "seconds": 233
+      },
+      {
+        "id": "cNx3sZpQFyk",
+        "title": "Мумий Тролль Невеста Караоке",
+        "channel": "Виктор Дмитриенко",
+        "seconds": 163
+      }
+    ]
+  },
+  "ru-087": {
+    "query": "Ленинград WWW караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "XCod1NZzeVI",
+        "title": "Ленинград - WWW (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 164
+      },
+      {
+        "id": "Xqed7A-g1RE",
+        "title": "Ленинград - WWW Ленинград (КАРАОКЕ МИНУС)",
+        "channel": "Ваше Караоке+",
+        "seconds": 168
+      }
+    ]
+  },
+  "ru-088": {
+    "query": "Любэ Атас караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "E3No4Hgi7RE",
+        "title": "Калинка караоке \" АТАС \", группа Любэ. Минус",
+        "channel": "AGK_cool ( AG Cool )",
+        "seconds": 195
+      },
+      {
+        "id": "TushDoqC8_8",
+        "title": "КАРАОКЕ 🎤 Любэ - Атас 🎤 сделано в студии: KARAOKE-BASE.CLUB",
+        "channel": "КАРАОКЕ Базы и Диски. Продажа. Обслуживание",
+        "seconds": 198
+      },
+      {
+        "id": "a3Ln8mLW6Wg",
+        "title": "Атас (караоке)",
+        "channel": "MidiRadio",
+        "seconds": 188
+      }
+    ]
+  },
+  "ru-089": {
+    "query": "Алла Пугачёва Старинные часы караоке",
+    "checked": "2026-10-27",
+    "candidates": [
+      {
+        "id": "z7omx89Rzrw",
+        "title": "Алла Пугачёва - Старинные часы (Караоке)",
+        "channel": "Калинка Караоке",
+        "seconds": 238
+      },
+      {
+        "id": "VM5hS7gMzkg",
+        "title": "Старинные часы - (караоке) Алла Пугачёва",
+        "channel": "Отдыхаем всей семьёй",
+        "seconds": 276
       }
     ]
   }
