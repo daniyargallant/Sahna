@@ -19183,5 +19183,29 @@
         "seconds": 253
       }
     ]
+  },
+  "en-403": {
+    "query": "Arctic Monkeys I Wanna Be Yours karaoke",
+    "checked": "2026-11-11",
+    "candidates": [
+      {
+        "id": "v8YFIzD571E",
+        "title": "Arctic Monkeys - I Wanna Be Yours [CC] [Karaoke Instrumental Version]",
+        "channel": "CC Karaoke X",
+        "seconds": 185
+      },
+      {
+        "id": "ECUpD3MX7x0",
+        "title": "Karaoke♬ I Wanna Be Yours - Arctic Monkeys 【No Guide Melody】 Instrumental, Lyric",
+        "channel": "EdKara",
+        "seconds": 186
+      },
+      {
+        "id": "uzpvDbmtE1I",
+        "title": "Arctic Monkeys - I Wanna Be Yours (Karaoke Version)",
+        "channel": "Karaoke Office",
+        "seconds": 192
+      }
+    ]
   }
 }
