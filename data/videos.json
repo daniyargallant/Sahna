@@ -23058,5 +23058,125 @@
         "seconds": 231
       }
     ]
+  },
+  "en-473": {
+    "query": "Celine Dion That's the Way It Is karaoke",
+    "checked": "2026-11-15",
+    "candidates": [
+      {
+        "id": "5HYwLl7oZhE",
+        "title": "THAT'S THE WAY IT IS - Celine Dion (KARAOKE HQ VERSION)",
+        "channel": "APMusic",
+        "seconds": 269
+      },
+      {
+        "id": "dkTGmwSd_7U",
+        "title": "THAT'S THE WAY IT IS - Celine Dion (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 261
+      },
+      {
+        "id": "_quDozm62vk",
+        "title": "Celine Dion - That's The Way It Is - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 251
+      }
+    ]
+  },
+  "en-474": {
+    "query": "Westlife Swear It Again karaoke",
+    "checked": "2026-11-15",
+    "candidates": [
+      {
+        "id": "FMgaYYSJMAc",
+        "title": "Swear It Again - Westlife (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 271
+      },
+      {
+        "id": "89m6pBct3DQ",
+        "title": "SWEAR IT AGAIN - Westlife (HD Karaoke)",
+        "channel": "Atomic Karaoke... ",
+        "seconds": 269
+      },
+      {
+        "id": "WfVlopQxDt8",
+        "title": "WESTLIFE - Swear It Again | Karaoke (instrumental w/ back vocals)",
+        "channel": "TWIN Music Cloud",
+        "seconds": 250
+      }
+    ]
+  },
+  "en-475": {
+    "query": "Christina Aguilera Fighter karaoke",
+    "checked": "2026-11-15",
+    "candidates": [
+      {
+        "id": "IKT4H3YmoGk",
+        "title": "[KARAOKE] Fighter by Christina Aguilera",
+        "channel": "Xtina Karaoke",
+        "seconds": 256
+      },
+      {
+        "id": "V4zORowsK1k",
+        "title": "Fighter - Christina Aguilera (Karaoke Version)",
+        "channel": "EasyKaraoke",
+        "seconds": 259
+      },
+      {
+        "id": "IKG7C0gpGSg",
+        "title": "Christina Aguilera - Fighter - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 259
+      }
+    ]
+  },
+  "en-476": {
+    "query": "Beyoncé If I Were a Boy karaoke",
+    "checked": "2026-11-15",
+    "candidates": [
+      {
+        "id": "e3pWWSNkwEs",
+        "title": "If I Were A Boy - Beyoncé Karaoke 【With Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 260
+      },
+      {
+        "id": "ZxKnksUbEy0",
+        "title": "If I Were A Boy - Beyoncé (Karaoke Version)",
+        "channel": "Shiron Karaoke",
+        "seconds": 262
+      },
+      {
+        "id": "uyuIDzGIA6o",
+        "title": "Beyonce - If I Were A Boy - Karaoke Version from Zoom Karaoke",
+        "channel": "Zoom Karaoke Official",
+        "seconds": 261
+      }
+    ]
+  },
+  "en-477": {
+    "query": "Rihanna Only Girl (In the World) karaoke",
+    "checked": "2026-11-15",
+    "candidates": [
+      {
+        "id": "M1nv2cvhQJk",
+        "title": "Only Girl (In The World) - Rihanna Karaoke 【With Guide Melody】 Instrumental",
+        "channel": "EdKara",
+        "seconds": 243
+      },
+      {
+        "id": "JWw7AaFcW4Y",
+        "title": "Rihanna - Only Girl (In The World) (Karaoke Version)",
+        "channel": "PARTY TYME KARAOKE CHANNEL",
+        "seconds": 256
+      },
+      {
+        "id": "Ey7OK8r7PUU",
+        "title": "Only Girl (In The World) - Rihanna (KARAOKE)",
+        "channel": "MrEntertainerKaraoke",
+        "seconds": 252
+      }
+    ]
   }
 }
